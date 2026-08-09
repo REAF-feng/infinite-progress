@@ -1,0 +1,45 @@
+Chronic Kidney Disease (CKD)
+
+Overview:
+Chronic kidney disease is defined as abnormalities of kidney structure or function, present for >3 months, with implications for health. It represents a global health challenge with increasing prevalence.
+
+Classification (KDIGO):
+Stage 1: GFR ≥90 mL/min/1.73m² + kidney damage
+Stage 2: GFR 60-89 mL/min/1.73m² + kidney damage
+Stage 3a: GFR 45-59 mL/min/1.73m²
+Stage 3b: GFR 30-44 mL/min/1.73m²
+Stage 4: GFR 15-29 mL/min/1.73m²
+Stage 5: GFR <15 mL/min/1.73m² or on dialysis
+
+Etiology:
+- Diabetes mellitus (leading cause)
+- Hypertension
+- Glomerulonephritis
+- Polycystic kidney disease
+- Autoimmune diseases
+- Hereditary nephritis
+
+Clinical Presentation:
+Early stages often asymptomatic
+Advanced stages:
+- Fatigue and weakness
+- Uremic symptoms
+- Fluid retention
+- Bone disease
+- Anemia
+- Cardiovascular complications
+
+Diagnosis:
+- Serum creatinine and eGFR
+- Urinalysis and proteinuria
+- Imaging studies
+- Kidney biopsy (selected cases)
+
+Treatment:
+- Blood pressure control
+- Diabetes management
+- Proteinuria reduction
+- Cardiovascular risk modification
+- Mineral bone disease management
+- Anemia treatment
+- Preparation for renal replacement therapy

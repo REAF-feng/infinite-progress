@@ -24,3 +24,4 @@ desktop.ini
 
 # 本地敏感配置
 settings.local.json
+embeddings_cache.pkl

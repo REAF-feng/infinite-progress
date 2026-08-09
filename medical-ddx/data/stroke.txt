@@ -1,0 +1,476 @@
+Stroke (Cerebrovascular Accident): Comprehensive Clinical Management Guide
+
+DEFINITION
+Stroke is a clinical syndrome of rapid onset of focal (or global) neurological dysfunction lasting more than 24 hours (or leading to death) with no apparent cause other than vascular origin. It represents the sudden loss of neurological function due to disturbance in blood supply to the brain.
+
+CLASSIFICATION
+
+Ischemic Stroke (85% of all strokes):
+1. Large Vessel Atherosclerosis:
+   - Carotid, vertebral, or intracranial artery stenosis
+   - Accounts for 20% of ischemic strokes
+
+2. Small Vessel Disease (Lacunar):
+   - Small penetrating arteries
+   - Associated with hypertension and diabetes
+   - 25% of ischemic strokes
+
+3. Cardioembolic:
+   - Atrial fibrillation most common cause
+   - Heart failure, valve disease, recent MI
+   - 30% of ischemic strokes
+
+4. Other Determined Etiology:
+   - Arterial dissection
+   - Vasculitis
+   - Hypercoagulable states
+   - 5% of strokes
+
+5. Undetermined Etiology (Cryptogenic):
+   - Multiple potential causes
+   - No clear single cause
+   - 20% of strokes
+
+Hemorrhagic Stroke (15% of all strokes):
+1. Intracerebral Hemorrhage (ICH):
+   - Bleeding within brain parenchyma
+   - 10% of all strokes
+   - Higher mortality than ischemic
+
+2. Subarachnoid Hemorrhage (SAH):
+   - Bleeding into subarachnoid space
+   - 5% of all strokes
+   - Often due to aneurysm rupture
+
+Transient Ischemic Attack (TIA):
+- Focal neurological symptoms <24 hours
+- Usually <1 hour duration
+- No permanent brain damage
+- High risk for subsequent stroke
+
+EPIDEMIOLOGY
+- Leading cause of disability worldwide
+- Second leading cause of death globally
+- ~795,000 strokes annually in US
+- ~610,000 are first-time strokes
+- Stroke incidence increases with age
+- More common in men <75, women >75
+- Higher incidence in African Americans
+- Geographic variation ("stroke belt" in southeastern US)
+
+PATHOPHYSIOLOGY
+
+Ischemic Stroke:
+1. Thrombotic:
+   - In-situ clot formation
+   - Usually on atherosclerotic plaque
+   - Gradual onset common
+
+2. Embolic:
+   - Clot travels from distant source
+   - Sudden onset typical
+   - Often cardiac source
+
+3. Hypoperfusion:
+   - Systemic hypotension
+   - Watershed territory infarcts
+   - Usually bilateral
+
+Ischemic Cascade:
+- Energy failure → membrane depolarization
+- Calcium influx → cellular toxicity
+- Free radical formation → cell death
+- Inflammatory response → tissue damage
+- Penumbra: tissue at risk but salvageable
+
+Hemorrhagic Stroke:
+- Direct mass effect
+- Increased intracranial pressure
+- Blood breakdown products toxicity
+- Surrounding edema
+
+RISK FACTORS
+
+Non-Modifiable:
+- Age (risk doubles each decade after 55)
+- Gender (men higher risk <75 years)
+- Race/ethnicity (African Americans highest risk)
+- Family history
+- Prior stroke or TIA
+
+Modifiable:
+1. Cardiovascular:
+   - Hypertension (most important)
+   - Atrial fibrillation
+   - Coronary artery disease
+   - Heart failure
+   - Valvular heart disease
+
+2. Metabolic:
+   - Diabetes mellitus
+   - Dyslipidemia
+   - Obesity
+   - Metabolic syndrome
+
+3. Lifestyle:
+   - Smoking (increases risk 2-4x)
+   - Excessive alcohol use
+   - Physical inactivity
+   - Poor diet
+
+4. Other:
+   - Carotid artery stenosis
+   - Sleep apnea
+   - Oral contraceptive use
+   - Hormone replacement therapy
+   - Drug use (cocaine, amphetamines)
+
+CLINICAL PRESENTATION
+
+Sudden Onset Neurological Deficits:
+
+Anterior Circulation (Carotid Territory):
+1. Middle Cerebral Artery (MCA):
+   - Contralateral hemiparesis/hemiplegia
+   - Contralateral hemisensory loss
+   - Aphasia (dominant hemisphere)
+   - Neglect (non-dominant hemisphere)
+   - Gaze deviation toward lesion
+   - Homonymous hemianopia
+
+2. Anterior Cerebral Artery (ACA):
+   - Contralateral leg weakness
+   - Abulia (apathy)
+   - Urinary incontinence
+   - Gait apraxia
+
+Posterior Circulation (Vertebrobasilar):
+1. Posterior Cerebral Artery (PCA):
+   - Homonymous hemianopia
+   - Alexia without agraphia
+   - Memory impairment
+
+2. Vertebrobasilar:
+   - Diplopia, vertigo, nausea
+   - Ataxia, dysarthria
+   - Dysphagia
+   - Crossed sensory/motor signs
+   - Coma (brainstem involvement)
+
+Lacunar Syndromes:
+1. Pure Motor Hemiparesis
+2. Pure Sensory Stroke
+3. Ataxic Hemiparesis
+4. Dysarthria-Clumsy Hand Syndrome
+
+Hemorrhagic Stroke:
+- Severe headache
+- Nausea and vomiting
+- Decreased consciousness
+- Focal neurological deficits
+- Neck stiffness (SAH)
+
+Warning Signs (FAST):
+- Face drooping
+- Arm weakness
+- Speech difficulty
+- Time to call emergency services
+
+DIAGNOSTIC EVALUATION
+
+Immediate Assessment:
+1. Time of symptom onset
+2. Current medications (especially anticoagulants)
+3. Recent surgery or trauma
+4. NIH Stroke Scale (NIHSS)
+
+Neuroimaging:
+
+Non-Contrast CT Head:
+- First-line imaging
+- Excludes hemorrhage
+- May be normal in acute ischemic stroke
+- Shows early signs of infarction
+
+CT Angiography (CTA):
+- Evaluates large vessel occlusion
+- Guide endovascular therapy
+- Assess for carotid stenosis
+
+MRI Brain:
+- More sensitive for acute infarction
+- DWI shows acute ischemia
+- FLAIR rules out stroke mimics
+- Better for posterior circulation
+
+MR Angiography (MRA):
+- Non-invasive vessel imaging
+- No contrast needed
+- Limited resolution compared to CTA
+
+CT/MR Perfusion:
+- Assesses tissue at risk
+- Guides extended time window therapy
+- Identifies penumbra
+
+Laboratory Tests:
+- Complete blood count
+- Basic metabolic panel
+- PT/INR, aPTT
+- Glucose
+- Troponin
+- Toxicology screen (if indicated)
+
+Cardiac Evaluation:
+- ECG (atrial fibrillation, acute MI)
+- Echocardiogram (cardioembolic source)
+- Cardiac monitoring (24-48 hours)
+
+Vascular Imaging:
+- Carotid ultrasound
+- Conventional angiography (if intervention planned)
+- CT/MR angiography of neck
+
+ACUTE TREATMENT
+
+Ischemic Stroke:
+
+IV Thrombolysis (tPA):
+Eligibility Criteria:
+- Symptom onset <4.5 hours
+- Age 18-80 years (relative)
+- NIHSS score typically >4
+- No contraindications
+
+Contraindications:
+- Recent stroke, trauma, or surgery
+- Active bleeding
+- Anticoagulation with elevated INR
+- Severe hypertension (>185/110)
+- Rapidly improving symptoms
+
+Dose: 0.9 mg/kg (max 90mg)
+- 10% as bolus
+- 90% as infusion over 60 minutes
+
+Mechanical Thrombectomy:
+Indications:
+- Large vessel occlusion (LVO)
+- Time window up to 24 hours (selected patients)
+- NIHSS ≥6
+- Good functional status pre-stroke
+
+Procedures:
+- Stent retrievers
+- Aspiration catheters
+- Combined techniques
+
+Extended Time Windows:
+- 4.5-9 hours: Perfusion imaging guided
+- 6-24 hours: Clinical-core mismatch
+- Wake-up stroke: MRI guided
+
+Blood Pressure Management:
+- Target <185/110 before tPA
+- <180/105 after tPA
+- Avoid precipitous drops
+
+Hemorrhagic Stroke:
+
+Intracerebral Hemorrhage:
+1. Blood Pressure Control:
+   - Target SBP 140-179 mmHg
+   - Nicardipine, clevidipine preferred
+   - Avoid sublingual nifedipine
+
+2. Hemostasis:
+   - Reverse anticoagulation
+   - Vitamin K, PCC, FFP
+   - Platelet transfusion if severe thrombocytopenia
+
+3. Intracranial Pressure:
+   - Monitor if GCS <8
+   - Mannitol, hypertonic saline
+   - Surgical evacuation (selected cases)
+
+Subarachnoid Hemorrhage:
+1. Aneurysm Securing:
+   - Surgical clipping
+   - Endovascular coiling
+   - Within 24-72 hours
+
+2. Vasospasm Prevention:
+   - Nimodipine 60mg q4h × 21 days
+   - Maintain euvolemia
+   - Avoid hypotension
+
+SECONDARY PREVENTION
+
+Antiplatelet Therapy:
+1. Aspirin:
+   - 75-100mg daily
+   - First-line for most patients
+   - Start within 24-48 hours
+
+2. Clopidogrel:
+   - 75mg daily
+   - Alternative to aspirin
+   - May be superior in certain populations
+
+3. Dual Antiplatelet Therapy:
+   - Aspirin + clopidogrel
+   - Short-term use (21-90 days)
+   - Minor stroke or TIA
+
+Anticoagulation:
+Indications:
+- Atrial fibrillation
+- Mechanical heart valves
+- Cardioembolic source
+
+Agents:
+- Warfarin (target INR 2-3)
+- DOACs (apixaban, rivaroxaban, dabigatran)
+- Start 1-2 weeks after stroke
+
+Risk Factors Modification:
+
+Blood Pressure:
+- Target <130/80 mmHg
+- ACE inhibitors/ARBs preferred
+- Combination therapy often needed
+
+Cholesterol:
+- High-intensity statin therapy
+- Target LDL <70 mg/dL
+- Consider PCSK9 inhibitors
+
+Diabetes:
+- HbA1c <7%
+- Avoid hypoglycemia
+- Consider SGLT2 inhibitors
+
+Lifestyle:
+- Smoking cessation
+- Mediterranean diet
+- Regular exercise
+- Weight management
+- Alcohol moderation
+
+Carotid Intervention:
+- Carotid endarterectomy
+- Carotid artery stenting
+- >50% stenosis symptomatic
+- >70% stenosis asymptomatic
+
+COMPLICATIONS
+
+Acute Complications:
+1. Cerebral Edema:
+   - Peaks 2-5 days
+   - May require decompressive craniectomy
+   - Monitor with serial CT
+
+2. Hemorrhagic Transformation:
+   - 6-15% of ischemic strokes
+   - Higher risk with large infarcts
+   - Symptomatic in 2-3%
+
+3. Seizures:
+   - 5-10% of strokes
+   - Higher with cortical involvement
+   - Prophylaxis not recommended
+
+4. Medical Complications:
+   - Pneumonia (aspiration)
+   - DVT/PE
+   - UTI
+   - Pressure ulcers
+
+Long-term Complications:
+1. Post-stroke Depression:
+   - 30-50% of patients
+   - Impacts rehabilitation
+   - Treat with SSRIs
+
+2. Cognitive Impairment:
+   - Vascular dementia
+   - Executive dysfunction
+   - Memory problems
+
+3. Spasticity:
+   - Affects 20-40% of patients
+   - Baclofen, tizanidine
+   - Botulinum toxin injections
+
+REHABILITATION
+
+Acute Rehabilitation:
+- Early mobilization
+- Swallowing assessment
+- Speech therapy
+- Physical therapy
+- Occupational therapy
+
+Goals:
+- Maximize functional independence
+- Prevent complications
+- Facilitate community reintegration
+- Family education and support
+
+Multidisciplinary Team:
+- Physicians
+- Nurses
+- Physical therapists
+- Occupational therapists
+- Speech-language pathologists
+- Social workers
+- Neuropsychologists
+
+PROGNOSIS
+
+Factors Affecting Outcome:
+- Stroke severity (NIHSS)
+- Age
+- Pre-stroke functional status
+- Stroke location and size
+- Time to treatment
+- Comorbidities
+
+Functional Outcomes:
+- 50-70% achieve functional independence
+- 15-30% have severe disability
+- 10-15% require institutional care
+
+Mortality:
+- 30-day mortality: 10-15%
+- 1-year mortality: 20-25%
+- Hemorrhagic stroke higher mortality
+
+Recurrence Risk:
+- 3-4% in first 30 days
+- 10-15% in first year
+- Highest risk in first 90 days
+- Secondary prevention reduces risk by 20-25%
+
+SPECIAL POPULATIONS
+
+Young Stroke:
+- Age <45 years
+- Different etiologies (dissection, vasculitis)
+- Extensive workup needed
+- Focus on underlying cause
+
+Pregnancy:
+- 30 per 100,000 deliveries
+- Peripartum period highest risk
+- Avoid ACE inhibitors, statins
+- Aspirin safe in pregnancy
+
+Elderly:
+- Higher stroke incidence
+- More complications
+- Careful consideration of risks/benefits
+- Quality of life considerations
+
+The management of stroke requires rapid recognition, immediate treatment, comprehensive care, and long-term prevention strategies. Time-sensitive interventions and multidisciplinary care are essential for optimal outcomes.

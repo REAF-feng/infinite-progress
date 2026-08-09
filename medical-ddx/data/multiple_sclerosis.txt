@@ -1,0 +1,273 @@
+Multiple Sclerosis
+
+Overview:
+Multiple sclerosis (MS) is a chronic autoimmune demyelinating disease of the central nervous system, characterized by inflammation, demyelination, and neurodegeneration. It affects young adults and can cause significant disability.
+
+Pathophysiology:
+- Autoimmune attack on myelin sheaths
+- T-cell mediated inflammatory response
+- Blood-brain barrier disruption
+- Oligodendrocyte damage and loss
+- Axonal damage and neurodegeneration
+- Formation of sclerotic plaques in white matter
+
+Types of Multiple Sclerosis:
+Relapsing-Remitting MS (RRMS):
+- 85% of patients at onset
+- Discrete relapses followed by recovery
+- Stable disability between relapses
+- Most common form in young adults
+
+Secondary Progressive MS (SPMS):
+- Evolution from RRMS
+- Gradual worsening with or without relapses
+- Accumulating disability over time
+- Usually occurs 10-20 years after onset
+
+Primary Progressive MS (PPMS):
+- 10-15% of patients
+- Gradual worsening from onset
+- No clear relapses or remissions
+- Typically older age at onset
+
+Progressive-Relapsing MS (PRMS):
+- Rare form (<5%)
+- Progressive course with acute relapses
+- Continuous worsening between relapses
+
+Clinical Presentation:
+Common Initial Symptoms:
+- Optic neuritis (vision loss, eye pain)
+- Sensory symptoms (numbness, tingling)
+- Motor weakness
+- Brainstem symptoms (diplopia, vertigo)
+- Cerebellar symptoms (ataxia, tremor)
+
+Motor Symptoms:
+- Weakness (hemiparesis, paraparesis)
+- Spasticity and stiffness
+- Fatigue
+- Gait difficulties
+- Coordination problems
+
+Sensory Symptoms:
+- Numbness and tingling
+- Burning sensations
+- Loss of vibration/position sense
+- Lhermitte's sign (electric shock sensation)
+- Trigeminal neuralgia
+
+Visual Symptoms:
+- Optic neuritis
+- Diplopia
+- Nystagmus
+- Visual field defects
+- Internuclear ophthalmoplegia
+
+Cognitive Symptoms:
+- Memory problems
+- Executive dysfunction
+- Processing speed reduction
+- Attention difficulties
+- Word-finding problems
+
+Bladder and Bowel:
+- Urinary urgency and frequency
+- Incontinence
+- Retention
+- Constipation
+
+Other Symptoms:
+- Depression and anxiety
+- Sexual dysfunction
+- Sleep disorders
+- Heat sensitivity (Uhthoff's phenomenon)
+- Pseudobulbar affect
+
+Risk Factors:
+- Age (typically 20-40 years)
+- Female gender (3:1 ratio)
+- Northern latitude/vitamin D deficiency
+- Genetic factors (HLA-DRB1*15:01)
+- Smoking
+- Epstein-Barr virus infection
+- Obesity in adolescence
+
+Diagnosis:
+McDonald Criteria (2017):
+Requires evidence of:
+- Dissemination in space (multiple CNS locations)
+- Dissemination in time (lesions of different ages)
+- No better explanation for clinical picture
+
+MRI Findings:
+T2/FLAIR Lesions:
+- Periventricular
+- Cortical/juxtacortical
+- Infratentorial
+- Spinal cord
+
+Gadolinium Enhancement:
+- Active inflammation
+- Acute lesions
+- Evidence of disease activity
+
+Oligoclonal Bands:
+- CSF-specific oligoclonal bands
+- IgG synthesis in CNS
+- Present in 85-95% of MS patients
+
+Evoked Potentials:
+- Visual evoked potentials
+- Somatosensory evoked potentials
+- Brainstem auditory evoked potentials
+- Detect subclinical lesions
+
+Differential Diagnosis:
+- Neuromyelitis optica spectrum disorder
+- Acute disseminated encephalomyelitis
+- CNS vasculitis
+- Sarcoidosis
+- Behcet's disease
+- Lyme disease
+- Vitamin B12 deficiency
+- Mitochondrial disorders
+
+Treatment:
+Disease-Modifying Therapies (DMTs):
+Injectable Therapies:
+- Interferon beta-1a (Avonex, Rebif)
+- Interferon beta-1b (Betaseron)
+- Glatiramer acetate (Copaxone)
+- First-line therapies with moderate efficacy
+
+Oral Therapies:
+- Fingolimod (Gilenya)
+- Dimethyl fumarate (Tecfidera)
+- Teriflunomide (Aubagio)
+- Cladribine (Mavenclad)
+- Ozanimod (Zeposia)
+- Ponesimod (Ponvory)
+
+Infusion Therapies:
+- Natalizumab (Tysabri) - high efficacy, PML risk
+- Alemtuzumab (Lemtrada) - high efficacy, safety concerns
+- Ocrelizumab (Ocrevus) - approved for RRMS and PPMS
+- Rituximab (off-label)
+
+Treatment Selection:
+- Disease activity and severity
+- Patient preferences and lifestyle
+- Safety profile and monitoring requirements
+- Pregnancy plans
+- Comorbidities
+
+Acute Relapse Treatment:
+- High-dose corticosteroids (methylprednisolone)
+- Plasma exchange for severe relapses
+- Supportive care
+
+Symptomatic Treatment:
+Spasticity:
+- Baclofen
+- Tizanidine
+- Botulinum toxin
+- Intrathecal baclofen pump
+
+Fatigue:
+- Amantadine
+- Modafinil
+- Energy conservation
+- Exercise programs
+
+Neuropathic Pain:
+- Gabapentin
+- Pregabalin
+- Tricyclic antidepressants
+- Duloxetine
+
+Bladder Dysfunction:
+- Anticholinergics
+- Beta-3 agonists
+- Intermittent catheterization
+- Botulinum toxin
+
+Depression:
+- SSRIs
+- SNRIs
+- Cognitive behavioral therapy
+- Support groups
+
+Rehabilitation:
+Physical Therapy:
+- Gait training
+- Strengthening exercises
+- Balance training
+- Spasticity management
+
+Occupational Therapy:
+- Activities of daily living
+- Adaptive equipment
+- Fatigue management
+- Cognitive rehabilitation
+
+Speech Therapy:
+- Swallowing assessment
+- Communication strategies
+- Cognitive-communication therapy
+
+Monitoring and Follow-up:
+Clinical Assessment:
+- EDSS (Expanded Disability Status Scale)
+- Relapse rate
+- Disease progression
+- Quality of life measures
+
+MRI Monitoring:
+- Annual brain MRI
+- New or enlarging T2 lesions
+- Gadolinium-enhancing lesions
+- Brain atrophy measurements
+
+Laboratory Monitoring:
+- Complete blood count
+- Liver function tests
+- JCV antibody status
+- Vitamin D levels
+
+Prognosis:
+Favorable Factors:
+- Younger age at onset
+- Female gender
+- Relapsing-remitting course
+- Complete recovery from relapses
+- Longer time to second relapse
+
+Poor Prognostic Factors:
+- Male gender
+- Older age at onset
+- Progressive course from onset
+- Motor symptoms at onset
+- Multiple relapses in first year
+
+Long-term Outcomes:
+- 50% reach EDSS 6 (walking aid) in 15-20 years
+- 10% have benign course
+- Life expectancy reduced by 5-10 years
+- Quality of life significantly affected
+
+Pregnancy and MS:
+- Relapse rate decreases during pregnancy
+- Increased relapse risk postpartum
+- Most DMTs discontinued during pregnancy
+- Breastfeeding considerations
+- Genetic counseling
+
+Key Points:
+- Chronic autoimmune demyelinating disease
+- Diagnosis requires clinical and MRI evidence
+- Early treatment with DMTs improves outcomes
+- Multidisciplinary approach essential
+- Regular monitoring for disease activity
+- Symptomatic treatment improves quality of life
+- Pregnancy planning requires special considerations

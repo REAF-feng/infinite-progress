@@ -1,0 +1,35 @@
+Lung Cancer
+
+Overview:
+Lung cancer is a malignant tumor characterized by uncontrolled cell growth in lung tissues, strongly associated with smoking.
+
+Clinical Presentation:
+Common Symptoms:
+- Persistent cough
+- Hemoptysis
+- Chest pain
+- Dyspnea
+- Weight loss
+
+Diagnosis:
+Key Diagnostic Tests:
+- Chest X-ray
+- CT scan
+- PET scan
+- Biopsy
+- Molecular testing
+
+Treatment:
+Management Approaches:
+- Surgery
+- Chemotherapy
+- Radiation therapy
+- Targeted therapy
+- Immunotherapy
+
+Key Points:
+- Lung Cancer is an important medical condition requiring proper diagnosis and management
+- Early recognition and appropriate treatment can significantly improve patient outcomes
+- Regular follow-up and monitoring are essential for optimal care
+- Patient education and compliance with treatment recommendations are crucial
+- Multidisciplinary approach may be beneficial for comprehensive care

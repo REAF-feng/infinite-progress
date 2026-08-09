@@ -1,0 +1,512 @@
+{% extends "base.html" %} {% block title %}Medical Conditions - AI-Powered Database{% endblock %} {% block content %}
+<!-- Header Section -->
+<section class="py-20 px-4 sm:px-6 lg:px-8">
+	<div class="max-w-7xl mx-auto">
+		<!-- Page Header -->
+		<div
+			class="text-center mb-16"
+			data-aos="fade-up"
+		>
+			<div class="inline-flex items-center space-x-3 p-4 glass-effect rounded-2xl mb-6">
+				<div class="p-3 medical-gradient rounded-xl animate-pulse-slow">
+					<i class="fas fa-book-medical text-white text-xl"></i>
+				</div>
+				<span class="text-lg font-semibold text-gray-700 dark:text-gray-300">Comprehensive Medical Database</span>
+			</div>
+
+			<h1 class="text-5xl md:text-6xl font-bold text-gray-800 dark:text-white mb-6">
+				Medical <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Conditions</span>
+			</h1>
+
+			<p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+				Explore our comprehensive database of <span class="font-semibold text-blue-600 dark:text-blue-400">60+ medical conditions</span>
+				across all major specialties with detailed clinical information and AI-powered analysis.
+			</p>
+		</div>
+
+		<!-- Statistics Grid -->
+		<div
+			class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+			data-aos="fade-up"
+			data-aos-delay="200"
+		>
+			<div class="glass-effect rounded-2xl p-6 text-center hover-glow group">
+				<div
+					class="w-16 h-16 medical-gradient rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
+				>
+					<i class="fas fa-database text-2xl text-white"></i>
+				</div>
+				<div class="text-3xl font-bold text-blue-600 dark:text-blue-400">60+</div>
+				<div class="text-gray-600 dark:text-gray-400">Conditions</div>
+			</div>
+
+			<div class="glass-effect rounded-2xl p-6 text-center hover-glow group">
+				<div
+					class="w-16 h-16 success-gradient rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
+				>
+					<i class="fas fa-stethoscope text-2xl text-white"></i>
+				</div>
+				<div class="text-3xl font-bold text-green-600 dark:text-green-400">10+</div>
+				<div class="text-gray-600 dark:text-gray-400">Specialties</div>
+			</div>
+
+			<div class="glass-effect rounded-2xl p-6 text-center hover-glow group">
+				<div
+					class="w-16 h-16 warning-gradient rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
+				>
+					<i class="fas fa-brain text-2xl text-white"></i>
+				</div>
+				<div class="text-3xl font-bold text-purple-600 dark:text-purple-400">AI</div>
+				<div class="text-gray-600 dark:text-gray-400">Powered</div>
+			</div>
+
+			<div class="glass-effect rounded-2xl p-6 text-center hover-glow group">
+				<div
+					class="w-16 h-16 danger-gradient rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
+				>
+					<i class="fas fa-graduation-cap text-2xl text-white"></i>
+				</div>
+				<div class="text-3xl font-bold text-red-600 dark:text-red-400">EDU</div>
+				<div class="text-gray-600 dark:text-gray-400">Focused</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Medical Specialties Grid -->
+<section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900">
+	<div class="max-w-7xl mx-auto">
+		<!-- Section Header -->
+		<div
+			class="text-center mb-12"
+			data-aos="fade-up"
+		>
+			<h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+				Medical <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Specialties</span>
+			</h2>
+			<p class="text-lg text-gray-600 dark:text-gray-400">Comprehensive coverage across all major medical fields</p>
+		</div>
+
+		<!-- Specialties Grid -->
+		<div class="grid lg:grid-cols-2 gap-8">
+			<!-- Neurological Conditions -->
+			<div
+				class="glass-effect rounded-3xl overflow-hidden hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="100"
+			>
+				<div class="medical-gradient p-6 text-white">
+					<div class="flex items-center space-x-3">
+						<div class="p-3 bg-white/20 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+							<i class="fas fa-brain text-2xl"></i>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold">Neurological Conditions</h3>
+							<p class="text-blue-100">Brain, nervous system, and cognitive disorders</p>
+						</div>
+					</div>
+				</div>
+				<div class="p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+					<div class="grid grid-cols-2 gap-3">
+						<span class="px-3 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 rounded-lg text-sm font-medium"
+							>Alzheimer's Disease</span
+						>
+						<span class="px-3 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 rounded-lg text-sm font-medium"
+							>Parkinson's Disease</span
+						>
+						<span class="px-3 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 rounded-lg text-sm font-medium"
+							>Multiple Sclerosis</span
+						>
+						<span class="px-3 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 rounded-lg text-sm font-medium"
+							>Epilepsy</span
+						>
+						<span class="px-3 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 rounded-lg text-sm font-medium"
+							>Stroke</span
+						>
+						<span class="px-3 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 rounded-lg text-sm font-medium"
+							>Migraine</span
+						>
+						<span class="px-3 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 rounded-lg text-sm font-medium"
+							>Tension Headache</span
+						>
+						<span class="px-3 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 rounded-lg text-sm font-medium"
+							>Cluster Headache</span
+						>
+						<span class="px-3 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 rounded-lg text-sm font-medium"
+							>Meningitis</span
+						>
+						<span class="px-3 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 rounded-lg text-sm font-medium"
+							>Brain Tumor</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<!-- Cardiovascular Conditions -->
+			<div
+				class="glass-effect rounded-3xl overflow-hidden hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="200"
+			>
+				<div class="danger-gradient p-6 text-white">
+					<div class="flex items-center space-x-3">
+						<div class="p-3 bg-white/20 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+							<i class="fas fa-heartbeat text-2xl"></i>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold">Cardiovascular Conditions</h3>
+							<p class="text-pink-100">Heart and blood vessel disorders</p>
+						</div>
+					</div>
+				</div>
+				<div class="p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+					<div class="grid grid-cols-2 gap-3">
+						<span class="px-3 py-2 bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300 rounded-lg text-sm font-medium"
+							>Heart Failure</span
+						>
+						<span class="px-3 py-2 bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300 rounded-lg text-sm font-medium"
+							>Myocardial Infarction</span
+						>
+						<span class="px-3 py-2 bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300 rounded-lg text-sm font-medium"
+							>Hypertension</span
+						>
+						<span class="px-3 py-2 bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300 rounded-lg text-sm font-medium"
+							>Atrial Fibrillation</span
+						>
+						<span class="px-3 py-2 bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300 rounded-lg text-sm font-medium"
+							>Deep Vein Thrombosis</span
+						>
+						<span class="px-3 py-2 bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300 rounded-lg text-sm font-medium"
+							>Pulmonary Embolism</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<!-- Respiratory Conditions -->
+			<div
+				class="glass-effect rounded-3xl overflow-hidden hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="300"
+			>
+				<div class="warning-gradient p-6 text-white">
+					<div class="flex items-center space-x-3">
+						<div class="p-3 bg-white/20 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+							<i class="fas fa-lungs text-2xl"></i>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold">Respiratory Conditions</h3>
+							<p class="text-yellow-100">Lung and breathing disorders</p>
+						</div>
+					</div>
+				</div>
+				<div class="p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+					<div class="grid grid-cols-2 gap-3">
+						<span
+							class="px-3 py-2 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300 rounded-lg text-sm font-medium"
+							>COPD</span
+						>
+						<span
+							class="px-3 py-2 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300 rounded-lg text-sm font-medium"
+							>Asthma</span
+						>
+						<span
+							class="px-3 py-2 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300 rounded-lg text-sm font-medium"
+							>Pneumonia</span
+						>
+						<span
+							class="px-3 py-2 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300 rounded-lg text-sm font-medium"
+							>Tuberculosis</span
+						>
+						<span
+							class="px-3 py-2 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300 rounded-lg text-sm font-medium"
+							>Lung Cancer</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<!-- Endocrine Conditions -->
+			<div
+				class="glass-effect rounded-3xl overflow-hidden hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="400"
+			>
+				<div class="success-gradient p-6 text-white">
+					<div class="flex items-center space-x-3">
+						<div class="p-3 bg-white/20 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+							<i class="fas fa-prescription-bottle-alt text-2xl"></i>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold">Endocrine Conditions</h3>
+							<p class="text-green-100">Hormonal and metabolic disorders</p>
+						</div>
+					</div>
+				</div>
+				<div class="p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+					<div class="grid grid-cols-2 gap-3">
+						<span class="px-3 py-2 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 rounded-lg text-sm font-medium"
+							>Diabetes Mellitus</span
+						>
+						<span class="px-3 py-2 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 rounded-lg text-sm font-medium"
+							>Hypothyroidism</span
+						>
+						<span class="px-3 py-2 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 rounded-lg text-sm font-medium"
+							>Hyperthyroidism</span
+						>
+						<span class="px-3 py-2 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 rounded-lg text-sm font-medium"
+							>Thyroid Cancer</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<!-- Gastrointestinal Conditions -->
+			<div
+				class="glass-effect rounded-3xl overflow-hidden hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="500"
+			>
+				<div class="medical-gradient p-6 text-white">
+					<div class="flex items-center space-x-3">
+						<div class="p-3 bg-white/20 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+							<i class="fas fa-stomach text-2xl"></i>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold">Gastrointestinal Conditions</h3>
+							<p class="text-blue-100">Digestive system disorders</p>
+						</div>
+					</div>
+				</div>
+				<div class="p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+					<div class="grid grid-cols-2 gap-3">
+						<span
+							class="px-3 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300 rounded-lg text-sm font-medium"
+							>GERD</span
+						>
+						<span
+							class="px-3 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300 rounded-lg text-sm font-medium"
+							>IBD</span
+						>
+						<span
+							class="px-3 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300 rounded-lg text-sm font-medium"
+							>Peptic Ulcer Disease</span
+						>
+						<span
+							class="px-3 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300 rounded-lg text-sm font-medium"
+							>Hepatitis</span
+						>
+						<span
+							class="px-3 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300 rounded-lg text-sm font-medium"
+							>Cirrhosis</span
+						>
+						<span
+							class="px-3 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300 rounded-lg text-sm font-medium"
+							>Pancreatitis</span
+						>
+						<span
+							class="px-3 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300 rounded-lg text-sm font-medium"
+							>Gallbladder Disease</span
+						>
+						<span
+							class="px-3 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300 rounded-lg text-sm font-medium"
+							>Appendicitis</span
+						>
+						<span
+							class="px-3 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300 rounded-lg text-sm font-medium"
+							>Diverticulitis</span
+						>
+						<span
+							class="px-3 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300 rounded-lg text-sm font-medium"
+							>Celiac Disease</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<!-- Oncology Conditions -->
+			<div
+				class="glass-effect rounded-3xl overflow-hidden hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="600"
+			>
+				<div class="bg-gradient-to-br from-purple-600 to-pink-600 p-6 text-white">
+					<div class="flex items-center space-x-3">
+						<div class="p-3 bg-white/20 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+							<i class="fas fa-ribbon text-2xl"></i>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold">Oncology Conditions</h3>
+							<p class="text-purple-100">Cancer and tumor disorders</p>
+						</div>
+					</div>
+				</div>
+				<div class="p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+					<div class="grid grid-cols-2 gap-3">
+						<span
+							class="px-3 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300 rounded-lg text-sm font-medium"
+							>Breast Cancer</span
+						>
+						<span
+							class="px-3 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300 rounded-lg text-sm font-medium"
+							>Lung Cancer</span
+						>
+						<span
+							class="px-3 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300 rounded-lg text-sm font-medium"
+							>Colorectal Cancer</span
+						>
+						<span
+							class="px-3 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300 rounded-lg text-sm font-medium"
+							>Prostate Cancer</span
+						>
+						<span
+							class="px-3 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300 rounded-lg text-sm font-medium"
+							>Skin Cancer</span
+						>
+						<span
+							class="px-3 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300 rounded-lg text-sm font-medium"
+							>Pancreatic Cancer</span
+						>
+						<span
+							class="px-3 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300 rounded-lg text-sm font-medium"
+							>Liver Cancer</span
+						>
+						<span
+							class="px-3 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300 rounded-lg text-sm font-medium"
+							>Kidney Cancer</span
+						>
+						<span
+							class="px-3 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300 rounded-lg text-sm font-medium"
+							>Leukemia</span
+						>
+						<span
+							class="px-3 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300 rounded-lg text-sm font-medium"
+							>Lymphoma</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Information Section -->
+<section class="py-16 px-4 sm:px-6 lg:px-8">
+	<div class="max-w-4xl mx-auto">
+		<div
+			class="glass-effect rounded-3xl p-8 hover-glow"
+			data-aos="fade-up"
+		>
+			<div class="flex items-start space-x-6">
+				<div class="flex-shrink-0">
+					<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+						<i class="fas fa-info-circle text-2xl text-white"></i>
+					</div>
+				</div>
+				<div class="flex-1">
+					<h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">How to Use This Database</h3>
+					<p class="text-gray-600 dark:text-gray-400 mb-6 text-lg leading-relaxed">
+						Each condition in our comprehensive database includes detailed clinical information designed for educational purposes and
+						AI-powered analysis.
+					</p>
+
+					<div class="grid md:grid-cols-2 gap-6">
+						<div class="space-y-4">
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
+									<i class="fas fa-clipboard-list text-blue-600 dark:text-blue-400"></i>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-800 dark:text-white">Symptoms & Presentations</h4>
+									<p class="text-sm text-gray-600 dark:text-gray-400">Detailed symptom patterns and clinical signs</p>
+								</div>
+							</div>
+
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-green-100 dark:bg-green-900/50 rounded-lg flex items-center justify-center">
+									<i class="fas fa-search text-green-600 dark:text-green-400"></i>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-800 dark:text-white">Diagnostic Criteria</h4>
+									<p class="text-sm text-gray-600 dark:text-gray-400">Evidence-based diagnostic guidelines</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="space-y-4">
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-yellow-100 dark:bg-yellow-900/50 rounded-lg flex items-center justify-center">
+									<i class="fas fa-exclamation-triangle text-yellow-600 dark:text-yellow-400"></i>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-800 dark:text-white">Risk Factors</h4>
+									<p class="text-sm text-gray-600 dark:text-gray-400">Patient characteristics that increase disease likelihood</p>
+								</div>
+							</div>
+
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center">
+									<i class="fas fa-pills text-purple-600 dark:text-purple-400"></i>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-800 dark:text-white">Management Approaches</h4>
+									<p class="text-sm text-gray-600 dark:text-gray-400">Treatment options and clinical strategies</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="mt-8 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-xl border border-blue-200 dark:border-blue-800">
+						<p class="text-blue-800 dark:text-blue-300 font-medium">
+							💡 <strong>Pro Tip:</strong> Use our <span class="font-semibold">Symptom Analysis</span> feature to get AI-powered
+							differential diagnosis based on this comprehensive medical knowledge base of 60+ conditions.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-16 px-4 sm:px-6 lg:px-8">
+	<div class="max-w-4xl mx-auto text-center">
+		<div
+			class="space-y-8"
+			data-aos="fade-up"
+		>
+			<h2 class="text-4xl font-bold text-gray-800 dark:text-white">
+				Ready to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Explore?</span>
+			</h2>
+			<p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+				Put our comprehensive medical database to work with AI-powered symptom analysis and differential diagnosis.
+			</p>
+
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a
+					href="{{ url_for('index') }}"
+					class="group px-8 py-4 medical-gradient text-white rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover-glow flex items-center justify-center space-x-3"
+				>
+					<div class="p-2 bg-white/20 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+						<i class="fas fa-stethoscope group-hover:rotate-12 transition-transform duration-300"></i>
+					</div>
+					<span>Try Symptom Analysis</span>
+					<i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+				</a>
+
+				<a
+					href="{{ url_for('about') }}"
+					class="group px-8 py-4 glass-effect text-gray-700 dark:text-gray-300 rounded-2xl font-bold text-lg hover:bg-white/20 dark:hover:bg-gray-800/50 transition-all duration-300 flex items-center justify-center space-x-3"
+				>
+					<div
+						class="p-2 bg-gray-100 dark:bg-gray-700 rounded-xl group-hover:bg-gray-200 dark:group-hover:bg-gray-600 transition-colors duration-300"
+					>
+						<i class="fas fa-info-circle group-hover:scale-110 transition-transform duration-300"></i>
+					</div>
+					<span>Learn More</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

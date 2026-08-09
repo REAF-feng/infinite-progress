@@ -1,0 +1,207 @@
+Parkinson's Disease
+
+Overview:
+Parkinson's disease is a progressive neurodegenerative disorder affecting movement, characterized by tremor, rigidity, bradykinesia, and postural instability. It results from the loss of dopamine-producing neurons in the substantia nigra.
+
+Pathophysiology:
+- Degeneration of dopaminergic neurons in substantia nigra pars compacta
+- Formation of Lewy bodies containing alpha-synuclein protein
+- Disruption of dopamine pathways in basal ganglia
+- Progressive loss of motor control
+- Non-motor symptoms due to widespread neurodegeneration
+
+Clinical Presentation:
+Motor Symptoms (Cardinal Features):
+- Resting tremor (4-6 Hz, "pill-rolling")
+- Rigidity (cogwheel or lead-pipe)
+- Bradykinesia (slowness of movement)
+- Postural instability (later stage)
+
+Early Motor Signs:
+- Reduced arm swing while walking
+- Micrographia (small handwriting)
+- Hypophonia (soft speech)
+- Masked facies (reduced facial expression)
+- Shuffling gait
+
+Non-Motor Symptoms:
+Neuropsychiatric:
+- Depression and anxiety
+- Apathy
+- Cognitive impairment
+- Hallucinations (visual)
+- Sleep disorders (REM sleep behavior disorder)
+
+Autonomic:
+- Constipation
+- Orthostatic hypotension
+- Urinary dysfunction
+- Sexual dysfunction
+- Excessive sweating
+
+Sensory:
+- Loss of smell (anosmia)
+- Pain and sensory symptoms
+- Restless leg syndrome
+
+Sleep:
+- Insomnia
+- Excessive daytime sleepiness
+- REM sleep behavior disorder
+- Sleep fragmentation
+
+Risk Factors:
+- Age (most important risk factor)
+- Male gender
+- Family history/genetic factors
+- Environmental toxins (pesticides, heavy metals)
+- Head trauma
+- Rural living
+- Well water consumption
+
+Protective Factors:
+- Caffeine consumption
+- Smoking (paradoxical)
+- Uric acid levels
+- Physical exercise
+
+Diagnosis:
+Clinical Criteria:
+- Presence of bradykinesia plus at least one of:
+  * Resting tremor
+  * Rigidity
+  * Response to dopaminergic therapy
+
+Supportive Features:
+- Unilateral onset
+- Progressive disorder
+- Persistent asymmetry
+- Excellent response to levodopa
+- Levodopa-induced dyskinesia
+- Clinical course >10 years
+
+Imaging:
+- DaTscan (dopamine transporter SPECT) - may help in uncertain cases
+- MRI to exclude other causes
+- No routine imaging required for typical cases
+
+Laboratory Tests:
+- No specific tests for Parkinson's disease
+- Tests to exclude other conditions
+
+Differential Diagnosis:
+- Essential tremor
+- Drug-induced parkinsonism
+- Vascular parkinsonism
+- Progressive supranuclear palsy
+- Multiple system atrophy
+- Corticobasal degeneration
+- Normal pressure hydrocephalus
+- Wilson's disease
+
+Treatment:
+Pharmacological:
+Dopamine Replacement:
+- Levodopa/carbidopa (gold standard)
+- Immediate-release and controlled-release formulations
+- Monitor for motor complications
+
+Dopamine Agonists:
+- Pramipexole, ropinirole, rotigotine
+- May delay motor complications
+- Risk of impulse control disorders
+
+MAO-B Inhibitors:
+- Selegiline, rasagiline, safinamide
+- Mild symptomatic benefit
+- May have neuroprotective effects
+
+COMT Inhibitors:
+- Entacapone, tolcapone
+- Used with levodopa to extend duration
+- Reduce wearing-off symptoms
+
+Anticholinergics:
+- Benztropine, trihexyphenidyl
+- Mainly for tremor in younger patients
+- Avoid in elderly due to cognitive effects
+
+Amantadine:
+- For dyskinesia
+- Mild anti-parkinsonian effects
+
+Surgical Treatment:
+Deep Brain Stimulation (DBS):
+- Subthalamic nucleus or globus pallidus
+- For patients with motor complications
+- Reduces medication requirements
+- Improves quality of life
+
+Non-Pharmacological Treatment:
+Physical Therapy:
+- Gait training
+- Balance exercises
+- Flexibility and strength training
+- LSVT BIG program
+
+Speech Therapy:
+- LSVT LOUD program
+- Voice amplification
+- Swallowing assessment
+
+Occupational Therapy:
+- Activities of daily living
+- Home safety assessment
+- Adaptive equipment
+
+Exercise:
+- Regular aerobic exercise
+- Dancing, tai chi, yoga
+- May be neuroprotective
+
+Complications:
+Motor Complications:
+- Wearing-off phenomenon
+- On-off fluctuations
+- Dyskinesia
+- Freezing episodes
+
+Non-Motor Complications:
+- Dementia (30-40% develop)
+- Depression
+- Psychosis
+- Autonomic dysfunction
+- Sleep disorders
+
+Prognosis:
+- Variable progression rate
+- Life expectancy may be reduced
+- Quality of life significantly affected
+- Motor complications develop in most patients
+- Non-motor symptoms become prominent in later stages
+
+Management Strategies:
+Early Disease:
+- Exercise and lifestyle modifications
+- Consider dopamine agonist or MAO-B inhibitor
+- Delay levodopa if possible
+
+Moderate Disease:
+- Levodopa/carbidopa
+- Add adjunctive medications as needed
+- Monitor for complications
+
+Advanced Disease:
+- Optimize medication regimens
+- Consider DBS
+- Manage non-motor symptoms
+- Palliative care approach
+
+Key Points:
+- Clinical diagnosis based on motor features
+- Excellent response to levodopa is diagnostic hallmark
+- Early treatment focuses on symptom control
+- Motor complications are inevitable with disease progression
+- Non-motor symptoms significantly impact quality of life
+- Multidisciplinary approach essential
+- Exercise may be disease-modifying

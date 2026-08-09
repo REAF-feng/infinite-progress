@@ -1,0 +1,304 @@
+Gastroesophageal Reflux Disease (GERD)
+
+Overview:
+GERD is a chronic digestive disorder characterized by the abnormal reflux of gastric contents into the esophagus, causing symptoms and/or complications. It occurs when the lower esophageal sphincter fails to function properly.
+
+Pathophysiology:
+- Lower esophageal sphincter (LES) dysfunction
+- Impaired esophageal clearance
+- Delayed gastric emptying
+- Increased gastric acid production
+- Hiatal hernia (often associated)
+- Mucosal defense mechanisms failure
+
+Mechanisms of Reflux:
+Transient LES Relaxations:
+- Most common mechanism
+- Inappropriate LES relaxation
+- Not triggered by swallowing
+- Allows gastric contents to reflux
+
+Mechanical Factors:
+- Increased intra-abdominal pressure
+- Anatomical abnormalities
+- Hiatal hernia
+- Pregnancy
+
+Chemical Factors:
+- Gastric acid
+- Pepsin
+- Bile acids
+- Pancreatic enzymes
+
+Clinical Presentation:
+Typical Symptoms:
+Heartburn:
+- Burning sensation in chest
+- Usually postprandial
+- Worse when lying down
+- Relieved by antacids
+
+Regurgitation:
+- Effortless return of gastric contents
+- Sour or bitter taste
+- May occur without warning
+- Can lead to aspiration
+
+Atypical Symptoms:
+Respiratory:
+- Chronic cough
+- Asthma exacerbation
+- Recurrent pneumonia
+- Laryngitis and hoarseness
+
+Cardiac:
+- Non-cardiac chest pain
+- May mimic angina
+- Can be severe and prolonged
+
+Oral/Dental:
+- Dental erosions
+- Halitosis
+- Oral ulcers
+
+Laryngeal:
+- Chronic throat clearing
+- Globus sensation
+- Vocal cord irritation
+
+Risk Factors:
+Anatomical:
+- Hiatal hernia
+- Pregnancy
+- Obesity
+- Scleroderma
+
+Lifestyle:
+- Smoking
+- Alcohol consumption
+- Large meals
+- Late evening meals
+- Certain foods (spicy, acidic, fatty)
+- Carbonated beverages
+
+Medications:
+- Calcium channel blockers
+- Beta-blockers
+- Nitrates
+- Theophylline
+- Anticholinergics
+- NSAIDs
+
+Diagnosis:
+Clinical Diagnosis:
+- Based on typical symptoms
+- Response to acid suppression therapy
+- No testing needed for uncomplicated cases
+
+Empirical PPI Trial:
+- 2-4 weeks of proton pump inhibitor
+- Symptom improvement suggests GERD
+- Cost-effective initial approach
+
+Upper Endoscopy:
+Indications:
+- Alarm symptoms (dysphagia, weight loss, bleeding)
+- Age >50 with new symptoms
+- Failed PPI therapy
+- Chronic symptoms (>5 years)
+
+Findings:
+- Erosive esophagitis (30% of patients)
+- Barrett's esophagus
+- Strictures
+- Normal appearing mucosa (70% of patients)
+
+Los Angeles Classification (Esophagitis):
+- Grade A: Mucosal breaks <5mm
+- Grade B: Mucosal breaks >5mm, not circumferential
+- Grade C: Circumferential mucosal breaks
+- Grade D: Extensive mucosal breaks (>75% circumference)
+
+pH Monitoring:
+24-hour pH Study:
+- Gold standard for GERD diagnosis
+- Measures acid exposure time
+- Correlates symptoms with reflux events
+
+Wireless pH Monitoring:
+- 48-96 hour monitoring
+- Better patient tolerance
+- More comprehensive data
+
+Impedance-pH Monitoring:
+- Detects non-acid reflux
+- Measures liquid and gas reflux
+- Useful for PPI-refractory symptoms
+
+Barium Swallow:
+- Limited diagnostic value
+- May show hiatal hernia
+- Assess for structural abnormalities
+- Not routinely recommended
+
+Esophageal Manometry:
+- Assesses LES pressure and function
+- Evaluates esophageal motility
+- Required before anti-reflux surgery
+
+Differential Diagnosis:
+- Functional dyspepsia
+- Peptic ulcer disease
+- Eosinophilic esophagitis
+- Infectious esophagitis
+- Coronary artery disease
+- Esophageal motility disorders
+- Biliary tract disease
+
+Treatment:
+Lifestyle Modifications:
+Dietary Changes:
+- Avoid trigger foods (chocolate, caffeine, alcohol, spicy foods)
+- Smaller, more frequent meals
+- Avoid eating 2-3 hours before bedtime
+- Weight loss if overweight
+
+Positional Changes:
+- Elevate head of bed 6-8 inches
+- Sleep on left side
+- Avoid lying down after meals
+
+Other Modifications:
+- Smoking cessation
+- Avoid tight clothing
+- Medication review
+- Stress reduction
+
+Pharmacological Treatment:
+Antacids:
+- Calcium carbonate, aluminum hydroxide
+- Rapid but short-term relief
+- For occasional symptoms
+- Can affect absorption of other medications
+
+H2 Receptor Antagonists:
+- Ranitidine, famotidine, cimetidine
+- Moderate acid suppression
+- Effective for mild-moderate symptoms
+- Tolerance may develop
+
+Proton Pump Inhibitors (PPIs):
+- Omeprazole, lansoprazole, pantoprazole, esomeprazole
+- Most effective acid suppression
+- First-line therapy for erosive esophagitis
+- Take 30-60 minutes before meals
+
+PPI Dosing:
+- Standard dose for 4-8 weeks initially
+- Maintenance therapy often needed
+- Step-down approach when possible
+- Twice-daily dosing for severe disease
+
+Prokinetic Agents:
+- Metoclopramide (limited use due to side effects)
+- Domperidone (not available in US)
+- May help with gastroparesis-related GERD
+
+Surgical Treatment:
+Nissen Fundoplication:
+- 360-degree wrap around esophagus
+- Laparoscopic approach preferred
+- Effective for acid and non-acid reflux
+- Durable long-term results
+
+Partial Fundoplication:
+- Toupet (270-degree) or Dor (180-degree)
+- Lower dysphagia rates
+- May be less durable
+
+Indications for Surgery:
+- Failed medical therapy
+- Young patients requiring long-term PPIs
+- Large hiatal hernia with symptoms
+- Extraesophageal symptoms
+- Patient preference
+
+LINX Device:
+- Magnetic sphincter augmentation
+- Preserves ability to belch and vomit
+- Less invasive than fundoplication
+- Limited long-term data
+
+Endoscopic Therapies:
+- Radiofrequency ablation (Stretta)
+- Endoscopic plication
+- Injection therapy
+- Limited evidence for effectiveness
+
+Complications:
+Barrett's Esophagus:
+- Intestinal metaplasia of esophageal epithelium
+- Increased risk of adenocarcinoma
+- Requires surveillance endoscopy
+- More common in white males
+
+Esophageal Stricture:
+- Narrowing due to chronic inflammation
+- Presents with dysphagia
+- May require dilation
+- Recurrence common
+
+Aspiration Pneumonia:
+- Due to regurgitation
+- More common at night
+- Can be life-threatening
+- Prevention important
+
+Dental Erosions:
+- Chronic acid exposure
+- Affects posterior teeth
+- May be irreversible
+- Preventive measures important
+
+Special Populations:
+Pregnancy:
+- Common in pregnancy (45-85%)
+- Related to hormonal changes and pressure
+- Most medications contraindicated
+- Lifestyle modifications primary treatment
+
+Pediatric GERD:
+- Often presents with different symptoms
+- Failure to thrive, respiratory symptoms
+- Conservative management preferred
+- Surgery rarely indicated
+
+Elderly:
+- Atypical presentations common
+- Higher complication rates
+- Medication interactions important
+- Careful monitoring needed
+
+Prognosis:
+- Chronic condition requiring long-term management
+- Most patients respond well to treatment
+- Lifestyle modifications provide benefit
+- Complications preventable with proper treatment
+- Quality of life significantly improved with therapy
+
+Monitoring:
+- Symptom assessment
+- Medication adherence
+- Surveillance for complications
+- Endoscopy for Barrett's esophagus
+- Consider step-down therapy when appropriate
+
+Key Points:
+- Common disorder affecting quality of life
+- Clinical diagnosis in typical cases
+- PPIs are most effective medical therapy
+- Lifestyle modifications important adjunct
+- Surgery effective for selected patients
+- Complications require specialized management
+- Long-term management usually required
+- Patient education essential for success

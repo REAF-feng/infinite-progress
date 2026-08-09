@@ -1,0 +1,821 @@
+{% extends "base.html" %} {% block title %}Medical Diagnosis Assistant - AI-Powered DDx{% endblock %} {% block content %}
+<!-- Hero Section with Animated Background -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+	<!-- Animated Background Gradient -->
+	<div class="absolute inset-0 gradient-bg animate-gradient"></div>
+
+	<!-- Floating Medical Icons -->
+	<div class="floating-icons">
+		<i
+			class="floating-icon fas fa-stethoscope"
+			style="top: 10%; left: 10%; animation-delay: 0s"
+		></i>
+		<i
+			class="floating-icon fas fa-heart"
+			style="top: 20%; right: 20%; animation-delay: 2s"
+		></i>
+		<i
+			class="floating-icon fas fa-brain"
+			style="bottom: 30%; left: 15%; animation-delay: 4s"
+		></i>
+		<i
+			class="floating-icon fas fa-pills"
+			style="top: 50%; right: 10%; animation-delay: 6s"
+		></i>
+		<i
+			class="floating-icon fas fa-dna"
+			style="bottom: 20%; right: 30%; animation-delay: 8s"
+		></i>
+	</div>
+
+	<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+		<div
+			class="space-y-8"
+			data-aos="fade-up"
+		>
+			<!-- Main Title with Animation -->
+			<div class="space-y-4">
+				<div
+					class="inline-flex items-center space-x-3 p-4 glass-effect rounded-2xl text-white mb-6"
+					data-aos="zoom-in"
+					data-aos-delay="200"
+				>
+					<div class="p-3 bg-white/20 rounded-xl animate-pulse-slow">
+						<i class="fas fa-brain text-2xl"></i>
+					</div>
+					<span class="text-lg font-semibold">AI-Powered Medical Intelligence</span>
+				</div>
+
+				<h1
+					class="text-5xl md:text-7xl font-bold text-white text-shadow animate-float"
+					data-aos="fade-up"
+					data-aos-delay="400"
+				>
+					Medical <span class="text-yellow-300">DDx</span>
+					<br />
+					<span class="text-3xl md:text-5xl text-blue-200">Assistant</span>
+				</h1>
+
+				<p
+					class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed"
+					data-aos="fade-up"
+					data-aos-delay="600"
+				>
+					Advanced differential diagnosis powered by artificial intelligence.
+					<span class="text-yellow-300 font-semibold">Analyze symptoms</span> and explore
+					<span class="text-pink-300 font-semibold">60+ medical conditions</span> with comprehensive clinical insights.
+				</p>
+			</div>
+
+			<!-- CTA Buttons -->
+			<div
+				class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+				data-aos="fade-up"
+				data-aos-delay="800"
+			>
+				<a
+					href="#analysis"
+					class="group px-8 py-4 bg-white text-blue-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover-glow flex items-center space-x-3"
+				>
+					<div class="p-2 bg-blue-100 rounded-xl group-hover:bg-blue-200 transition-colors duration-300">
+						<i class="fas fa-stethoscope group-hover:rotate-12 transition-transform duration-300"></i>
+					</div>
+					<span>Start Analysis</span>
+					<i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+				</a>
+
+				<a
+					href="{{ url_for('diseases') }}"
+					class="group px-8 py-4 glass-effect text-white rounded-2xl font-bold text-lg hover:bg-white/20 transition-all duration-300 flex items-center space-x-3"
+				>
+					<div class="p-2 bg-white/20 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+						<i class="fas fa-book-medical group-hover:scale-110 transition-transform duration-300"></i>
+					</div>
+					<span>Browse Diseases</span>
+				</a>
+			</div>
+
+			<!-- Stats -->
+			<div
+				class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
+				data-aos="fade-up"
+				data-aos-delay="1000"
+			>
+				<div class="glass-effect rounded-2xl p-6 text-center hover-glow group">
+					<div class="text-3xl font-bold text-white group-hover:scale-110 transition-transform duration-300">60+</div>
+					<div class="text-blue-200">Diseases</div>
+				</div>
+				<div class="glass-effect rounded-2xl p-6 text-center hover-glow group">
+					<div class="text-3xl font-bold text-white group-hover:scale-110 transition-transform duration-300">AI</div>
+					<div class="text-blue-200">Powered</div>
+				</div>
+				<div class="glass-effect rounded-2xl p-6 text-center hover-glow group">
+					<div class="text-3xl font-bold text-white group-hover:scale-110 transition-transform duration-300">24/7</div>
+					<div class="text-blue-200">Available</div>
+				</div>
+				<div class="glass-effect rounded-2xl p-6 text-center hover-glow group">
+					<div class="text-3xl font-bold text-white group-hover:scale-110 transition-transform duration-300">∞</div>
+					<div class="text-blue-200">Learning</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scroll Indicator -->
+	<div
+		class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+		data-aos="fade-up"
+		data-aos-delay="1200"
+	>
+		<a
+			href="#analysis"
+			class="text-white/70 hover:text-white transition-colors duration-300"
+		>
+			<i class="fas fa-chevron-down text-2xl"></i>
+		</a>
+	</div>
+</section>
+
+<!-- Analysis Section -->
+<section
+	id="analysis"
+	class="py-20 px-4 sm:px-6 lg:px-8"
+>
+	<div class="max-w-4xl mx-auto">
+		<!-- Section Header -->
+		<div
+			class="text-center mb-16"
+			data-aos="fade-up"
+		>
+			<div class="inline-flex items-center space-x-3 p-4 glass-effect rounded-2xl mb-6">
+				<div class="p-3 medical-gradient rounded-xl animate-pulse-slow">
+					<i class="fas fa-search-plus text-white"></i>
+				</div>
+				<span class="text-lg font-semibold text-gray-700 dark:text-gray-300">Symptom Analysis Engine</span>
+			</div>
+			<h2 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+				Describe Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Symptoms</span>
+			</h2>
+			<p class="text-xl text-gray-600 dark:text-gray-400">Our AI will analyze the symptoms and provide comprehensive differential diagnosis</p>
+		</div>
+
+		<!-- Analysis Form -->
+		<div
+			class="glass-effect rounded-3xl p-8 shadow-2xl hover-glow"
+			data-aos="fade-up"
+			data-aos-delay="200"
+		>
+			<form
+				id="symptomForm"
+				class="space-y-8"
+			>
+				<!-- Symptom Input -->
+				<div class="space-y-4">
+					<label
+						for="symptoms"
+						class="flex items-center space-x-3 text-lg font-semibold text-gray-700 dark:text-gray-300"
+					>
+						<div class="p-2 medical-gradient rounded-xl">
+							<i class="fas fa-clipboard-list text-white"></i>
+						</div>
+						<span>Patient Symptoms</span>
+					</label>
+
+					<div class="relative">
+						<textarea
+							id="symptoms"
+							name="symptoms"
+							rows="8"
+							class="w-full p-6 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 transition-all duration-300 resize-none"
+							placeholder="Enter detailed symptom description here...
+
+Example: 35-year-old patient presents with severe headache, photophobia, nausea, and vomiting that started 2 hours ago. Pain is throbbing and located on the right side of the head."
+							required
+						></textarea>
+
+						<!-- Character Counter -->
+						<div
+							class="absolute bottom-3 right-3 text-sm text-gray-500 dark:text-gray-400"
+							id="charCounter"
+						>
+							0 characters
+						</div>
+					</div>
+
+					<!-- Tips -->
+					<div class="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-xl border border-blue-200 dark:border-blue-800">
+						<div class="flex items-start space-x-3">
+							<div class="p-2 bg-blue-100 dark:bg-blue-800 rounded-lg mt-1">
+								<i class="fas fa-lightbulb text-blue-600 dark:text-blue-400"></i>
+							</div>
+							<div>
+								<h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-2">💡 Pro Tips for Better Analysis:</h4>
+								<ul class="text-sm text-blue-700 dark:text-blue-400 space-y-1">
+									<li>• Include patient age, gender, and relevant medical history</li>
+									<li>• Describe symptom duration, severity, and progression</li>
+									<li>• Mention location, quality, and associated symptoms</li>
+									<li>• Add any relevant medications or recent changes</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Submit Button -->
+				<button
+					type="submit"
+					id="analyzeBtn"
+					class="w-full py-6 medical-gradient rounded-2xl text-white font-bold text-xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 group hover-glow disabled:opacity-50 disabled:cursor-not-allowed"
+				>
+					<div class="flex items-center justify-center space-x-3">
+						<div class="p-2 bg-white/20 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+							<i class="fas fa-stethoscope group-hover:rotate-12 transition-transform duration-300"></i>
+						</div>
+						<span>Analyze Symptoms</span>
+						<i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+					</div>
+				</button>
+			</form>
+		</div>
+	</div>
+</section>
+
+<!-- Results Section -->
+<section
+	id="resultsContainer"
+	class="py-20 px-4 sm:px-6 lg:px-8 hidden"
+>
+	<div class="max-w-6xl mx-auto">
+		<div
+			class="glass-effect rounded-3xl shadow-2xl overflow-hidden"
+			data-aos="fade-up"
+		>
+			<!-- Results Header -->
+			<div class="success-gradient p-8 text-white">
+				<div class="flex items-center space-x-4">
+					<div class="p-4 bg-white/20 rounded-2xl animate-pulse-slow">
+						<i class="fas fa-diagnoses text-3xl"></i>
+					</div>
+					<div>
+						<h3 class="text-3xl font-bold">Analysis Complete</h3>
+						<p class="text-green-100">AI-Generated Differential Diagnosis</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Results Content -->
+			<div class="p-8 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+				<div
+					id="analysisResults"
+					class="prose prose-lg max-w-none dark:prose-invert"
+				>
+					<!-- Results will be populated here -->
+				</div>
+
+				<!-- Action Buttons -->
+				<div class="flex flex-wrap gap-4 mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+					<button
+						onclick="copyResults()"
+						class="px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors duration-300 flex items-center space-x-2"
+					>
+						<i class="fas fa-copy"></i>
+						<span>Copy Results</span>
+					</button>
+					<button
+						onclick="printResults()"
+						class="px-6 py-3 bg-gray-600 text-white rounded-xl hover:bg-gray-700 transition-colors duration-300 flex items-center space-x-2"
+					>
+						<i class="fas fa-print"></i>
+						<span>Print</span>
+					</button>
+					<button
+						onclick="newAnalysis()"
+						class="px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-colors duration-300 flex items-center space-x-2"
+					>
+						<i class="fas fa-plus"></i>
+						<span>New Analysis</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Features Section -->
+<section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<!-- Section Header -->
+		<div
+			class="text-center mb-16"
+			data-aos="fade-up"
+		>
+			<h2 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+				Powerful <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Features</span>
+			</h2>
+			<p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+				Advanced medical AI capabilities designed for comprehensive clinical analysis and educational excellence
+			</p>
+		</div>
+
+		<!-- Features Grid -->
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<!-- Feature 1 -->
+			<div
+				class="glass-effect rounded-3xl p-8 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="100"
+			>
+				<div class="text-center">
+					<div
+						class="w-20 h-20 medical-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-brain text-3xl text-white"></i>
+					</div>
+					<h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">AI-Powered Analysis</h3>
+					<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+						Advanced machine learning algorithms trained on comprehensive medical literature for accurate differential diagnosis and
+						clinical reasoning.
+					</p>
+				</div>
+			</div>
+
+			<!-- Feature 2 -->
+			<div
+				class="glass-effect rounded-3xl p-8 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="200"
+			>
+				<div class="text-center">
+					<div
+						class="w-20 h-20 success-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-database text-3xl text-white"></i>
+					</div>
+					<h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Comprehensive Database</h3>
+					<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+						Extensive medical knowledge base covering 60+ disease categories with detailed clinical information and diagnostic criteria.
+					</p>
+				</div>
+			</div>
+
+			<!-- Feature 3 -->
+			<div
+				class="glass-effect rounded-3xl p-8 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="300"
+			>
+				<div class="text-center">
+					<div
+						class="w-20 h-20 warning-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-shield-alt text-3xl text-white"></i>
+					</div>
+					<h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Educational Focus</h3>
+					<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+						Designed for learning and education with clear explanations, clinical reasoning, and comprehensive medical insights.
+					</p>
+				</div>
+			</div>
+
+			<!-- Feature 4 -->
+			<div
+				class="glass-effect rounded-3xl p-8 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="400"
+			>
+				<div class="text-center">
+					<div
+						class="w-20 h-20 danger-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-clock text-3xl text-white"></i>
+					</div>
+					<h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Real-Time Analysis</h3>
+					<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+						Instant symptom analysis and diagnosis generation with fast processing and immediate results for efficient workflow.
+					</p>
+				</div>
+			</div>
+
+			<!-- Feature 5 -->
+			<div
+				class="glass-effect rounded-3xl p-8 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="500"
+			>
+				<div class="text-center">
+					<div
+						class="w-20 h-20 medical-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-mobile-alt text-3xl text-white"></i>
+					</div>
+					<h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Mobile Responsive</h3>
+					<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+						Fully responsive design that works seamlessly across all devices - desktop, tablet, and mobile for accessibility anywhere.
+					</p>
+				</div>
+			</div>
+
+			<!-- Feature 6 -->
+			<div
+				class="glass-effect rounded-3xl p-8 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="600"
+			>
+				<div class="text-center">
+					<div
+						class="w-20 h-20 success-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-chart-line text-3xl text-white"></i>
+					</div>
+					<h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Continuous Learning</h3>
+					<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+						Our AI system continuously improves through advanced learning algorithms and updated medical knowledge bases.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Medical Specialties Section -->
+<section class="py-20 px-4 sm:px-6 lg:px-8">
+	<div class="max-w-7xl mx-auto">
+		<!-- Section Header -->
+		<div
+			class="text-center mb-16"
+			data-aos="fade-up"
+		>
+			<h2 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+				Medical <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Specialties</span>
+			</h2>
+			<p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+				Comprehensive coverage across all major medical specialties with 60+ conditions and detailed clinical information
+			</p>
+		</div>
+
+		<!-- Specialties Grid -->
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<!-- Neurology -->
+			<div
+				class="glass-effect rounded-2xl p-6 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="100"
+			>
+				<div class="flex items-center space-x-4">
+					<div
+						class="w-16 h-16 medical-gradient rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-brain text-2xl text-white"></i>
+					</div>
+					<div>
+						<h3 class="text-lg font-bold text-gray-800 dark:text-white">Neurology</h3>
+						<p class="text-sm text-gray-600 dark:text-gray-400">Headaches, Migraines, Stroke, Epilepsy, Multiple Sclerosis</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Cardiology -->
+			<div
+				class="glass-effect rounded-2xl p-6 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="200"
+			>
+				<div class="flex items-center space-x-4">
+					<div
+						class="w-16 h-16 danger-gradient rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-heartbeat text-2xl text-white"></i>
+					</div>
+					<div>
+						<h3 class="text-lg font-bold text-gray-800 dark:text-white">Cardiology</h3>
+						<p class="text-sm text-gray-600 dark:text-gray-400">Heart Attack, Hypertension, Arrhythmia, Heart Failure</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Pulmonology -->
+			<div
+				class="glass-effect rounded-2xl p-6 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="300"
+			>
+				<div class="flex items-center space-x-4">
+					<div
+						class="w-16 h-16 warning-gradient rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-lungs text-2xl text-white"></i>
+					</div>
+					<div>
+						<h3 class="text-lg font-bold text-gray-800 dark:text-white">Pulmonology</h3>
+						<p class="text-sm text-gray-600 dark:text-gray-400">Asthma, COPD, Pneumonia, Bronchitis</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Endocrinology -->
+			<div
+				class="glass-effect rounded-2xl p-6 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="400"
+			>
+				<div class="flex items-center space-x-4">
+					<div
+						class="w-16 h-16 success-gradient rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-prescription-bottle-alt text-2xl text-white"></i>
+					</div>
+					<div>
+						<h3 class="text-lg font-bold text-gray-800 dark:text-white">Endocrinology</h3>
+						<p class="text-sm text-gray-600 dark:text-gray-400">Diabetes, Thyroid Disorders, Hormonal Imbalances</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Gastroenterology -->
+			<div
+				class="glass-effect rounded-2xl p-6 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="500"
+			>
+				<div class="flex items-center space-x-4">
+					<div
+						class="w-16 h-16 medical-gradient rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-stomach text-2xl text-white"></i>
+					</div>
+					<div>
+						<h3 class="text-lg font-bold text-gray-800 dark:text-white">Gastroenterology</h3>
+						<p class="text-sm text-gray-600 dark:text-gray-400">GERD, IBD, Peptic Ulcers, Liver Disease</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Oncology -->
+			<div
+				class="glass-effect rounded-2xl p-6 hover-glow group"
+				data-aos="fade-up"
+				data-aos-delay="600"
+			>
+				<div class="flex items-center space-x-4">
+					<div
+						class="w-16 h-16 danger-gradient rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+					>
+						<i class="fas fa-ribbon text-2xl text-white"></i>
+					</div>
+					<div>
+						<h3 class="text-lg font-bold text-gray-800 dark:text-white">Oncology</h3>
+						<p class="text-sm text-gray-600 dark:text-gray-400">Various Cancer Types, Tumors, Malignancies</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- View All Button -->
+		<div
+			class="text-center mt-12"
+			data-aos="fade-up"
+			data-aos-delay="700"
+		>
+			<a
+				href="{{ url_for('diseases') }}"
+				class="inline-flex items-center space-x-3 px-8 py-4 medical-gradient text-white rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover-glow group"
+			>
+				<span>Explore All Conditions</span>
+				<i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- Loading Modal -->
+<div
+	id="loadingModal"
+	class="fixed inset-0 z-50 hidden"
+>
+	<div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+	<div class="flex items-center justify-center min-h-screen p-4">
+		<div class="glass-effect rounded-3xl p-8 max-w-md w-full text-center">
+			<div class="mb-6">
+				<div class="w-16 h-16 medical-gradient rounded-2xl flex items-center justify-center mx-auto mb-4 animate-pulse-slow">
+					<i class="fas fa-brain text-2xl text-white"></i>
+				</div>
+				<div class="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>
+			</div>
+			<h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Analyzing Symptoms</h3>
+			<p class="text-gray-600 dark:text-gray-400">AI is processing symptoms and generating comprehensive differential diagnosis...</p>
+			<div class="mt-6 flex items-center justify-center space-x-2">
+				<div
+					class="w-2 h-2 bg-blue-600 rounded-full animate-bounce"
+					style="animation-delay: 0s"
+				></div>
+				<div
+					class="w-2 h-2 bg-blue-600 rounded-full animate-bounce"
+					style="animation-delay: 0.1s"
+				></div>
+				<div
+					class="w-2 h-2 bg-blue-600 rounded-full animate-bounce"
+					style="animation-delay: 0.2s"
+				></div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %} {% block scripts %}
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const form = document.getElementById("symptomForm");
+		const loadingModal = document.getElementById("loadingModal");
+		const resultsContainer = document.getElementById("resultsContainer");
+		const analysisResults = document.getElementById("analysisResults");
+		const symptomsTextarea = document.getElementById("symptoms");
+		const charCounter = document.getElementById("charCounter");
+		const analyzeBtn = document.getElementById("analyzeBtn");
+
+		// Character counter
+		symptomsTextarea.addEventListener("input", function () {
+			const count = this.value.length;
+			charCounter.textContent = `${count} characters`;
+
+			// Change color based on length
+			if (count < 50) {
+				charCounter.className = "absolute bottom-3 right-3 text-sm text-red-500";
+			} else if (count < 200) {
+				charCounter.className = "absolute bottom-3 right-3 text-sm text-yellow-500";
+			} else {
+				charCounter.className = "absolute bottom-3 right-3 text-sm text-green-500";
+			}
+		});
+
+		// Form submission
+		form.addEventListener("submit", async function (e) {
+			e.preventDefault();
+
+			const symptoms = symptomsTextarea.value.trim();
+
+			if (!symptoms) {
+				showNotification("Please enter symptoms before analyzing.", "error");
+				return;
+			}
+
+			if (symptoms.length < 50) {
+				showNotification("Please provide more detailed symptoms (at least 50 characters).", "warning");
+				return;
+			}
+
+			// Show loading modal
+			loadingModal.classList.remove("hidden");
+			analyzeBtn.disabled = true;
+
+			try {
+				const response = await fetch("/analyze", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({ symptoms: symptoms }),
+				});
+
+				const data = await response.json();
+
+				// Hide loading modal
+				loadingModal.classList.add("hidden");
+				analyzeBtn.disabled = false;
+
+				if (data.success) {
+					// Format and display results
+					const formattedResults = formatAnalysisResults(data.analysis);
+					analysisResults.innerHTML = formattedResults;
+					resultsContainer.classList.remove("hidden");
+
+					// Scroll to results with animation
+					setTimeout(() => {
+						resultsContainer.scrollIntoView({
+							behavior: "smooth",
+							block: "start",
+						});
+					}, 300);
+
+					// Add animation to results
+					AOS.refresh();
+				} else {
+					showNotification("Error: " + data.error, "error");
+				}
+			} catch (error) {
+				loadingModal.classList.add("hidden");
+				analyzeBtn.disabled = false;
+				showNotification("Network error. Please check your connection and try again.", "error");
+				console.error("Error:", error);
+			}
+		});
+
+		function formatAnalysisResults(analysis) {
+			// Enhanced formatting with better styling
+			let formatted = analysis
+				.replace(/\*\*(.*?)\*\*/g, '<strong class="text-blue-600 dark:text-blue-400">$1</strong>')
+				.replace(/\*(.*?)\*/g, '<em class="text-gray-700 dark:text-gray-300">$1</em>')
+				.replace(
+					/###\s*(.*)/g,
+					'<h3 class="text-xl font-bold text-gray-800 dark:text-white mt-6 mb-3 border-b border-gray-200 dark:border-gray-700 pb-2">$1</h3>'
+				)
+				.replace(/##\s*(.*)/g, '<h2 class="text-2xl font-bold text-gray-800 dark:text-white mt-8 mb-4">$1</h2>')
+				.replace(/\n\n/g, '</p><p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">')
+				.replace(/\n/g, "<br>");
+
+			return `<div class="space-y-4"><p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">${formatted}</p></div>`;
+		}
+
+		function showNotification(message, type = "info") {
+			// Create notification element
+			const notification = document.createElement("div");
+			notification.className = `fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-6 py-4 rounded-2xl shadow-xl max-w-md w-full mx-4 transition-all duration-300 ${
+				type === "error"
+					? "bg-red-500 text-white"
+					: type === "warning"
+					? "bg-yellow-500 text-white"
+					: type === "success"
+					? "bg-green-500 text-white"
+					: "bg-blue-500 text-white"
+			}`;
+
+			notification.innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <i class="fas ${
+						type === "error"
+							? "fa-exclamation-circle"
+							: type === "warning"
+							? "fa-exclamation-triangle"
+							: type === "success"
+							? "fa-check-circle"
+							: "fa-info-circle"
+					}"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+
+			document.body.appendChild(notification);
+
+			// Animate in
+			setTimeout(() => {
+				notification.style.transform = "translateX(-50%) translateY(0)";
+			}, 100);
+
+			// Remove after 5 seconds
+			setTimeout(() => {
+				notification.style.transform = "translateX(-50%) translateY(-100px)";
+				notification.style.opacity = "0";
+				setTimeout(() => {
+					document.body.removeChild(notification);
+				}, 300);
+			}, 5000);
+		}
+
+		// Global functions for result actions
+		window.copyResults = function () {
+			const resultsText = analysisResults.innerText;
+			navigator.clipboard.writeText(resultsText).then(() => {
+				showNotification("Results copied to clipboard!", "success");
+			});
+		};
+
+		window.printResults = function () {
+			const printWindow = window.open("", "_blank");
+			printWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Medical Analysis Results</title>
+                        <style>
+                            body { font-family: Arial, sans-serif; padding: 20px; }
+                            h1, h2, h3 { color: #333; }
+                            p { line-height: 1.6; }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>Medical DDx Assistant - Analysis Results</h1>
+                        ${analysisResults.innerHTML}
+                        <hr style="margin-top: 40px;">
+                        <p style="color: #666; font-size: 12px;">
+                            Generated by Medical DDx Assistant - For educational purposes only
+                        </p>
+                    </body>
+                </html>
+            `);
+			printWindow.document.close();
+			printWindow.print();
+		};
+
+		window.newAnalysis = function () {
+			resultsContainer.classList.add("hidden");
+			symptomsTextarea.value = "";
+			charCounter.textContent = "0 characters";
+			charCounter.className = "absolute bottom-3 right-3 text-sm text-gray-500";
+			symptomsTextarea.focus();
+
+			// Scroll back to form
+			document.getElementById("analysis").scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+			});
+		};
+	});
+</script>
+{% endblock %}

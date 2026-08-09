@@ -1,0 +1,344 @@
+Inflammatory Bowel Disease (IBD)
+
+Overview:
+IBD comprises two main conditions: Crohn's disease and ulcerative colitis. These are chronic inflammatory disorders of the gastrointestinal tract characterized by periods of relapse and remission.
+
+Crohn's Disease:
+Characteristics:
+- Can affect any part of GI tract (mouth to anus)
+- Transmural inflammation (all layers of bowel wall)
+- Skip lesions (discontinuous involvement)
+- Granulomatous inflammation
+- Higher risk of strictures and fistulas
+
+Ulcerative Colitis:
+Characteristics:
+- Limited to colon and rectum
+- Mucosal and submucosal inflammation only
+- Continuous involvement starting from rectum
+- Crypt abscesses and pseudopolyps
+- Higher risk of dysplasia and cancer
+
+Pathophysiology:
+- Inappropriate immune response to intestinal microbiota
+- Genetic susceptibility (>200 risk loci identified)
+- Environmental triggers
+- Dysregulated cytokine production
+- Compromised intestinal barrier function
+- Altered gut microbiome
+
+Clinical Presentation:
+Common Symptoms:
+- Abdominal pain and cramping
+- Diarrhea (bloody in UC, may be bloody in CD)
+- Weight loss and malnutrition
+- Fatigue
+- Fever during flares
+- Reduced appetite
+
+Crohn's Disease Specific:
+- Right lower quadrant pain (ileocecal involvement)
+- Perianal disease (fistulas, abscesses)
+- Oral ulcers
+- Growth retardation in children
+- Malabsorption symptoms
+
+Ulcerative Colitis Specific:
+- Left lower quadrant pain
+- Bloody diarrhea
+- Urgency and tenesmus
+- Rectal bleeding
+- Mucus in stool
+
+Extraintestinal Manifestations:
+Musculoskeletal:
+- Arthritis (peripheral and axial)
+- Ankylosing spondylitis
+- Sacroiliitis
+
+Dermatologic:
+- Erythema nodosum
+- Pyoderma gangrenosum
+- Aphthous ulcers
+
+Ocular:
+- Episcleritis
+- Uveitis
+- Iritis
+
+Hepatobiliary:
+- Primary sclerosing cholangitis (especially UC)
+- Fatty liver
+- Gallstones
+
+Risk Factors:
+Genetic:
+- Family history (10-15% have affected relative)
+- Ashkenazi Jewish descent
+- Multiple susceptibility genes
+
+Environmental:
+- Smoking (increases CD risk, protective for UC)
+- Westernized diet
+- Antibiotic use
+- Stress
+- Infection triggers
+
+Demographics:
+- Bimodal age distribution (15-35, 55-65 years)
+- Slightly higher in females
+- More common in developed countries
+
+Diagnosis:
+Clinical Assessment:
+- Detailed history and physical examination
+- Family history
+- Symptom duration and pattern
+- Growth assessment in children
+
+Laboratory Tests:
+Inflammatory Markers:
+- C-reactive protein (CRP)
+- Erythrocyte sedimentation rate (ESR)
+- Fecal calprotectin or lactoferrin
+
+Blood Tests:
+- Complete blood count (anemia, thrombocytosis)
+- Comprehensive metabolic panel
+- Albumin and nutritional markers
+- Iron studies, B12, folate
+
+Stool Studies:
+- Fecal calprotectin (>150 μg/g suggests IBD)
+- C. difficile toxin
+- Stool culture and parasites
+- Fecal lactoferrin
+
+Serologic Markers:
+- ASCA (anti-Saccharomyces cerevisiae antibodies) - Crohn's
+- p-ANCA (perinuclear anti-neutrophil cytoplasmic antibodies) - UC
+- Limited diagnostic utility
+
+Imaging:
+CT Enterography:
+- Preferred for small bowel evaluation
+- Bowel wall thickening
+- Strictures and fistulas
+- Abscesses
+
+MR Enterography:
+- No radiation exposure
+- Excellent soft tissue contrast
+- Preferred in young patients
+- Assessment of perianal disease
+
+Small Bowel Series:
+- Less commonly used
+- May show strictures and ulcerations
+
+Ultrasound:
+- Point-of-care assessment
+- Bowel wall thickness
+- Disease activity monitoring
+
+Endoscopy:
+Colonoscopy:
+- Gold standard for diagnosis
+- Assess extent and severity
+- Obtain biopsies
+- Monitor for dysplasia
+
+Upper Endoscopy:
+- If upper GI symptoms
+- Evaluate for Crohn's disease
+- Rule out other conditions
+
+Capsule Endoscopy:
+- Small bowel evaluation
+- Contraindicated if stricture suspected
+- High sensitivity for mucosal lesions
+
+Balloon Enteroscopy:
+- Deep small bowel examination
+- Therapeutic interventions
+- Limited availability
+
+Histopathology:
+Crohn's Disease:
+- Transmural inflammation
+- Non-caseating granulomas (40% of cases)
+- Lymphoid aggregates
+- Cryptitis and crypt abscesses
+
+Ulcerative Colitis:
+- Mucosal inflammation
+- Crypt architectural distortion
+- Increased chronic inflammatory cells
+- Crypt abscesses
+
+Treatment:
+Medical Therapy:
+Aminosalicylates (5-ASA):
+- Mesalamine, sulfasalazine, balsalazide
+- First-line for mild-moderate UC
+- Topical formulations for distal disease
+- Limited efficacy in Crohn's disease
+
+Corticosteroids:
+- Prednisone, budesonide
+- Induction therapy for moderate-severe disease
+- Not for maintenance therapy
+- Taper once remission achieved
+
+Immunomodulators:
+Thiopurines:
+- Azathioprine, 6-mercaptopurine
+- Steroid-sparing agents
+- Maintenance therapy
+- TPMT testing before initiation
+
+Methotrexate:
+- Alternative to thiopurines
+- Especially in Crohn's disease
+- Weekly dosing with folic acid
+
+Biologic Therapy:
+Anti-TNF Agents:
+- Infliximab, adalimumab, certolizumab, golimumab
+- Moderate-severe disease
+- Steroid-refractory cases
+- Fistulizing Crohn's disease
+
+Anti-Integrin Agents:
+- Vedolizumab
+- Gut-selective mechanism
+- Lower systemic side effects
+- Effective for both CD and UC
+
+Anti-IL12/23 Agents:
+- Ustekinumab
+- Effective for Crohn's disease
+- Alternative mechanism of action
+
+JAK Inhibitors:
+- Tofacitinib (UC)
+- Oral administration
+- Rapid onset of action
+
+Small Molecule Therapy:
+- Ozanimod (UC) - S1P receptor modulator
+- Oral administration
+- Cardiac monitoring required
+
+Combination Therapy:
+- Anti-TNF + immunomodulator
+- More effective than monotherapy
+- Higher immunosuppression risk
+- Consider in severe disease
+
+Surgical Treatment:
+Crohn's Disease:
+Indications:
+- Bowel obstruction
+- Perforation
+- Abscesses
+- Medically refractory disease
+- Growth failure in children
+
+Procedures:
+- Stricturoplasty
+- Bowel resection
+- Drainage of abscesses
+- Fistula repair
+
+Ulcerative Colitis:
+Indications:
+- Medically refractory disease
+- Dysplasia or cancer
+- Severe complications
+- Growth failure
+
+Procedures:
+- Total proctocolectomy with ileostomy
+- Ileal pouch-anal anastomosis (IPAA)
+- Subtotal colectomy
+
+Monitoring:
+Disease Activity Assessment:
+- Clinical symptoms
+- Laboratory markers (CRP, fecal calprotectin)
+- Endoscopic evaluation
+- Cross-sectional imaging
+
+Treat-to-Target Approach:
+- Clinical remission
+- Endoscopic healing
+- Histologic remission (emerging target)
+- Biomarker normalization
+
+Surveillance:
+Cancer Screening:
+- Colonoscopy every 1-3 years after 8-10 years of disease
+- Chromoendoscopy or narrow-band imaging
+- Random biopsies throughout colon
+
+Complications:
+Intestinal:
+- Strictures and obstruction
+- Perforation
+- Fistulas and abscesses
+- Malabsorption
+- Colorectal cancer
+
+Medication-Related:
+- Infections (opportunistic)
+- Malignancy (lymphoma, skin cancer)
+- Bone disease
+- Liver toxicity
+
+Growth and Development:
+- Growth retardation in children
+- Delayed puberty
+- Nutritional deficiencies
+
+Prognosis:
+Crohn's Disease:
+- Chronic relapsing-remitting course
+- 80% require surgery within 20 years
+- Strictures and fistulas common
+- Anti-TNF therapy improves outcomes
+
+Ulcerative Colitis:
+- 10% require surgery within 10 years
+- Risk of colorectal cancer
+- Colectomy is curative
+- Generally better prognosis than CD
+
+Quality of Life:
+- Significantly impacted during flares
+- Improved with effective treatment
+- Psychological support important
+- Patient education essential
+
+Special Populations:
+Pregnancy:
+- Most medications safe during pregnancy
+- Disease activity more harmful than medications
+- Sulfasalazine requires folate supplementation
+- Biologic therapy generally continued
+
+Pediatric IBD:
+- More extensive disease at presentation
+- Growth and development concerns
+- Nutritional therapy important
+- Family and school support needed
+
+Key Points:
+- Chronic inflammatory conditions requiring lifelong management
+- Early diagnosis and treatment improve outcomes
+- Treat-to-target approach with objective measures
+- Multidisciplinary care team approach
+- Regular monitoring for complications
+- Patient education and support essential
+- Surgery may be necessary despite medical therapy
+- Quality of life can be significantly improved with proper treatment

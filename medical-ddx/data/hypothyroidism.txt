@@ -1,0 +1,147 @@
+Hypothyroidism
+
+Overview:
+Hypothyroidism is a common endocrine disorder characterized by insufficient production of thyroid hormones, leading to decreased metabolic rate and various systemic effects.
+
+Pathophysiology:
+- Decreased T4 and T3 production
+- Elevated TSH (primary hypothyroidism)
+- Reduced metabolic rate
+- Protein synthesis alterations
+- Cardiovascular effects
+- Neurological dysfunction
+
+Types:
+Primary Hypothyroidism:
+- Thyroid gland dysfunction
+- Elevated TSH, low T4
+- Most common type (95%)
+
+Secondary Hypothyroidism:
+- Pituitary dysfunction
+- Low TSH and T4
+- Rare (5% of cases)
+
+Tertiary Hypothyroidism:
+- Hypothalamic dysfunction
+- Very rare
+
+Clinical Presentation:
+Common Symptoms:
+- Fatigue and weakness
+- Weight gain
+- Cold intolerance
+- Constipation
+- Depression
+- Memory problems
+- Dry skin and hair
+- Hair loss
+
+Physical Signs:
+- Bradycardia
+- Diastolic hypertension
+- Cool, dry, rough skin
+- Brittle nails
+- Hoarse voice
+- Delayed reflexes
+- Myxedema
+
+Etiology:
+Hashimoto's Thyroiditis:
+- Most common cause in iodine-sufficient areas
+- Autoimmune destruction
+- Anti-TPO and anti-thyroglobulin antibodies
+
+Iodine Deficiency:
+- Most common cause worldwide
+- Endemic in certain regions
+- Preventable with iodine supplementation
+
+Post-surgical:
+- Total or partial thyroidectomy
+- Immediate or delayed onset
+
+Radioactive Iodine:
+- Treatment for hyperthyroidism
+- Gradual onset over months to years
+
+Medications:
+- Lithium
+- Amiodarone
+- Interferon
+- Tyrosine kinase inhibitors
+
+Congenital:
+- Thyroid dysgenesis
+- Inborn errors of hormone synthesis
+
+Diagnosis:
+Laboratory Tests:
+TSH:
+- First-line screening test
+- Elevated in primary hypothyroidism
+- Normal: 0.4-4.0 mIU/L
+
+Free T4:
+- Confirms diagnosis
+- Low in overt hypothyroidism
+- Normal in subclinical hypothyroidism
+
+Free T3:
+- Usually not necessary for diagnosis
+- May be normal in mild hypothyroidism
+
+Thyroid Antibodies:
+- Anti-TPO antibodies
+- Anti-thyroglobulin antibodies
+- Helpful in determining etiology
+
+Treatment:
+Levothyroxine:
+- Synthetic T4
+- Standard treatment
+- Once daily dosing
+- Start low, titrate slowly
+
+Dosing:
+- Initial: 1.6 μg/kg/day (healthy adults)
+- Elderly: 25-50 μg/day
+- Cardiac disease: 25 μg/day
+- Adjust every 6-8 weeks
+
+Monitoring:
+- TSH every 6-8 weeks until stable
+- Annual monitoring once stable
+- Adjust dose to normalize TSH
+
+Special Considerations:
+- Take on empty stomach
+- Avoid calcium, iron, coffee
+- Drug interactions
+- Pregnancy requirements higher
+
+Subclinical Hypothyroidism:
+- Elevated TSH, normal T4
+- Often asymptomatic
+- Treatment controversial
+- Consider if TSH >10 or symptoms
+
+Myxedema Coma:
+- Medical emergency
+- Altered mental status
+- Hypothermia
+- IV levothyroxine
+- Supportive care
+
+Pregnancy:
+- Increased levothyroxine needs
+- Monitor TSH each trimester
+- Target TSH <2.5 first trimester
+- Fetal development important
+
+Key Points:
+- Common endocrine disorder
+- TSH is primary screening test
+- Levothyroxine is standard treatment
+- Monitor and adjust dosing regularly
+- Special considerations in pregnancy

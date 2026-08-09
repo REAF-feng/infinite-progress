@@ -1,0 +1,222 @@
+Hyperthyroidism
+
+Overview:
+Hyperthyroidism is a condition characterized by excessive production and secretion of thyroid hormones, leading to increased metabolic rate and various systemic effects.
+
+Pathophysiology:
+- Increased T4 and T3 production
+- Suppressed TSH (primary hyperthyroidism)
+- Increased metabolic rate
+- Enhanced protein catabolism
+- Cardiovascular stimulation
+- Sympathetic nervous system activation
+
+Types:
+Primary Hyperthyroidism:
+- Thyroid gland overactivity
+- Low TSH, elevated T4/T3
+- Most common type
+
+Secondary Hyperthyroidism:
+- Pituitary adenoma (TSH-secreting)
+- Very rare
+
+Clinical Presentation:
+Common Symptoms:
+- Palpitations and tachycardia
+- Weight loss despite increased appetite
+- Heat intolerance and sweating
+- Nervousness and anxiety
+- Tremor
+- Fatigue and weakness
+- Insomnia
+- Frequent bowel movements
+
+Physical Signs:
+- Tachycardia or atrial fibrillation
+- Systolic hypertension
+- Warm, moist skin
+- Fine tremor
+- Hyperreflexia
+- Proximal muscle weakness
+- Eye signs (in Graves' disease)
+
+Etiology:
+Graves' Disease:
+- Most common cause (80-85%)
+- Autoimmune condition
+- TSI (thyroid-stimulating immunoglobulin)
+- Diffuse thyroid enlargement
+- Eye disease (ophthalmopathy)
+
+Toxic Multinodular Goiter:
+- Multiple functioning nodules
+- Common in elderly
+- Iodine-induced in iodine-deficient areas
+
+Toxic Adenoma:
+- Single functioning nodule
+- Autonomous function
+- Suppressed surrounding tissue
+
+Thyroiditis:
+- Subacute (de Quervain's)
+- Silent (lymphocytic)
+- Postpartum thyroiditis
+- Transient hyperthyroidism
+
+Iodine-induced:
+- Contrast agents
+- Amiodarone
+- Iodine supplements
+
+Exogenous Thyroid Hormone:
+- Factitious thyrotoxicosis
+- Excessive levothyroxine dosing
+
+Diagnosis:
+Laboratory Tests:
+TSH:
+- Suppressed (<0.1 mIU/L)
+- First-line screening test
+- Most sensitive indicator
+
+Free T4 and T3:
+- Elevated in overt hyperthyroidism
+- T3 may be elevated alone (T3 toxicosis)
+- Confirms diagnosis
+
+Thyroid Antibodies:
+- TSI or TRAb (Graves' disease)
+- Anti-TPO antibodies
+
+Thyroglobulin:
+- Elevated in thyroiditis
+- Low in factitious thyrotoxicosis
+
+Imaging:
+Radioactive Iodine Uptake:
+- Increased in Graves' disease and toxic nodules
+- Decreased in thyroiditis
+- Helps determine etiology
+
+Thyroid Scan:
+- Diffuse uptake (Graves')
+- Hot nodules (toxic adenoma/multinodular)
+- Cold areas (thyroiditis)
+
+Ultrasound:
+- Assess thyroid structure
+- Evaluate nodules
+- Doppler flow assessment
+
+Treatment:
+Antithyroid Drugs:
+Methimazole:
+- Preferred agent
+- Once daily dosing
+- Lower side effect profile
+- Teratogenic in first trimester
+
+Propylthiouracil (PTU):
+- Preferred in pregnancy (first trimester)
+- Three times daily dosing
+- Higher risk of liver toxicity
+
+Beta-blockers:
+- Propranolol most commonly used
+- Symptom control
+- All patients initially
+- Contraindicated in asthma
+
+Radioactive Iodine (RAI):
+- Definitive treatment
+- Contraindicated in pregnancy/nursing
+- Results in hypothyroidism
+- Single dose usually effective
+
+Surgery:
+- Near-total or total thyroidectomy
+- Large goiters
+- Malignancy suspected
+- Failed medical therapy
+- Patient preference
+
+Treatment Selection:
+Graves' Disease:
+- Antithyroid drugs first-line
+- RAI for definitive treatment
+- Surgery if large goiter
+
+Toxic Nodular Disease:
+- RAI preferred
+- Surgery for large nodules
+- Antithyroid drugs for preparation
+
+Thyroiditis:
+- Beta-blockers for symptoms
+- Self-limiting condition
+- Monitor for hypothyroid phase
+
+Monitoring:
+- Free T4 and T3 every 4-6 weeks
+- Adjust antithyroid drug dosing
+- Monitor for side effects
+- CBC with differential
+- Liver function tests
+
+Complications:
+Thyroid Storm:
+- Life-threatening emergency
+- Fever, tachycardia, delirium
+- High-dose antithyroid drugs
+- Beta-blockers, steroids
+- Supportive care
+
+Graves' Ophthalmopathy:
+- Eyelid retraction
+- Proptosis
+- Diplopia
+- Optic neuropathy
+- Selenium supplementation
+- Steroids for severe cases
+
+Cardiac Complications:
+- Atrial fibrillation
+- Heart failure
+- Increased cardiovascular mortality
+
+Bone Effects:
+- Accelerated bone loss
+- Increased fracture risk
+- Osteoporosis
+
+Drug Side Effects:
+- Agranulocytosis (rare but serious)
+- Hepatotoxicity
+- Rash
+- Arthritis
+
+Pregnancy and Hyperthyroidism:
+- PTU in first trimester
+- Methimazole in second/third trimester
+- Monitor closely
+- Fetal thyroid function
+- Neonatal complications possible
+
+Subclinical Hyperthyroidism:
+- Low TSH, normal T4/T3
+- May be asymptomatic
+- Increased cardiovascular risk
+- Treatment controversial
+- Consider if TSH <0.1
+
+Key Points:
+- Common endocrine disorder
+- Graves' disease most common cause
+- TSH suppression is hallmark
+- Multiple treatment options available
+- Beta-blockers for immediate symptom control
+- Antithyroid drugs, RAI, or surgery for definitive treatment
+- Monitor for complications
+- Special considerations in pregnancy

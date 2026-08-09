@@ -1,0 +1,257 @@
+Heart Failure
+
+Overview:
+Heart failure is a complex clinical syndrome characterized by the heart's inability to pump blood efficiently to meet the body's metabolic demands. It can result from various structural or functional cardiac disorders.
+
+Pathophysiology:
+- Reduced cardiac output and/or elevated filling pressures
+- Activation of neurohormonal systems (RAAS, SNS)
+- Ventricular remodeling and dysfunction
+- Fluid retention and congestion
+- Progressive deterioration of cardiac function
+
+Classification:
+By Ejection Fraction:
+Heart Failure with Reduced Ejection Fraction (HFrEF):
+- LVEF ≤40%
+- Systolic dysfunction
+- Most common in younger patients
+- Better evidence for therapies
+
+Heart Failure with Preserved Ejection Fraction (HFpEF):
+- LVEF ≥50%
+- Diastolic dysfunction
+- More common in elderly, women
+- Limited treatment options
+
+Heart Failure with Mildly Reduced Ejection Fraction (HFmrEF):
+- LVEF 41-49%
+- Intermediate category
+- May respond to HFrEF therapies
+
+By Functional Class (NYHA):
+Class I: No symptoms with ordinary activity
+Class II: Symptoms with ordinary activity
+Class III: Symptoms with minimal activity
+Class IV: Symptoms at rest
+
+Clinical Presentation:
+Left Heart Failure:
+- Dyspnea on exertion
+- Orthopnea
+- Paroxysmal nocturnal dyspnea
+- Fatigue and weakness
+- Reduced exercise tolerance
+- Cough (often nocturnal)
+
+Right Heart Failure:
+- Peripheral edema
+- Jugular venous distension
+- Ascites
+- Right upper quadrant pain
+- Early satiety and bloating
+- Weight gain
+
+Acute Decompensation:
+- Sudden worsening of symptoms
+- Pulmonary edema
+- Cardiogenic shock
+- Acute kidney injury
+
+Physical Examination:
+Vital Signs:
+- Tachycardia
+- Elevated blood pressure (may be low in advanced disease)
+- Tachypnea
+- Reduced oxygen saturation
+
+Cardiovascular:
+- S3 gallop (ventricular gallop)
+- S4 gallop (atrial gallop)
+- Murmurs (mitral regurgitation, tricuspid regurgitation)
+- Displaced point of maximal impulse
+
+Pulmonary:
+- Rales/crackles
+- Pleural effusions
+- Reduced breath sounds
+
+Other:
+- Jugular venous distension
+- Peripheral edema
+- Hepatomegaly
+- Ascites
+- Cool extremities
+
+Etiology:
+Ischemic Heart Disease:
+- Coronary artery disease
+- Previous myocardial infarction
+- Chronic ischemia
+
+Cardiomyopathies:
+- Dilated cardiomyopathy
+- Hypertrophic cardiomyopathy
+- Restrictive cardiomyopathy
+- Arrhythmogenic right ventricular cardiomyopathy
+
+Valvular Disease:
+- Mitral regurgitation/stenosis
+- Aortic regurgitation/stenosis
+- Tricuspid regurgitation
+- Pulmonary valve disease
+
+Hypertensive Heart Disease:
+- Long-standing hypertension
+- Left ventricular hypertrophy
+- Diastolic dysfunction
+
+Other Causes:
+- Viral myocarditis
+- Alcohol-induced cardiomyopathy
+- Chemotherapy-induced cardiomyopathy
+- Thyroid disease
+- Infiltrative diseases (amyloidosis, sarcoidosis)
+
+Diagnosis:
+Laboratory Tests:
+- B-type natriuretic peptide (BNP) or NT-proBNP
+- Complete blood count
+- Comprehensive metabolic panel
+- Liver function tests
+- Thyroid function tests
+- Urinalysis
+
+Electrocardiogram:
+- Arrhythmias
+- Evidence of prior MI
+- Left ventricular hypertrophy
+- Conduction abnormalities
+
+Chest X-ray:
+- Cardiomegaly
+- Pulmonary edema
+- Pleural effusions
+- Pulmonary vascular congestion
+
+Echocardiography:
+- Left ventricular ejection fraction
+- Wall motion abnormalities
+- Valvular function
+- Diastolic function assessment
+- Right heart function
+
+Additional Testing:
+- Cardiac catheterization (if ischemic etiology suspected)
+- Cardiac MRI (for tissue characterization)
+- Nuclear imaging
+- Exercise testing
+- Right heart catheterization (in selected patients)
+
+Treatment:
+HFrEF Management:
+ACE Inhibitors/ARBs:
+- First-line therapy
+- Reduce mortality and morbidity
+- Start low dose, titrate to maximum tolerated
+
+Beta-blockers:
+- Metoprolol succinate, carvedilol, bisoprolol
+- Reduce mortality
+- Start low, titrate slowly
+
+Mineralocorticoid Receptor Antagonists:
+- Spironolactone, eplerenone
+- For NYHA Class II-IV symptoms
+- Monitor potassium and kidney function
+
+SGLT2 Inhibitors:
+- Dapagliflozin, empagliflozin
+- Reduce heart failure hospitalizations
+- Benefits regardless of diabetes status
+
+ARNI (Angiotensin Receptor-Neprilysin Inhibitor):
+- Sacubitril/valsartan
+- Superior to ACE inhibitors in reducing cardiovascular death
+- For patients already on ACE inhibitor/ARB
+
+Diuretics:
+- Loop diuretics (furosemide, bumetanide)
+- For volume overload
+- Monitor electrolytes and kidney function
+
+Device Therapy:
+Implantable Cardioverter-Defibrillator (ICD):
+- Primary prevention: LVEF ≤35% on optimal medical therapy
+- Secondary prevention: survivors of VT/VF
+
+Cardiac Resynchronization Therapy (CRT):
+- LVEF ≤35%, QRS ≥120ms, NYHA Class II-IV
+- Improves symptoms and mortality
+
+HFpEF Management:
+- Limited evidence-based therapies
+- Treatment of comorbidities
+- Diuretics for congestion
+- SGLT2 inhibitors may be beneficial
+- Blood pressure control
+- Rate control for atrial fibrillation
+
+Acute Heart Failure:
+Initial Assessment:
+- Hemodynamic profile (warm/cold, wet/dry)
+- Volume status
+- Blood pressure
+- Kidney function
+
+Treatment:
+- IV diuretics
+- Vasodilators (nitroglycerin, hydralazine)
+- Inotropes (dobutamine, milrinone) - if hypotensive
+- Mechanical circulatory support (severe cases)
+
+Lifestyle Modifications:
+- Sodium restriction (<2-3g/day)
+- Fluid restriction (if hyponatremic)
+- Daily weight monitoring
+- Regular exercise (cardiac rehabilitation)
+- Smoking cessation
+- Alcohol limitation
+- Medication adherence
+
+Monitoring:
+- Regular clinical assessment
+- Laboratory monitoring (BNP, electrolytes, kidney function)
+- Echocardiography
+- Exercise testing
+- Quality of life assessments
+
+Complications:
+- Arrhythmias (atrial fibrillation, ventricular arrhythmias)
+- Sudden cardiac death
+- Thromboembolism
+- Progressive kidney disease
+- Liver dysfunction
+- Depression and cognitive impairment
+
+Prognosis:
+- 5-year mortality rate 30-50%
+- Frequent hospitalizations
+- Progressive functional decline
+- Better outcomes with HFrEF than HFpEF
+- Early diagnosis and treatment improve outcomes
+
+Advanced Therapies:
+- Heart transplantation
+- Left ventricular assist devices (LVADs)
+- Total artificial heart
+- Experimental therapies (gene therapy, stem cells)
+
+Key Points:
+- Common and growing public health problem
+- Classification by ejection fraction guides treatment
+- Neurohormonal blockade is cornerstone of HFrEF therapy
+- Device therapy indicated for selected patients
+- Early recognition and treatment improve outcomes
+- Multidisciplinary care approach
+- Patient education and self-care essential

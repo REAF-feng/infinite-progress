@@ -1,0 +1,449 @@
+Acute Myocardial Infarction: Comprehensive Clinical Management Guide
+
+DEFINITION
+Acute myocardial infarction (AMI) is the rapid development of myocardial necrosis caused by a critical imbalance between oxygen supply and demand. It represents a spectrum of acute coronary syndromes (ACS) and is a leading cause of morbidity and mortality worldwide.
+
+CLASSIFICATION
+
+Universal Definition of Myocardial Infarction (Fourth Definition):
+Type 1: Spontaneous MI due to atherothrombotic plaque rupture/erosion
+Type 2: MI secondary to oxygen supply-demand imbalance
+Type 3: Sudden cardiac death with presumed MI
+Type 4a: MI associated with percutaneous coronary intervention (PCI)
+Type 4b: MI associated with stent thrombosis
+Type 5: MI associated with coronary artery bypass grafting (CABG)
+
+STEMI vs NSTEMI Classification:
+1. ST-Elevation Myocardial Infarction (STEMI):
+   - Complete coronary artery occlusion
+   - ST-segment elevation on ECG
+   - Requires immediate reperfusion
+
+2. Non-ST-Elevation Myocardial Infarction (NSTEMI):
+   - Partial coronary artery occlusion
+   - No ST-segment elevation
+   - Managed based on risk stratification
+
+EPIDEMIOLOGY
+- Leading cause of death globally
+- ~800,000 Americans experience MI annually
+- ~605,000 are first-time attacks
+- Incidence decreasing due to prevention efforts
+- In-hospital mortality: STEMI ~7%, NSTEMI ~3-5%
+- More common in men <75 years, women >75 years
+- Racial disparities exist in outcomes
+
+PATHOPHYSIOLOGY
+
+Atherosclerotic Plaque Development:
+1. Endothelial dysfunction
+2. Lipid accumulation in arterial wall
+3. Inflammatory cell recruitment
+4. Smooth muscle cell proliferation
+5. Fibrous cap formation
+6. Plaque vulnerability
+
+Acute Thrombosis:
+1. Plaque rupture or erosion
+2. Exposure of thrombogenic material
+3. Platelet activation and aggregation
+4. Coagulation cascade activation
+5. Thrombus formation
+6. Coronary artery occlusion
+
+Myocardial Necrosis Process:
+- Begins within 20-40 minutes of complete occlusion
+- Progresses from subendocardium to epicardium
+- Irreversible after 6-8 hours
+- Collateral circulation may provide protection
+
+RISK FACTORS
+
+Non-Modifiable:
+- Age (men >45, women >55)
+- Male gender (premenopausal women protected)
+- Family history of CAD
+- Genetic factors
+
+Modifiable:
+- Smoking (most important modifiable risk factor)
+- Hypertension
+- Diabetes mellitus
+- Dyslipidemia
+- Obesity (BMI >30)
+- Physical inactivity
+- Unhealthy diet
+- Psychosocial stress
+
+Emerging Risk Factors:
+- C-reactive protein (CRP)
+- Lipoprotein(a)
+- Homocysteine
+- Fibrinogen
+- Sleep apnea
+- Air pollution exposure
+- Chronic kidney disease
+
+CLINICAL PRESENTATION
+
+Classic Symptoms:
+1. Chest Pain:
+   - Substernal, crushing, pressure-like
+   - Radiation to left arm, neck, jaw, back
+   - Duration >20 minutes
+   - Not relieved by rest or nitroglycerin
+
+2. Associated Symptoms:
+   - Diaphoresis (sweating)
+   - Nausea and vomiting
+   - Shortness of breath
+   - Lightheadedness
+   - Feeling of impending doom
+
+Atypical Presentations (30-40% of cases):
+- Elderly patients (>75 years)
+- Women
+- Diabetics
+- Patients with chronic kidney disease
+
+Atypical Symptoms:
+- Epigastric pain
+- Indigestion-like symptoms
+- Fatigue
+- Weakness
+- Syncope
+- Isolated shortness of breath
+- Back or shoulder pain
+
+Silent MI:
+- No symptoms or minimal symptoms
+- More common in diabetics and elderly
+- Diagnosed on routine ECG or imaging
+- Up to 25% of MIs may be silent
+
+Physical Examination:
+May be normal or reveal:
+- Diaphoresis
+- Pallor
+- Tachycardia or bradycardia
+- Hypertension or hypotension
+- S3 or S4 gallop
+- Mitral regurgitation murmur
+- Pulmonary rales
+- Signs of cardiogenic shock
+
+Killip Classification:
+- Class I: No heart failure (mortality ~6%)
+- Class II: Mild-moderate heart failure (mortality ~17%)
+- Class III: Pulmonary edema (mortality ~38%)
+- Class IV: Cardiogenic shock (mortality ~67%)
+
+DIAGNOSTIC EVALUATION
+
+Electrocardiogram (ECG):
+Should be obtained within 10 minutes of presentation
+
+STEMI Criteria:
+- ST-elevation ≥1mm in 2 contiguous limb leads
+- ST-elevation ≥2mm in 2 contiguous precordial leads
+- New left bundle branch block
+
+NSTEMI/Unstable Angina:
+- ST-depression
+- T-wave inversions
+- Non-specific changes
+- Normal ECG (doesn't exclude MI)
+
+ECG Localization:
+- Anterior: V1-V6 (LAD territory)
+- Inferior: II, III, aVF (RCA or LCX territory)
+- Lateral: I, aVL, V5-V6 (LCX territory)
+- Posterior: Prominent R waves V1-V2
+
+Cardiac Biomarkers:
+
+Troponin (preferred):
+- Troponin I or T
+- Highly sensitive and specific
+- Detects smaller amounts of myocardial necrosis
+- Rises 3-6 hours post-MI
+- Peaks 12-24 hours
+- Remains elevated 7-14 days
+
+High-Sensitivity Troponin:
+- Earlier detection (1-3 hours)
+- Better rule-out capability
+- Lower false-positive rates
+- Allows for rapid protocols
+
+CK-MB:
+- Less sensitive than troponin
+- Useful for reinfarction detection
+- Returns to normal sooner (3-4 days)
+
+Other Biomarkers:
+- Myoglobin (early marker, non-specific)
+- LDH (late marker, non-specific)
+- BNP/NT-proBNP (heart failure, prognosis)
+
+Imaging:
+
+Echocardiography:
+- Assess wall motion abnormalities
+- Evaluate left ventricular function
+- Detect mechanical complications
+- Portable and readily available
+
+Chest X-ray:
+- Assess for pulmonary edema
+- Rule out other causes of chest pain
+- Baseline for comparison
+
+Coronary Angiography:
+- Gold standard for coronary anatomy
+- Therapeutic intervention capability
+- Risk stratification
+- Timing depends on presentation
+
+MANAGEMENT
+
+STEMI Management:
+Primary goal: Rapid reperfusion (<90 minutes door-to-balloon)
+
+Reperfusion Strategies:
+
+1. Primary Percutaneous Coronary Intervention (PCI):
+   - Preferred strategy if available <90 minutes
+   - Superior to fibrinolysis
+   - Lower mortality and morbidity
+   - Allows treatment of shock
+
+2. Fibrinolytic Therapy:
+   - When PCI not available or delayed >90 minutes
+   - Most effective within 3 hours
+   - Benefit up to 12 hours
+   - Contraindications must be assessed
+
+Fibrinolytic Agents:
+- tPA (alteplase): 90-minute protocol
+- TNK (tenecteplase): single bolus
+- Streptokinase: less commonly used
+
+Contraindications to Fibrinolysis:
+Absolute:
+- Active bleeding
+- Intracranial hemorrhage history
+- Known intracranial neoplasm
+- Aortic dissection
+- Significant closed head trauma <3 months
+
+Relative:
+- Age >75 years
+- Current anticoagulation
+- Pregnancy
+- Recent surgery
+- Severe hypertension (>180/110)
+
+NSTEMI/Unstable Angina Management:
+
+Risk Stratification:
+TIMI Risk Score:
+- Age ≥65
+- ≥3 CAD risk factors
+- Known CAD (stenosis ≥50%)
+- Aspirin use in past 7 days
+- Severe angina (≥2 episodes in 24h)
+- ST changes ≥0.5mm
+- Positive cardiac markers
+
+GRACE Score:
+- More comprehensive
+- Includes vital signs and laboratory values
+- Better predictor of outcomes
+
+Management Strategy:
+- High risk: Early invasive strategy (<24h)
+- Intermediate risk: Invasive or conservative
+- Low risk: Conservative management
+
+Pharmacological Therapy:
+
+Antiplatelet Agents:
+1. Aspirin:
+   - 325mg loading dose, then 81mg daily
+   - Lifelong therapy
+   - Chewed for faster absorption
+
+2. P2Y12 Inhibitors:
+   - Clopidogrel 600mg loading, then 75mg daily
+   - Prasugrel 60mg loading, then 10mg daily
+   - Ticagrelor 180mg loading, then 90mg BID
+   - Duration: 12 months minimum
+
+Anticoagulation:
+- Unfractionated heparin
+- Low molecular weight heparin (enoxaparin)
+- Bivalirudin (direct thrombin inhibitor)
+- Duration during hospitalization
+
+Beta-Blockers:
+- Metoprolol, carvedilol, bisoprolol
+- Start within 24 hours if stable
+- Reduce mortality and reinfarction
+- Contraindicated in cardiogenic shock
+
+ACE Inhibitors/ARBs:
+- Start within 24 hours if stable
+- Lisinopril, enalapril, losartan
+- Reduce mortality and remodeling
+- Monitor renal function and potassium
+
+Statins:
+- High-intensity statin therapy
+- Atorvastatin 80mg or rosuvastatin 40mg
+- Start before discharge
+- LDL goal <70 mg/dL
+
+COMPLICATIONS
+
+Mechanical Complications (1-3% of STEMIs):
+1. Ventricular Septal Defect:
+   - Usually 3-7 days post-MI
+   - New holosystolic murmur
+   - Requires urgent surgical repair
+
+2. Papillary Muscle Rupture:
+   - Acute severe mitral regurgitation
+   - Pulmonary edema
+   - Cardiogenic shock
+
+3. Free Wall Rupture:
+   - Cardiac tamponade
+   - High mortality
+   - Emergency pericardiocentesis/surgery
+
+Electrical Complications:
+1. Arrhythmias:
+   - Ventricular tachycardia/fibrillation
+   - Complete heart block (inferior MI)
+   - Atrial fibrillation
+
+2. Sudden Cardiac Death:
+   - Primary electrical event
+   - Most common in first hour
+
+Hemodynamic Complications:
+1. Cardiogenic Shock:
+   - 5-8% of STEMIs
+   - Mortality 50-80%
+   - Requires immediate revascularization
+
+2. Heart Failure:
+   - Acute or chronic
+   - Related to infarct size
+   - May require device therapy
+
+Other Complications:
+1. Pericarditis:
+   - 1-3 days post-MI
+   - Pleuritic chest pain
+   - Pericardial friction rub
+
+2. Dressler Syndrome:
+   - Weeks to months post-MI
+   - Autoimmune pericarditis
+   - Fever, pleuritic pain
+
+3. Left Ventricular Aneurysm:
+   - Late complication
+   - Risk of thromboembolism
+   - May require surgical repair
+
+SECONDARY PREVENTION
+
+Lifestyle Modifications:
+1. Smoking Cessation:
+   - Most important intervention
+   - Reduces risk by 50%
+   - Nicotine replacement therapy
+
+2. Diet:
+   - Mediterranean diet
+   - Low saturated fat
+   - Omega-3 fatty acids
+   - Limit sodium
+
+3. Exercise:
+   - Cardiac rehabilitation
+   - 150 minutes moderate activity/week
+   - Supervised program preferred
+
+4. Weight Management:
+   - BMI 18.5-24.9 kg/m²
+   - Waist circumference goals
+
+Pharmacological Therapy:
+1. Dual Antiplatelet Therapy:
+   - Aspirin + P2Y12 inhibitor
+   - Minimum 12 months
+   - Longer in high-risk patients
+
+2. Beta-Blockers:
+   - Lifelong therapy
+   - Reduce sudden death
+   - Target heart rate 50-60 bpm
+
+3. ACE Inhibitors/ARBs:
+   - Especially if EF <40%
+   - Remodeling prevention
+   - Blood pressure control
+
+4. Statins:
+   - High-intensity therapy
+   - LDL <70 mg/dL
+   - Consider PCSK9 inhibitors if needed
+
+5. Additional Therapies:
+   - Eplerenone (if EF <35%)
+   - Diabetes management
+   - Blood pressure control
+
+Device Therapy:
+1. Implantable Cardioverter Defibrillator (ICD):
+   - EF ≤35% after 3 months
+   - Primary prevention sudden death
+   - Life vest as bridge
+
+2. Cardiac Resynchronization Therapy:
+   - EF ≤35% with wide QRS
+   - Improves symptoms and survival
+
+PROGNOSIS
+
+Factors Affecting Prognosis:
+- Age at presentation
+- Infarct size and location
+- Left ventricular function
+- Time to reperfusion
+- Presence of complications
+- Comorbidities
+
+Mortality:
+- 30-day mortality: STEMI ~7%, NSTEMI ~3-5%
+- 1-year mortality: ~10%
+- Sudden death risk highest in first 30 days
+
+Quality of Life:
+- Most patients return to normal activities
+- Cardiac rehabilitation improves outcomes
+- Depression common (20-25%)
+- Return to work in 2-8 weeks
+
+Long-term Management:
+- Annual cardiology follow-up
+- Medication adherence crucial
+- Risk factor modification
+- Surveillance for complications
+- Family screening for CAD risk factors
+
+The management of acute myocardial infarction requires rapid recognition, immediate reperfusion therapy, comprehensive medical management, and lifelong secondary prevention strategies. Multidisciplinary care and patient education are essential for optimal outcomes.

@@ -1,0 +1,300 @@
+Atrial Fibrillation
+
+Overview:
+Atrial fibrillation (AFib) is the most common sustained cardiac arrhythmia, characterized by rapid, irregular atrial electrical activity resulting in ineffective atrial contraction and irregular ventricular response.
+
+Pathophysiology:
+- Multiple reentrant wavelets in atrial tissue
+- Triggered activity from pulmonary veins
+- Loss of organized atrial contraction
+- Irregular ventricular filling
+- Increased risk of thromboembolism
+- Potential for tachycardia-induced cardiomyopathy
+
+Classification:
+By Duration:
+Paroxysmal AFib:
+- Self-terminating within 7 days
+- Usually <24 hours
+- Recurrent episodes
+
+Persistent AFib:
+- Sustained >7 days
+- Requires intervention for termination
+- May be long-standing (>12 months)
+
+Permanent AFib:
+- Accepted as permanent
+- No attempts at rhythm control
+- Focus on rate control
+
+By Clinical Context:
+First Detected:
+- First documented episode
+- May have been present for unknown duration
+
+Valvular AFib:
+- Associated with rheumatic mitral valve disease
+- Mechanical or bioprosthetic heart valves
+- Mitral valve repair
+
+Non-valvular AFib:
+- AFib without valvular disease
+- Most common type
+
+Clinical Presentation:
+Symptoms:
+- Palpitations
+- Fatigue and weakness
+- Dyspnea on exertion
+- Chest discomfort
+- Dizziness or syncope
+- Reduced exercise tolerance
+- May be asymptomatic
+
+Physical Examination:
+- Irregularly irregular pulse
+- Variable intensity S1
+- Signs of heart failure (if present)
+- Signs of hyperthyroidism
+- Pulse deficit (apical rate > radial rate)
+
+Hemodynamic Effects:
+- Loss of atrial kick (20-25% of cardiac output)
+- Irregular ventricular filling
+- Potential for rapid ventricular response
+- Reduced cardiac output
+
+Risk Factors:
+Non-modifiable:
+- Age (most important)
+- Male gender
+- Genetic factors
+- Ethnicity (higher in Caucasians)
+
+Cardiovascular:
+- Hypertension
+- Heart failure
+- Coronary artery disease
+- Valvular heart disease
+- Cardiomyopathy
+- Congenital heart disease
+
+Other Medical Conditions:
+- Hyperthyroidism
+- Diabetes mellitus
+- Chronic kidney disease
+- Obesity
+- Sleep apnea
+- Chronic lung disease
+
+Lifestyle Factors:
+- Alcohol consumption
+- Caffeine (controversial)
+- Physical inactivity
+- Smoking
+
+Acute Precipitants:
+- Acute illness
+- Surgery
+- Electrolyte imbalances
+- Hypoxia
+- Medication effects
+
+Diagnosis:
+Electrocardiogram:
+- Absence of P waves
+- Irregular R-R intervals
+- Fibrillatory waves (f waves)
+- Variable ventricular rate
+
+Continuous Monitoring:
+- Holter monitor (24-48 hours)
+- Event monitors
+- Implantable loop recorders
+- Mobile cardiac telemetry
+
+Laboratory Tests:
+- Thyroid function tests
+- Complete blood count
+- Comprehensive metabolic panel
+- BNP or NT-proBNP
+- Magnesium and phosphorus
+
+Imaging:
+Echocardiography:
+- Left ventricular function
+- Left atrial size
+- Valvular function
+- Rule out structural heart disease
+
+Additional Tests:
+- Chest X-ray
+- Exercise stress test
+- Cardiac catheterization (if CAD suspected)
+
+Risk Stratification:
+CHA2DS2-VASc Score (Stroke Risk):
+C - Congestive heart failure (1 point)
+H - Hypertension (1 point)
+A2 - Age ≥75 years (2 points)
+D - Diabetes mellitus (1 point)
+S2 - Stroke/TIA/thromboembolism history (2 points)
+V - Vascular disease (1 point)
+A - Age 65-74 years (1 point)
+Sc - Sex category (female) (1 point)
+
+Score interpretation:
+- 0 (males) or 1 (females): Low risk
+- 1 (males) or 2 (females): Consider anticoagulation
+- ≥2 (males) or ≥3 (females): Anticoagulation recommended
+
+HAS-BLED Score (Bleeding Risk):
+H - Hypertension
+A - Abnormal kidney/liver function
+S - Stroke
+B - Bleeding predisposition
+L - Labile INR
+E - Elderly (>65 years)
+D - Drugs/alcohol
+
+Treatment:
+Rate Control:
+Beta-blockers:
+- Metoprolol, atenolol, propranolol
+- First-line for rate control
+- Target resting HR 60-100 bpm
+
+Calcium Channel Blockers:
+- Diltiazem, verapamil
+- Alternative to beta-blockers
+- Avoid in heart failure with reduced EF
+
+Digoxin:
+- For patients with heart failure
+- Less effective during exercise
+- Narrow therapeutic window
+
+Rhythm Control:
+Antiarrhythmic Drugs:
+Class IA: Procainamide, disopyramide
+Class IC: Flecainide, propafenone (no structural heart disease)
+Class III: Amiodarone, dronedarone, sotalol, dofetilide
+
+Drug Selection:
+- Structural heart disease status
+- Kidney/liver function
+- Other medical conditions
+- Drug interactions
+
+Cardioversion:
+Electrical Cardioversion:
+- Synchronized DC shock
+- More effective than pharmacologic
+- Requires anticoagulation
+
+Pharmacologic Cardioversion:
+- IV or oral antiarrhythmic drugs
+- Flecainide, propafenone, amiodarone
+- Less effective than electrical
+
+Catheter Ablation:
+Pulmonary Vein Isolation:
+- First-line for symptomatic paroxysmal AFib
+- Superior to antiarrhythmic drugs
+- Lower recurrence rates
+
+Indications:
+- Symptomatic AFib despite optimal medical therapy
+- Patient preference over long-term drug therapy
+- Drug intolerance or contraindications
+
+Anticoagulation:
+Warfarin:
+- Vitamin K antagonist
+- Target INR 2.0-3.0
+- Requires regular monitoring
+
+Direct Oral Anticoagulants (DOACs):
+- Dabigatran (thrombin inhibitor)
+- Rivaroxaban, apixaban, edoxaban (Factor Xa inhibitors)
+- No routine monitoring required
+- Fewer drug-food interactions
+
+Anticoagulation Duration:
+- Long-term for most patients with AFib
+- Risk-benefit assessment
+- Not routinely discontinued
+
+Left Atrial Appendage Occlusion:
+- Watchman device
+- For patients with contraindications to anticoagulation
+- Reduces stroke risk
+
+Complications:
+Thromboembolism:
+- Stroke (most serious)
+- Systemic embolism
+- Pulmonary embolism
+
+Hemodynamic:
+- Heart failure
+- Cardiomyopathy
+- Hypotension
+
+Treatment-related:
+- Bleeding from anticoagulation
+- Proarrhythmia from antiarrhythmic drugs
+- Procedure-related complications
+
+Management Strategies:
+Rate vs Rhythm Control:
+- No mortality difference in most patients
+- Rhythm control for younger, symptomatic patients
+- Rate control acceptable for older, asymptomatic patients
+
+Integrated Care:
+- Anticoagulation decision independent of rate/rhythm strategy
+- Lifestyle modifications
+- Treatment of underlying conditions
+- Regular follow-up
+
+Special Populations:
+Acute Setting:
+- Hemodynamically unstable: immediate cardioversion
+- Stable patients: rate control, anticoagulation
+- Duration >48 hours: TEE or 3 weeks anticoagulation before cardioversion
+
+Heart Failure:
+- Beta-blockers preferred for rate control
+- Consider rhythm control
+- Optimize heart failure medications
+
+Perioperative:
+- Continue anticoagulation if possible
+- Bridge with heparin if high stroke risk
+- Manage rate during surgery
+
+Prognosis:
+- Increased mortality risk (1.5-2x)
+- Stroke risk varies with CHA2DS2-VASc score
+- Quality of life impairment
+- Progressive condition in many patients
+- Better outcomes with early intervention
+
+Prevention:
+- Blood pressure control
+- Weight management
+- Alcohol moderation
+- Treatment of sleep apnea
+- Regular exercise
+- Management of diabetes
+
+Key Points:
+- Most common sustained arrhythmia
+- Stroke prevention is primary goal
+- CHA2DS2-VASc score guides anticoagulation
+- Rate vs rhythm control based on symptoms and age
+- Catheter ablation increasingly used
+- Multidisciplinary approach improves outcomes
+- Patient education essential for management

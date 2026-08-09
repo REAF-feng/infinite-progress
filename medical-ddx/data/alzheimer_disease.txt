@@ -1,0 +1,132 @@
+Alzheimer's Disease
+
+Overview:
+Alzheimer's disease is a progressive neurodegenerative disorder that causes dementia, characterized by memory loss, cognitive decline, and behavioral changes. It is the most common cause of dementia in older adults.
+
+Pathophysiology:
+- Accumulation of amyloid-beta plaques in brain tissue
+- Formation of neurofibrillary tangles containing hyperphosphorylated tau protein
+- Progressive neuronal death and brain atrophy
+- Cholinergic neurotransmitter deficiency
+- Inflammation and oxidative stress
+
+Clinical Presentation:
+Early Stage:
+- Mild memory loss, especially recent events
+- Difficulty finding words
+- Challenges with planning and organizing
+- Mild disorientation in unfamiliar settings
+- Changes in mood and personality
+
+Middle Stage:
+- Increased memory loss and confusion
+- Difficulty recognizing family and friends
+- Problems with language and reading
+- Inability to learn new things
+- Difficulty carrying out multistep tasks
+- Problems coping with new situations
+- Hallucinations, delusions, and paranoia
+- Impulsive behavior
+
+Late Stage:
+- Severe memory loss
+- Complete dependence on others
+- Loss of ability to communicate
+- Weight loss
+- Seizures
+- Difficulty swallowing
+- Increased sleeping
+
+Risk Factors:
+- Age (greatest risk factor)
+- Family history and genetics (APOE-e4 allele)
+- History of head trauma
+- Cardiovascular disease
+- Diabetes
+- Obesity
+- Smoking
+- Sleep disorders
+- Social isolation
+
+Diagnosis:
+Clinical Assessment:
+- Comprehensive medical history
+- Mental status examinations (MMSE, MoCA)
+- Neuropsychological testing
+- Physical and neurological examination
+
+Imaging:
+- MRI to assess brain atrophy
+- PET scans (amyloid, tau, FDG)
+- Rule out other causes of dementia
+
+Laboratory Tests:
+- Complete blood count
+- Comprehensive metabolic panel
+- Thyroid function tests
+- Vitamin B12 levels
+- CSF biomarkers (research/specialized centers)
+
+Differential Diagnosis:
+- Vascular dementia
+- Lewy body dementia
+- Frontotemporal dementia
+- Normal pressure hydrocephalus
+- Depression ("pseudodementia")
+- Medication-induced cognitive impairment
+- Thyroid disorders
+- Vitamin deficiencies
+
+Treatment:
+Pharmacological:
+- Cholinesterase inhibitors: donepezil, rivastigmine, galantamine
+- NMDA receptor antagonist: memantine
+- Aducanumab (controversial, limited evidence)
+- Treatment of comorbid conditions
+
+Non-pharmacological:
+- Cognitive stimulation activities
+- Regular physical exercise
+- Social engagement
+- Structured daily routines
+- Environmental modifications
+- Music and art therapy
+- Reality orientation therapy
+
+Behavioral Management:
+- Address underlying causes of agitation
+- Maintain consistent caregivers
+- Modify environment to reduce confusion
+- Use redirection techniques
+- Consider low-dose antipsychotics for severe behavioral symptoms
+
+Prognosis:
+- Progressive disease with average survival 4-8 years after diagnosis
+- Rate of progression varies among individuals
+- Earlier onset typically associated with faster decline
+- Quality of life depends on available support and care
+
+Prevention:
+- Regular physical exercise
+- Mediterranean diet
+- Cognitive engagement
+- Social connections
+- Cardiovascular health management
+- Quality sleep
+- Stress management
+
+Complications:
+- Falls and injuries
+- Malnutrition and dehydration
+- Infections (pneumonia, UTIs)
+- Medication errors
+- Wandering and getting lost
+- Caregiver stress and burnout
+
+Key Points:
+- Most common cause of dementia
+- Diagnosis is primarily clinical
+- Early intervention may slow progression
+- Focus on maintaining function and quality of life
+- Comprehensive care approach involving multiple disciplines
+- Important to provide support for caregivers

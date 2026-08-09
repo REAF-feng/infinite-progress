@@ -1,0 +1,283 @@
+Epilepsy
+
+Overview:
+Epilepsy is a neurological disorder characterized by recurrent, unprovoked seizures due to abnormal electrical activity in the brain. It affects people of all ages and can have various underlying causes.
+
+Pathophysiology:
+- Abnormal synchronous neuronal firing
+- Imbalance between excitatory and inhibitory neurotransmission
+- Altered ion channel function
+- Structural brain abnormalities
+- Genetic factors affecting neuronal excitability
+
+Types of Seizures:
+Focal Seizures:
+Simple Focal (Focal Aware):
+- Consciousness maintained
+- Motor, sensory, autonomic, or psychic symptoms
+- May have aura
+
+Complex Focal (Focal Impaired Awareness):
+- Altered consciousness
+- Automatisms (lip smacking, picking at clothes)
+- Postictal confusion
+
+Focal to Bilateral Tonic-Clonic:
+- Begins as focal seizure
+- Spreads to involve both hemispheres
+- Secondary generalization
+
+Generalized Seizures:
+Absence Seizures:
+- Brief staring spells (3-30 seconds)
+- Sudden onset and offset
+- No postictal period
+- Common in children
+
+Tonic-Clonic Seizures:
+- Tonic phase: muscle stiffening
+- Clonic phase: rhythmic jerking
+- Loss of consciousness
+- Postictal confusion and fatigue
+
+Myoclonic Seizures:
+- Brief, shock-like muscle jerks
+- Can be isolated or clustered
+- Consciousness usually preserved
+
+Atonic Seizures:
+- Sudden loss of muscle tone
+- "Drop attacks"
+- High risk of injury
+
+Clinical Presentation:
+Ictal (During Seizure):
+- Depends on seizure type and location
+- Loss of consciousness (generalized)
+- Motor symptoms (jerking, stiffening)
+- Sensory symptoms
+- Autonomic symptoms (incontinence, flushing)
+
+Postictal (After Seizure):
+- Confusion and disorientation
+- Fatigue and sleepiness
+- Headache
+- Muscle soreness
+- Todd's paralysis (temporary weakness)
+
+Interictal (Between Seizures):
+- May be completely normal
+- Subtle cognitive changes
+- Mood disorders
+- Medication side effects
+
+Etiology:
+Idiopathic/Genetic:
+- Primary generalized epilepsy
+- Genetic epilepsy syndromes
+- Family history
+
+Symptomatic/Structural:
+- Brain tumors
+- Stroke
+- Traumatic brain injury
+- CNS infections
+- Cortical dysplasia
+- Hippocampal sclerosis
+- Neurodevelopmental disorders
+
+Metabolic:
+- Hypoglycemia
+- Electrolyte imbalances
+- Hypoxia
+- Drug withdrawal
+- Toxins
+
+Risk Factors:
+- Family history of epilepsy
+- Head trauma
+- Stroke
+- CNS infections
+- Developmental disorders
+- Alcohol abuse
+- Sleep deprivation
+- Stress
+
+Diagnosis:
+Clinical History:
+- Detailed seizure description
+- Witness accounts
+- Triggers and precipitants
+- Family history
+- Developmental history
+
+Electroencephalogram (EEG):
+- Interictal epileptiform discharges
+- Ictal patterns during seizures
+- Video-EEG monitoring for complex cases
+- Sleep-deprived EEG if initial normal
+
+Neuroimaging:
+MRI Brain:
+- High-resolution structural imaging
+- FLAIR, T2, T1 sequences
+- Look for structural abnormalities
+
+CT Brain:
+- Emergency setting
+- Acute trauma or bleeding
+
+Functional Imaging:
+- PET scan (interictal hypometabolism)
+- SPECT (ictal hyperperfusion)
+- For surgical evaluation
+
+Laboratory Tests:
+Acute Setting:
+- Blood glucose
+- Electrolytes (sodium, magnesium, calcium)
+- Complete blood count
+- Toxicology screen
+- Antiepileptic drug levels
+
+Chronic Evaluation:
+- Liver function tests
+- Kidney function
+- Vitamin levels (B12, folate)
+- Thyroid function
+
+Differential Diagnosis:
+- Syncope
+- Psychogenic nonepileptic seizures
+- Migraine with aura
+- Sleep disorders (parasomnias)
+- Movement disorders
+- Metabolic disorders
+- Cardiac arrhythmias
+- Transient ischemic attacks
+
+Treatment:
+Antiepileptic Drugs (AEDs):
+First-Line Agents:
+Focal Seizures:
+- Levetiracetam
+- Lamotrigine
+- Carbamazepine
+- Oxcarbazepine
+
+Generalized Seizures:
+- Valproic acid
+- Levetiracetam
+- Lamotrigine
+- Topiramate
+
+Specific Syndromes:
+Absence Seizures:
+- Ethosuximide
+- Valproic acid
+- Lamotrigine
+
+Myoclonic Seizures:
+- Valproic acid
+- Levetiracetam
+- Clonazepam
+
+Drug Selection Considerations:
+- Seizure type and syndrome
+- Age and gender
+- Comorbidities
+- Drug interactions
+- Side effect profile
+- Cost and availability
+
+Surgical Treatment:
+Resective Surgery:
+- Temporal lobectomy
+- Lesionectomy
+- Functional hemispherectomy
+- For drug-resistant focal epilepsy
+
+Palliative Surgery:
+- Corpus callosotomy
+- Multiple subpial transections
+- For generalized or multifocal epilepsy
+
+Neurostimulation:
+- Vagus nerve stimulation (VNS)
+- Responsive neurostimulation (RNS)
+- Deep brain stimulation (DBS)
+
+Non-Pharmacological Treatment:
+Dietary Therapy:
+- Ketogenic diet
+- Modified Atkins diet
+- Low glycemic index treatment
+- Particularly effective in children
+
+Lifestyle Modifications:
+- Sleep hygiene
+- Stress management
+- Alcohol avoidance
+- Trigger identification and avoidance
+
+Psychosocial Support:
+- Counseling and therapy
+- Support groups
+- Vocational rehabilitation
+- Educational accommodations
+
+Complications:
+Medical:
+- Status epilepticus
+- Sudden unexpected death in epilepsy (SUDEP)
+- Injuries from seizures
+- Medication side effects
+- Cognitive impairment
+
+Psychosocial:
+- Depression and anxiety
+- Social stigma
+- Driving restrictions
+- Employment limitations
+- Relationship difficulties
+
+Status Epilepticus:
+Definition:
+- Continuous seizure >5 minutes
+- Recurrent seizures without recovery
+
+Emergency Management:
+- Airway, breathing, circulation
+- IV lorazepam or midazolam
+- Phenytoin or fosphenytoin
+- Consider intubation
+- ICU monitoring
+
+Prognosis:
+- 70% achieve seizure control with appropriate treatment
+- 30% have drug-resistant epilepsy
+- Quality of life depends on seizure control
+- Most patients can lead normal lives
+- SUDEP risk: 1-2 per 1000 patient-years
+
+Special Populations:
+Women of Childbearing Age:
+- Teratogenic effects of AEDs
+- Folic acid supplementation
+- Pregnancy planning
+- Contraceptive interactions
+
+Elderly:
+- Drug interactions
+- Reduced clearance
+- Comorbidities
+- Lower starting doses
+
+Key Points:
+- Diagnosis requires at least two unprovoked seizures
+- EEG and MRI are essential diagnostic tools
+- Treatment aims for seizure freedom with minimal side effects
+- Surgical evaluation for drug-resistant epilepsy
+- Lifestyle modifications are important adjuncts
+- Regular monitoring for medication effects and seizure control
+- Patient education about safety and seizure precautions
