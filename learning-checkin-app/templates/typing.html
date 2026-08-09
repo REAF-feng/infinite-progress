@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}打字训练{% endblock %}
+{% block content %}
+
+<div class="grid-2">
+  <div>
+    <!-- 素材分类 -->
+    <div class="cat-section mb-4">
+      <h3 style="font-size:14px;color:var(--text2);margin-bottom:10px;">📂 素材分类</h3>
+      <div class="flex gap-2 flex-wrap">
+        <button class="cat-btn active" data-cat="python">🐍 Python代码</button>
+        <button class="cat-btn" data-cat="c_lang">🇨 C语言代码</button>
+        <button class="cat-btn" data-cat="english">🇬🇧 英文段落</button>
+      </div>
+    </div>
+
+    <!-- 素材选择 -->
+    <div class="form-group">
+      <label class="form-label">选择素材</label>
+      <select class="form-select" id="text-select"></select>
+    </div>
+
+    <!-- 实时统计 -->
+    <div class="stat-row mb-4">
+      <div class="stat-box">
+        <div class="stat-value green" id="wpm-value">0</div>
+        <div class="stat-label">WPM (字/分钟)</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value orange" id="acc-value">100%</div>
+        <div class="stat-label">准确率</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value purple" id="timer-value">0:00</div>
+        <div class="stat-label">用时</div>
+      </div>
+    </div>
+
+    <!-- 文本展示 -->
+    <div class="text-display-container" id="text-display-container">
+      <div class="text-display" id="text-display">
+        <div class="line"><span class="char pending">加载中...</span></div>
+      </div>
+    </div>
+
+    <!-- 输入区 -->
+    <div class="form-group">
+      <textarea class="form-textarea" id="typing-input" placeholder="在此输入，开始打字练习..." rows="3"></textarea>
+    </div>
+
+    <!-- 操作按钮 -->
+    <div class="flex gap-3">
+      <button class="btn btn-accent" id="restart-btn">🔄 重新开始</button>
+      <button class="btn btn-primary" onclick="showCheckinModal('typing', '打字', () => location.reload())">📝 打卡</button>
+    </div>
+  </div>
+
+  <!-- 历史记录 -->
+  <div>
+    <div class="card">
+      <div class="card-header"><span class="icon">📜</span> 打字历史记录</div>
+      <div id="typing-history" style="max-height:500px;overflow-y:auto;">
+        <div class="text-center text-muted" style="padding:20px;">加载中...</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="icon">💡</span> 打字技巧</div>
+      <div style="font-size:13px;color:var(--text2);line-height:2;">
+        <p>⌨️ <strong>标准指法：</strong></p>
+        <p>　左手：ASDF (基准键) | 右手：JKL;</p>
+        <p>🎯 <strong>练习建议：</strong></p>
+        <p>　1. 先追求准确率，再提升速度</p>
+        <p>　2. 每天练习15-30分钟</p>
+        <p>　3. 保持手指在基准键位</p>
+        <p>　4. 不要看键盘！</p>
+        <p>📊 <strong>目标：</strong></p>
+        <p>　入门: 30 WPM | 熟练: 50 WPM | 高手: 80+ WPM</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/typing.js') }}"></script>
+{% endblock %}

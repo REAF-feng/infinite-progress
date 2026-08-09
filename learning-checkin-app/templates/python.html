@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% block title %}Python学习{% endblock %}
+{% block content %}
+
+<div class="grid-2">
+  <!-- 知识点列表 -->
+  <div>
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">🐍</span> Python知识点清单（40天）
+        <span style="margin-left:auto;font-size:13px;color:var(--text2);" id="py-knowledge-count"></span>
+      </div>
+
+      <!-- 阶段筛选 -->
+      <div class="filter-tabs" id="py-stage-filters">
+        <button class="filter-tab active" data-stage="all">全部</button>
+        <button class="filter-tab" data-stage="阶段一：入门基础">阶段一</button>
+        <button class="filter-tab" data-stage="阶段二：逻辑控制">阶段二</button>
+        <button class="filter-tab" data-stage="阶段三：数据容器">阶段三</button>
+        <button class="filter-tab" data-stage="阶段四：函数与项目实战">阶段四</button>
+      </div>
+
+      <div id="py-knowledge-list" style="max-height:600px;overflow-y:auto;">
+        <div class="text-center text-muted" style="padding:20px;">加载中...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 右侧面板 -->
+  <div>
+    <!-- 打卡区域 -->
+    <div class="card text-center">
+      <div class="card-header"><span class="icon">📝</span> 今日Python打卡</div>
+      <div id="py-checkin-status" style="margin-bottom:16px;">
+        <span class="text-muted">加载中...</span>
+      </div>
+      <button class="btn btn-primary btn-lg" onclick="showCheckinModal('python', 'Python', () => location.reload())">
+        📝 Python打卡
+      </button>
+      <div id="py-streak-info" class="text-sm text-muted mt-4"></div>
+    </div>
+
+    <!-- 学习进度 -->
+    <div class="card">
+      <div class="card-header"><span class="icon">📊</span> 学习进度</div>
+      <div id="py-progress-container">
+        <div class="text-sm text-muted mb-4" id="py-progress-text">加载中...</div>
+        <div class="progress-bar">
+          <div class="progress-fill purple" id="py-progress-bar" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 学习笔记 -->
+    <div class="card">
+      <div class="card-header"><span class="icon">🗒️</span> 最近打卡笔记</div>
+      <div id="py-notes" style="max-height:200px;overflow-y:auto;">
+        <div class="text-muted text-sm">暂无记录</div>
+      </div>
+    </div>
+
+    <!-- Python速查 -->
+    <div class="card">
+      <div class="card-header"><span class="icon">⚡</span> Python常用速查</div>
+      <div style="font-size:13px;color:var(--text2);line-height:2;">
+        <p><code style="background:var(--surface2);padding:2px 6px;border-radius:3px;">print()</code> 输出到控制台</p>
+        <p><code style="background:var(--surface2);padding:2px 6px;border-radius:3px;">input()</code> 获取用户输入</p>
+        <p><code style="background:var(--surface2);padding:2px 6px;border-radius:3px;">len()</code> 获取长度</p>
+        <p><code style="background:var(--surface2);padding:2px 6px;border-radius:3px;">range(n)</code> 生成0到n-1序列</p>
+        <p><code style="background:var(--surface2);padding:2px 6px;border-radius:3px;">list.append()</code> 列表追加</p>
+        <p><code style="background:var(--surface2);padding:2px 6px;border-radius:3px;">dict.keys()</code> 字典所有键</p>
+        <p><code style="background:var(--surface2);padding:2px 6px;border-radius:3px;">def func():</code> 定义函数</p>
+        <p><code style="background:var(--surface2);padding:2px 6px;border-radius:3px;">open()</code> 打开文件</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+(async function() {
+  try {
+    const knowledge = await api.get('/api/knowledge/python');
+    const checkinData = await api.get('/api/checkin/python?days=60');
+    const todayData = await api.get('/api/checkin/today');
+
+    const checkedDates = new Set(checkinData.history.map(h => h.date));
+    document.getElementById('py-streak-info').textContent = `🔥 连续打卡: ${checkinData.streak} 天`;
+
+    const todayCheck = todayData.python;
+    const statusEl = document.getElementById('py-checkin-status');
+    if (todayCheck) {
+      statusEl.innerHTML = `<span style="color:var(--green);">✅ 今日已打卡 · ${todayCheck.study_time_min}分钟 · 自评${todayCheck.self_score}/10</span>`;
+    } else {
+      statusEl.innerHTML = '<span style="color:var(--text2);">⬜ 今日尚未打卡</span>';
+    }
+
+    const listEl = document.getElementById('py-knowledge-list');
+
+    const filterTabs = document.querySelectorAll('#py-stage-filters .filter-tab');
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const stage = tab.dataset.stage;
+        renderKnowledge(stage === 'all' ? knowledge : knowledge.filter(k => k.stage === stage));
+      });
+    });
+
+    function renderKnowledge(items) {
+      document.getElementById('py-knowledge-count').textContent = `共${items.length}天`;
+      const totalDays = items.length;
+      // Python打卡历史匹配天数
+      const completedCount = Math.min(checkedDates.size, totalDays);
+
+      listEl.innerHTML = items.map(k => `
+        <div class="knowledge-item">
+          <div class="day-num">${k.day}</div>
+          <div class="day-info">
+            <div class="day-topic">${k.topic}</div>
+            <div class="day-points">${(k.points || []).join(' · ')}</div>
+            <div class="day-stage"><span class="tag purple">${k.stage}</span></div>
+          </div>
+        </div>
+      `).join('');
+
+      const pct = totalDays > 0 ? Math.round(completedCount / totalDays * 100) : 0;
+      document.getElementById('py-progress-text').textContent = `累计打卡 ${checkedDates.size} 天 / ${totalDays} 天课程 (${pct}%)`;
+      document.getElementById('py-progress-bar').style.width = pct + '%';
+    }
+
+    renderKnowledge(knowledge);
+
+    // 最近笔记
+    const notesEl = document.getElementById('py-notes');
+    const notesList = checkinData.history.filter(h => h.notes).slice(0, 5);
+    if (notesList.length > 0) {
+      notesEl.innerHTML = notesList.map(h => `
+        <div style="margin-bottom:8px;padding:8px;background:var(--surface2);border-radius:6px;">
+          <div style="font-size:12px;color:var(--text3);">${h.date}</div>
+          <div style="font-size:13px;">${h.notes}</div>
+        </div>
+      `).join('');
+    }
+  } catch(e) {
+    console.error('Failed to load Python knowledge:', e);
+  }
+})();
+</script>
+{% endblock %}

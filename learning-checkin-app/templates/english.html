@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}英语学习{% endblock %}
+{% block content %}
+
+<div class="grid-2">
+  <!-- 单词卡片 -->
+  <div class="card" style="min-height:400px;">
+    <div class="card-header">
+      <span class="icon">📖</span> 单词卡片
+      <span style="margin-left:auto;font-size:13px;color:var(--text2);" id="word-progress">0 / 0</span>
+    </div>
+
+    <div class="word-card-container">
+      <div class="word-card" id="word-card" style="min-height:220px;">
+        <div class="word-card-front" id="word-front">
+          <div class="word">loading...</div>
+          <div class="hint">👆 点击翻转查看释义 | 空格键翻转</div>
+        </div>
+        <div class="word-card-back" id="word-back">
+          <div class="meaning"></div>
+          <div class="word-reminder"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-between items-center" style="margin-top:12px;">
+      <button class="btn btn-sm" id="prev-word">◀ 上一个</button>
+      <div class="flex gap-2">
+        <button class="btn btn-sm btn-primary" id="mark-mastered">✅ 已掌握</button>
+        <button class="btn btn-sm btn-danger" id="mark-review">🔄 再复习</button>
+      </div>
+      <button class="btn btn-sm" id="next-word">下一个 ▶</button>
+    </div>
+
+    <div class="flex gap-2 justify-between items-center mt-4">
+      <button class="btn btn-accent" id="reload-words">🔄 换一批词</button>
+      <span class="text-sm" id="vocab-stats" style="color:var(--text2);">加载中...</span>
+      <button class="btn btn-sm" onclick="showCheckinModal('english', '英语', () => location.reload())">📝 打卡</button>
+    </div>
+  </div>
+
+  <!-- 学习指南 -->
+  <div>
+    <div class="card">
+      <div class="card-header"><span class="icon">🎯</span> CET4 备考指南</div>
+      <div style="font-size:14px;line-height:2;">
+        <p>📌 <strong>阶段一：基础适配期</strong>（7-8月）<br>
+        <span class="text-sm text-muted">四级核心词汇2000、新闻听力入门、翻译基础句式 | 日均1.5h</span></p>
+        <p>📌 <strong>阶段二：专项强化期</strong>（9-10月）<br>
+        <span class="text-sm text-muted">分题型技巧精练、真题逐题型刷 | 日均2h</span></p>
+        <p>📌 <strong>阶段三：全真冲刺期</strong>（11-12月）<br>
+        <span class="text-sm text-muted">整卷模考×12套、错题清零 | 日均2h</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="icon">💡</span> 使用技巧</div>
+      <div style="font-size:13px;color:var(--text2);line-height:2;">
+        <p>⌨️ <strong>键盘快捷键：</strong></p>
+        <p>　← → 切换单词 | 空格键 翻转卡片</p>
+        <p>📖 <strong>学习方法：</strong></p>
+        <p>　1. 先看英文回忆中文释义</p>
+        <p>　2. 翻转卡片验证</p>
+        <p>　3. 掌握后点"已掌握"</p>
+        <p>　4. 不确定的点"再复习"</p>
+        <p>　5. 每天学完记得打卡！</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="icon">📊</span> 词汇进度</div>
+      <div id="vocab-progress-container">
+        <div class="text-sm text-muted" id="vocab-stats-detail">加载中...</div>
+        <div class="progress-bar mt-4">
+          <div class="progress-fill green" id="vocab-progress-bar" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/english.js') }}"></script>
+<script>
+// 初始化词汇进度条
+(async function() {
+  try {
+    const data = await api.get('/api/vocabulary/random?count=1');
+    const s = data.stats;
+    const pct = s.total > 0 ? Math.round(s.mastered / s.total * 100) : 0;
+    document.getElementById('vocab-stats-detail').textContent =
+      `已掌握 ${s.mastered} / ${s.total} 词 (${pct}%) | 今日复习 ${s.today_reviewed} 词`;
+    document.getElementById('vocab-progress-bar').style.width = pct + '%';
+  } catch(e) {}
+})();
+</script>
+{% endblock %}

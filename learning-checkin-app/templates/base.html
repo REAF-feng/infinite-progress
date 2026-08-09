@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}学习打卡{% endblock %} — 无限进步</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+{% block extra_head %}{% endblock %}
+</head>
+<body>
+<header class="header">
+    <a href="/" class="logo">📚 <span>无限进步</span></a>
+    <nav class="nav">
+        <a href="/" class="nav-btn" data-page="index">📊 仪表盘</a>
+        <a href="/english" class="nav-btn" data-page="english">🇬🇧 英语</a>
+        <a href="/typing" class="nav-btn" data-page="typing">⌨️ 打字</a>
+        <a href="/c-lang" class="nav-btn" data-page="c_lang">🇨 C语言</a>
+        <a href="/python" class="nav-btn" data-page="python">🐍 Python</a>
+    </nav>
+    <div class="header-right">
+        <span id="today-date" class="today-date"></span>
+    </div>
+</header>
+
+<main class="main">
+{% block content %}{% endblock %}
+</main>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% block extra_scripts %}{% endblock %}
+</body>
+</html>

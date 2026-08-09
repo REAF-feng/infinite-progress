@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"$env:USERPROFILE\\\\Desktop\" -Force | Sort-Object PSIsContainer, Name | Format-Table Name, PSIsContainer, Length, LastWriteTime -AutoSize)"
+    ]
+  }
+}

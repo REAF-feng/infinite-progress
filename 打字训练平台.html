@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TypeMaster — 准大一打字训练平台</title>
+<style>
+/* ========== CSS Variables & Reset ========== */
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface2: #21262d;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #6e7681;
+  --accent: #58a6ff;
+  --accent2: #79c0ff;
+  --green: #3fb950;
+  --red: #f85149;
+  --orange: #d2991d;
+  --purple: #a371f7;
+  --pink: #db61a2;
+  --cyan: #39d2c0;
+
+  /* Keyboard finger zone colors */
+  --finger-lp: #f8514966;
+  --finger-lr: #d2991d66;
+  --finger-lm: #d2a83166;
+  --finger-li: #3fb95066;
+  --finger-ri: #58a6ff66;
+  --finger-rm: #a371f766;
+  --finger-rr: #db61a266;
+  --finger-rp: #db61a299;
+  --finger-thumb: #8b949e44;
+
+  --finger-lp-solid: #f85149;
+  --finger-lr-solid: #d2991d;
+  --finger-lm-solid: #d2a831;
+  --finger-li-solid: #3fb950;
+  --finger-ri-solid: #58a6ff;
+  --finger-rm-solid: #a371f7;
+  --finger-rr-solid: #db61a2;
+  --finger-rp-solid: #c94d8c;
+
+  --radius: 8px;
+  --radius-sm: 4px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.3);
+  --transition: 0.15s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ========== Header & Nav ========== */
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent2);
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+.logo span { color: var(--green); }
+
+.nav { display: flex; gap: 2px; background: var(--surface2); border-radius: var(--radius); padding: 3px; }
+.nav-btn {
+  padding: 6px 16px;
+  border: none;
+  background: transparent;
+  color: var(--text2);
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition);
+  white-space: nowrap;
+  font-family: inherit;
+}
+.nav-btn:hover { color: var(--text); }
+.nav-btn.active { background: var(--accent); color: #fff; }
+
+.main { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+/* ========== Tabs ========== */
+.tab { display: none; }
+.tab.active { display: block; }
+
+/* ========== Stats Bar ========== */
+.stats-bar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.stat-card {
+  flex: 1;
+  min-width: 100px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  text-align: center;
+}
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent2);
+}
+.stat-value.green { color: var(--green); }
+.stat-value.red { color: var(--red); }
+.stat-label {
+  font-size: 12px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* ========== Text Display ========== */
+.text-display-container {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  min-height: 120px;
+  margin-bottom: 16px;
+  position: relative;
+  transition: border-color var(--transition);
+}
+.text-display-container.focused { border-color: var(--accent); }
+.text-display-container.finished { border-color: var(--green); }
+
+.text-display {
+  font-size: 22px;
+  font-family: "JetBrains Mono", "Cascadia Code", "Consolas", "Microsoft YaHei Mono", monospace;
+  line-height: 1.8;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  user-select: none;
+  letter-spacing: 1px;
+}
+.text-display .line { display: block; min-height: 1.8em; }
+
+.char {
+  position: relative;
+  transition: color 0.08s, background 0.08s;
+}
+.char.correct { color: var(--green); }
+.char.incorrect { color: var(--red); background: rgba(248,81,73,0.15); border-radius: 2px; }
+.char.current {
+  color: var(--text);
+  background: var(--accent);
+  border-radius: 2px;
+  animation: blink-caret 1s step-end infinite;
+}
+@keyframes blink-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.char.pending { color: var(--text3); }
+.char.space-correct { text-decoration: none; }
+.char.space-incorrect { background: rgba(248,81,73,0.2); border-radius: 2px; }
+.char.space-pending { }
+.char.newline {
+  color: var(--text3);
+  font-size: 14px;
+  vertical-align: middle;
+}
+.char.newline::before { content: '↵'; }
+.char.newline.correct { color: var(--green); }
+.char.newline.incorrect { color: var(--red); background: rgba(248,81,73,0.15); }
+
+/* ========== Input Area ========== */
+.input-wrapper { position: relative; margin-bottom: 20px; }
+#typing-input {
+  width: 100%;
+  padding: 16px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 18px;
+  font-family: "JetBrains Mono", "Cascadia Code", "Consolas", "Microsoft YaHei Mono", monospace;
+  resize: none;
+  outline: none;
+  transition: border-color var(--transition);
+  min-height: 80px;
+}
+#typing-input:focus { border-color: var(--accent); }
+#typing-input::placeholder { color: var(--text3); }
+
+.input-hint {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  font-size: 11px;
+  color: var(--text3);
+  pointer-events: none;
+}
+
+/* ========== Category Selector ========== */
+.cat-section { margin-bottom: 24px; }
+.cat-section h3 { font-size: 14px; color: var(--text2); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+.cat-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.cat-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text2);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: var(--transition);
+  font-family: inherit;
+  white-space: nowrap;
+}
+.cat-btn:hover { border-color: var(--accent); color: var(--text); }
+.cat-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ========== Action Buttons ========== */
+.actions { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.btn {
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn-primary:hover { background: var(--accent2); }
+.btn-secondary { background: var(--surface2); color: var(--text); }
+.btn-secondary:hover { background: var(--border); }
+.btn-danger { background: transparent; color: var(--red); border-color: var(--red); }
+.btn-danger:hover { background: rgba(248,81,73,0.1); }
+
+/* ========== Virtual Keyboard ========== */
+.keyboard-wrap { margin-top: 24px; }
+.keyboard-wrap h3 { font-size: 14px; color: var(--text2); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+
+.keyboard { display: flex; flex-direction: column; gap: 4px; align-items: center; padding: 16px; background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); overflow-x: auto; }
+.kb-row { display: flex; gap: 3px; }
+.kb-key {
+  height: 40px;
+  border-radius: 4px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text2);
+  transition: all 0.08s;
+  cursor: default;
+  min-width: 36px;
+  padding: 0 4px;
+  position: relative;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  user-select: none;
+}
+.kb-key.w1-25 { min-width: 45px; }
+.kb-key.w1-5 { min-width: 54px; }
+.kb-key.w1-75 { min-width: 66px; }
+.kb-key.w2 { min-width: 76px; }
+.kb-key.w2-25 { min-width: 86px; }
+.kb-key.w2-75 { min-width: 106px; }
+.kb-key.w6 { min-width: 240px; }
+
+/* Finger zone colors on keyboard */
+.kb-key.zone-lp { background: var(--finger-lp); border-color: var(--finger-lp-solid); }
+.kb-key.zone-lr { background: var(--finger-lr); border-color: var(--finger-lr-solid); }
+.kb-key.zone-lm { background: var(--finger-lm); border-color: var(--finger-lm-solid); }
+.kb-key.zone-li { background: var(--finger-li); border-color: var(--finger-li-solid); }
+.kb-key.zone-ri { background: var(--finger-ri); border-color: var(--finger-ri-solid); }
+.kb-key.zone-rm { background: var(--finger-rm); border-color: var(--finger-rm-solid); }
+.kb-key.zone-rr { background: var(--finger-rr); border-color: var(--finger-rr-solid); }
+.kb-key.zone-rp { background: var(--finger-rp); border-color: var(--finger-rp-solid); }
+.kb-key.zone-thumb { background: var(--finger-thumb); }
+.kb-key.anchor { border-bottom: 3px solid var(--accent2); }
+.kb-key.highlight {
+  background: var(--accent) !important;
+  border-color: var(--accent2) !important;
+  color: #fff !important;
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(88,166,255,0.5);
+  z-index: 2;
+}
+
+/* ========== Legend ========== */
+.legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; font-size: 12px; color: var(--text2); }
+.legend-item { display: flex; align-items: center; gap: 4px; }
+.legend-dot { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+
+/* ========== Fingering Guide ========== */
+.guide-section { margin-bottom: 28px; }
+.guide-section h2 {
+  font-size: 20px;
+  color: var(--accent2);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.guide-section h3 { font-size: 16px; color: var(--text); margin: 16px 0 8px; }
+
+.posture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin: 12px 0;
+}
+.posture-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.posture-card h4 { color: var(--accent2); font-size: 14px; margin-bottom: 6px; }
+.posture-card p { color: var(--text2); font-size: 13px; line-height: 1.5; }
+
+.finger-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+.finger-table th, .finger-table td {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+.finger-table th { background: var(--surface2); color: var(--accent2); font-weight: 600; }
+.finger-table td { background: var(--surface); }
+.finger-table code { background: var(--surface2); padding: 1px 6px; border-radius: 3px; font-size: 12px; color: var(--accent2); }
+
+.principle-list { list-style: none; padding: 0; }
+.principle-list li {
+  padding: 10px 14px;
+  margin: 6px 0;
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 14px;
+}
+.principle-list li strong { color: var(--accent2); }
+
+/* ========== Materials Tab ========== */
+.mat-section { margin-bottom: 20px; }
+.mat-section h3 { color: var(--accent2); margin-bottom: 10px; font-size: 16px; }
+.mat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.mat-card:hover { border-color: var(--accent); }
+.mat-card h4 { color: var(--text); font-size: 14px; margin-bottom: 6px; }
+.mat-card .preview {
+  font-family: "JetBrains Mono", "Consolas", "Microsoft YaHei Mono", monospace;
+  font-size: 12px;
+  color: var(--text3);
+  max-height: 60px;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+.mat-card .meta { font-size: 11px; color: var(--text3); margin-top: 6px; }
+
+/* ========== Check-in / Stats Tab ========== */
+.stats-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 768px) { .stats-layout { grid-template-columns: 1fr; } }
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.panel h3 { color: var(--accent2); font-size: 16px; margin-bottom: 14px; }
+
+.checkin-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  background: var(--green);
+  color: #000;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+.checkin-btn:hover { filter: brightness(1.15); }
+.checkin-btn.checked { background: var(--surface2); color: var(--text2); cursor: default; }
+
+.checkin-form { margin-top: 14px; display: none; }
+.checkin-form.show { display: block; }
+.form-row { display: flex; gap: 10px; margin-bottom: 10px; align-items: center; }
+.form-row label { min-width: 60px; font-size: 13px; color: var(--text2); }
+.form-row input, .form-row textarea {
+  flex: 1;
+  padding: 8px 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+}
+.form-row textarea { resize: vertical; min-height: 50px; }
+
+.history-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 10px; }
+.history-table th, .history-table td {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+.history-table th { color: var(--text2); font-weight: 600; }
+.history-table .wpm-cell { color: var(--accent2); font-weight: 700; }
+
+.chart-container { display: flex; align-items: flex-end; gap: 4px; height: 150px; padding: 10px 0; }
+.chart-bar {
+  flex: 1;
+  background: var(--accent);
+  border-radius: 3px 3px 0 0;
+  min-width: 10px;
+  transition: height 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+.chart-bar:hover { filter: brightness(1.3); }
+.chart-bar-label {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: var(--text3);
+  white-space: nowrap;
+}
+.chart-bar-value {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: var(--accent2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.streak-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--orange);
+  color: #000;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.stats-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
+.summary-item { text-align: center; padding: 12px; background: var(--surface2); border-radius: var(--radius); }
+.summary-item .val { font-size: 22px; font-weight: 700; color: var(--accent2); }
+.summary-item .lbl { font-size: 11px; color: var(--text3); margin-top: 2px; }
+
+/* ========== Tips Tab ========== */
+.tip-accordion { margin-bottom: 8px; }
+.tip-header {
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tip-header:hover { border-color: var(--accent); }
+.tip-header::after { content: '▸'; transition: transform 0.2s; color: var(--text3); }
+.tip-header.open::after { transform: rotate(90deg); }
+
+.tip-body {
+  padding: 0 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.3s;
+  background: var(--surface2);
+  border-radius: 0 0 var(--radius) var(--radius);
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+.tip-body.open { padding: 14px; max-height: 300px; }
+.tip-body strong { color: var(--accent2); }
+
+/* ========== Toast ========== */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; }
+.toast.success { border-color: var(--green); color: var(--green); }
+.toast.error { border-color: var(--red); color: var(--red); }
+
+/* ========== Timer Select ========== */
+.timer-select {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.timer-btn {
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 12px;
+  font-family: inherit;
+  transition: var(--transition);
+}
+.timer-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ========== Utils ========== */
+.flex-between { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.empty-state { text-align: center; padding: 40px; color: var(--text3); }
+.empty-state .icon { font-size: 48px; margin-bottom: 12px; }
+.tag { display: inline-block; padding: 2px 8px; background: var(--surface2); border-radius: 10px; font-size: 11px; color: var(--text2); margin: 2px; }
+
+@media (max-width: 768px) {
+  .nav { gap: 0; }
+  .nav-btn { padding: 6px 10px; font-size: 12px; }
+  .stat-value { font-size: 24px; }
+  .text-display { font-size: 16px; }
+  .kb-key { height: 32px; min-width: 28px; font-size: 9px; }
+  .kb-key.w1-25 { min-width: 36px; }
+  .kb-key.w1-5 { min-width: 42px; }
+  .kb-key.w1-75 { min-width: 50px; }
+  .kb-key.w2 { min-width: 58px; }
+  .kb-key.w2-25 { min-width: 66px; }
+  .kb-key.w2-75 { min-width: 80px; }
+  .kb-key.w6 { min-width: 160px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="logo">⌨️ Type<span>Master</span></div>
+  <nav class="nav" id="nav">
+    <button class="nav-btn active" data-tab="practice">🏠 开始练习</button>
+    <button class="nav-btn" data-tab="fingering">⌨️ 指法教学</button>
+    <button class="nav-btn" data-tab="materials">📚 练习素材</button>
+    <button class="nav-btn" data-tab="stats">📊 打卡统计</button>
+    <button class="nav-btn" data-tab="tips">💡 提升技巧</button>
+  </nav>
+</header>
+
+<main class="main">
+
+<!-- ==================== TAB 1: Practice ==================== -->
+<div class="tab active" id="tab-practice">
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="stat-value" id="wpm-display">0</div>
+      <div class="stat-label">WPM（字/分钟）</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value green" id="acc-display">100%</div>
+      <div class="stat-label">正确率</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="time-display">0:00</div>
+      <div class="stat-label">用时</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="progress-display">0%</div>
+      <div class="stat-label">进度</div>
+    </div>
+  </div>
+
+  <!-- Category Selector -->
+  <div class="cat-section">
+    <div class="flex-between">
+      <h3>📂 练习文本分类</h3>
+      <div class="timer-select">
+        <span style="font-size:12px;color:var(--text3)">计时:</span>
+        <button class="timer-btn" data-time="0">不限</button>
+        <button class="timer-btn active" data-time="60">1分钟</button>
+        <button class="timer-btn" data-time="180">3分钟</button>
+        <button class="timer-btn" data-time="300">5分钟</button>
+      </div>
+    </div>
+    <div class="cat-grid" id="cat-grid">
+      <button class="cat-btn active" data-cat="basic">🔤 基础字母</button>
+      <button class="cat-btn" data-cat="chinese">🀄 常用汉字</button>
+      <button class="cat-btn" data-cat="english">🇬🇧 英文短句</button>
+      <button class="cat-btn" data-cat="c-basic">💻 C语言基础</button>
+      <button class="cat-btn" data-cat="c-adv">⚡ C语言进阶</button>
+      <button class="cat-btn" data-cat="cet4">📖 四级短文</button>
+      <button class="cat-btn" data-cat="symbols">#️⃣ 符号专项</button>
+      <button class="cat-btn" data-cat="mixed">🎲 综合混合</button>
+    </div>
+  </div>
+
+  <!-- Text Display -->
+  <div class="text-display-container focused" id="text-container">
+    <div class="text-display" id="text-display"></div>
+  </div>
+
+  <!-- Hidden input for typing -->
+  <div class="input-wrapper">
+    <textarea id="typing-input" placeholder="👆 点击此处或按任意键开始打字练习..." rows="2"></textarea>
+    <div class="input-hint">Shift+Enter 换行 | Esc 重置 | 打字自动计时</div>
+  </div>
+
+  <!-- Actions -->
+  <div class="actions">
+    <button class="btn btn-primary" id="btn-restart">🔄 重新开始</button>
+    <button class="btn btn-secondary" id="btn-new-text">📝 换一段文本</button>
+    <button class="btn btn-secondary" id="btn-weak-keys">🎯 弱键专项练习</button>
+  </div>
+
+  <!-- Virtual Keyboard -->
+  <div class="keyboard-wrap">
+    <h3>⌨️ 虚拟键盘 · 手指分区</h3>
+    <div class="keyboard" id="keyboard"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+</div>
+
+<!-- ==================== TAB 2: Fingering Guide ==================== -->
+<div class="tab" id="tab-fingering">
+  <div class="guide-section">
+    <h2>🪑 标准坐姿规范</h2>
+    <div class="posture-grid">
+      <div class="posture-card"><h4>👀 屏幕高度</h4><p>屏幕上沿与视线平齐或略低，眼睛距屏幕 50–70cm</p></div>
+      <div class="posture-card"><h4>🧍 背部</h4><p>背部挺直贴椅背，肩膀放松下沉，不耸肩</p></div>
+      <div class="posture-card"><h4>💪 手臂</h4><p>上臂自然下垂，肘关节 ≈90°，手腕悬空不压桌面</p></div>
+      <div class="posture-card"><h4>✋ 手指</h4><p>手指自然弯曲，指尖轻触键面，想象键盘是烫的</p></div>
+      <div class="posture-card"><h4>🦶 脚部</h4><p>双脚平放地面，膝盖 ≈90°</p></div>
+      <div class="posture-card"><h4>📏 口诀</h4><p><strong>脚平背直肩放松，悬腕曲指轻触键</strong></p></div>
+    </div>
+  </div>
+
+  <div class="guide-section">
+    <h2>🏠 基准键位（Home Row）— 盲打的锚点</h2>
+    <p style="color:var(--text2);margin-bottom:12px;">
+      <strong>F</strong> 和 <strong>J</strong> 键上有凸起小横杠，闭着眼也能摸到——这是盲打最核心的锚点！<br>
+      起始位置：左手食指放 <strong>F</strong>，右手食指放 <strong>J</strong>，其余手指依次放好。<br>
+      每打完一个键，手指<strong>立即回到基准键位</strong>！
+    </p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:24px;text-align:center;">
+      <div style="flex:1;min-width:120px;padding:16px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);">
+        A<br><span style="font-size:11px;color:var(--finger-lp-solid)">小指</span>
+      </div>
+      <div style="flex:1;min-width:120px;padding:16px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);">
+        S<br><span style="font-size:11px;color:var(--finger-lr-solid)">无名指</span>
+      </div>
+      <div style="flex:1;min-width:120px;padding:16px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);">
+        D<br><span style="font-size:11px;color:var(--finger-lm-solid)">中指</span>
+      </div>
+      <div style="flex:1;min-width:120px;padding:16px;background:var(--surface);border-radius:var(--radius);border:2px solid var(--accent);">
+        <strong>F</strong><br><span style="font-size:11px;color:var(--finger-li-solid)">食指 ⚓</span>
+      </div>
+      <div style="flex:1;min-width:120px;padding:16px;background:var(--surface);border-radius:var(--radius);border:2px solid var(--accent);">
+        <strong>J</strong><br><span style="font-size:11px;color:var(--finger-ri-solid)">食指 ⚓</span>
+      </div>
+      <div style="flex:1;min-width:120px;padding:16px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);">
+        K<br><span style="font-size:11px;color:var(--finger-rm-solid)">中指</span>
+      </div>
+      <div style="flex:1;min-width:120px;padding:16px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);">
+        L<br><span style="font-size:11px;color:var(--finger-rr-solid)">无名指</span>
+      </div>
+      <div style="flex:1;min-width:120px;padding:16px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);">
+        ;<br><span style="font-size:11px;color:var(--finger-rp-solid)">小指</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section">
+    <h2>✋ 完整手指分工表</h2>
+    <table class="finger-table">
+      <thead><tr><th>手指</th><th>负责键位</th></tr></thead>
+      <tbody>
+        <tr><td style="color:var(--finger-lp-solid);font-weight:700">左手小指</td><td><code>`</code> <code>1</code> <code>Q</code> <code>A</code> <code>Z</code> <code>Shift</code> <code>Ctrl</code> <code>Tab</code></td></tr>
+        <tr><td style="color:var(--finger-lr-solid);font-weight:700">左手无名指</td><td><code>2</code> <code>W</code> <code>S</code> <code>X</code></td></tr>
+        <tr><td style="color:var(--finger-lm-solid);font-weight:700">左手中指</td><td><code>3</code> <code>E</code> <code>D</code> <code>C</code></td></tr>
+        <tr><td style="color:var(--finger-li-solid);font-weight:700">左手食指</td><td><code>4</code> <code>5</code> <code>R</code> <code>F</code> <code>V</code> <code>T</code> <code>G</code> <code>B</code></td></tr>
+        <tr><td style="color:var(--finger-ri-solid);font-weight:700">右手食指</td><td><code>6</code> <code>7</code> <code>Y</code> <code>H</code> <code>N</code> <code>U</code> <code>J</code> <code>M</code></td></tr>
+        <tr><td style="color:var(--finger-rm-solid);font-weight:700">右手中指</td><td><code>8</code> <code>I</code> <code>K</code> <code>,</code></td></tr>
+        <tr><td style="color:var(--finger-rr-solid);font-weight:700">右手无名指</td><td><code>9</code> <code>O</code> <code>L</code> <code>.</code></td></tr>
+        <tr><td style="color:var(--finger-rp-solid);font-weight:700">右手小指</td><td><code>0</code> <code>-</code> <code>=</code> <code>P</code> <code>[</code> <code>]</code> <code>;</code> <code>'</code> <code>/</code> <code>\</code> <code>Backspace</code> <code>Enter</code> <code>Shift</code></td></tr>
+        <tr><td style="color:var(--text2);font-weight:700">大拇指</td><td><code>空格键</code>（哪只手方便用哪只）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="guide-section">
+    <h2>🧠 核心原则（每天默念）</h2>
+    <ul class="principle-list">
+      <li><strong>❶</strong> 眼睛盯屏幕，不准看键盘——这是盲打的底线</li>
+      <li><strong>❷</strong> 手指永远从基准键位出发，打完立刻回位</li>
+      <li><strong>❸</strong> 准确率 > 速度——阶段一宁可慢，不能错</li>
+      <li><strong>❹</strong> 匀速节奏，不要忽快忽慢</li>
+      <li><strong>❺</strong> 错了不要立刻改——打完当前词再回头看</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ==================== TAB 3: Materials ==================== -->
+<div class="tab" id="tab-materials">
+  <div class="mat-section">
+    <h3>🔤 基础字母练习</h3>
+    <div class="mat-card" data-text-id="basic-1">
+      <h4>第一周 · 基准键位行 ASDF JKL;</h4>
+      <div class="preview">asdf jkl; asdf jkl; fdsa ;lkj fdsa ;lkj dad sad lad ask fall lass flask salad</div>
+      <div class="meta">难度：⭐ | 字数：~40</div>
+    </div>
+    <div class="mat-card" data-text-id="basic-2">
+      <h4>第二周 · 上排键位 QWER TYUI OP</h4>
+      <div class="preview">qwer tyui op[] quite world early point yours tower poetry writer quiet</div>
+      <div class="meta">难度：⭐⭐ | 字数：~45</div>
+    </div>
+    <div class="mat-card" data-text-id="basic-3">
+      <h4>第三周 · 下排键位 ZXCV BNM ,.</h4>
+      <div class="preview">zxcv bnm, ./ zoo vex cat banana monkey zebra cactus violin</div>
+      <div class="meta">难度：⭐⭐ | 字数：~45</div>
+    </div>
+    <div class="mat-card" data-text-id="basic-4">
+      <h4>第四周 · 全键盘综合</h4>
+      <div class="preview">the quick brown fox jumps over the lazy dog. pack my box with five dozen liquor jugs. sphinx of black quartz judge my vow.</div>
+      <div class="meta">难度：⭐⭐⭐ | 字数：~80</div>
+    </div>
+  </div>
+
+  <div class="mat-section">
+    <h3>🀄 常用汉字（拼音盲打）</h3>
+    <div class="mat-card" data-text-id="cn-daily">
+      <h4>高频日常词</h4>
+      <div class="preview">我们 他们 你们 自己 这个 那个 什么 怎么 为什么 可以 能够 应该 必须 需要 喜欢 觉得 知道 了解 今天 明天 昨天 现在 以后 以前 时候 时间 地方</div>
+      <div class="meta">难度：⭐⭐ | 27个常用词</div>
+    </div>
+    <div class="mat-card" data-text-id="cn-study">
+      <h4>学习高频词</h4>
+      <div class="preview">学习 工作 方法 问题 解决 处理 管理 系统 程序 数据 代码 函数 变量 循环 条件 数组 指针 内存 安全 漏洞 攻击 防御 加密 协议 网络 服务器</div>
+      <div class="meta">难度：⭐⭐ | 26个学习术语</div>
+    </div>
+  </div>
+
+  <div class="mat-section">
+    <h3>🇬🇧 英文短句（兼顾四级）</h3>
+    <div class="mat-card" data-text-id="en-1">
+      <h4>程序员励志短句</h4>
+      <div class="preview">Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.</div>
+      <div class="meta">难度：⭐⭐⭐ | ~100字符</div>
+    </div>
+    <div class="mat-card" data-text-id="en-2">
+      <h4>编程名言</h4>
+      <div class="preview">Talk is cheap. Show me the code. First, solve the problem. Then, write the code. Security is not a product, but a process.</div>
+      <div class="meta">难度：⭐⭐⭐ | ~120字符</div>
+    </div>
+    <div class="mat-card" data-text-id="en-3">
+      <h4>英语学习名言</h4>
+      <div class="preview">Practice makes perfect. Success is the sum of small efforts, repeated day in and day out. It does not matter how slowly you go as long as you do not stop.</div>
+      <div class="meta">难度：⭐⭐⭐ | ~170字符</div>
+    </div>
+  </div>
+
+  <div class="mat-section">
+    <h3>💻 C语言代码片段</h3>
+    <div class="mat-card" data-text-id="c-hello">
+      <h4>Hello World 入门</h4>
+      <div class="preview">#include <stdio.h>\nint main() {\n    printf("Hello, World!\\n");\n    return 0;\n}</div>
+      <div class="meta">难度：⭐⭐ | C语言 + 符号</div>
+    </div>
+    <div class="mat-card" data-text-id="c-if">
+      <h4>if-else 条件判断</h4>
+      <div class="preview">#include <stdio.h>\nint main() {\n    int score = 85;\n    if (score >= 90) {\n        printf("A\\n");\n    } else if (score >= 60) {\n        printf("Pass\\n");\n    } else {\n        printf("Fail\\n");\n    }\n    return 0;\n}</div>
+      <div class="meta">难度：⭐⭐⭐ | C语言 + 嵌套结构</div>
+    </div>
+    <div class="mat-card" data-text-id="c-sort">
+      <h4>冒泡排序算法</h4>
+      <div class="preview">void bubble_sort(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - 1 - i; j++) {\n            if (arr[j] > arr[j + 1]) {\n                int temp = arr[j];\n                arr[j] = arr[j + 1];\n                arr[j + 1] = temp;\n            }\n        }\n    }\n}</div>
+      <div class="meta">难度：⭐⭐⭐⭐ | 嵌套循环 + 数组</div>
+    </div>
+    <div class="mat-card" data-text-id="c-struct">
+      <h4>结构体 + 指针 + 内存管理</h4>
+      <div class="preview">typedef struct {\n    char name[50];\n    int age;\n    float score;\n} Student;\n\nint *ptr = (int *)malloc(sizeof(int) * 10);\nfor (int i = 0; i < 10; i++) {\n    ptr[i] = i * i;\n}\nfree(ptr);</div>
+      <div class="meta">难度：⭐⭐⭐⭐⭐ | 综合C语言练习</div>
+    </div>
+  </div>
+
+  <div class="mat-section">
+    <h3>#️⃣ 符号专项</h3>
+    <div class="mat-card" data-text-id="sym-1">
+      <h4>C语言高频符号</h4>
+      <div class="preview">() () () {} {} {} [] [] [] ; ; ; , , , " " " ' ' ' < > < > == != <= >= && || ++ -- += -= *= /= %= -></div>
+      <div class="meta">难度：⭐⭐ | 编程符号肌肉记忆</div>
+    </div>
+  </div>
+
+  <div class="mat-section">
+    <h3>📖 四级英语短文</h3>
+    <div class="mat-card" data-text-id="cet4-tech">
+      <h4>科技与网络安全</h4>
+      <div class="preview">The Internet has changed the way people communicate and access information. Cybersecurity threats such as phishing attacks, malware, and data breaches are becoming increasingly common. Therefore, it is essential for every Internet user to develop good security habits.</div>
+      <div class="meta">难度：⭐⭐⭐ | ~300字符 | CET-4 词汇</div>
+    </div>
+    <div class="mat-card" data-text-id="cet4-learn">
+      <h4>高效学习方法</h4>
+      <div class="preview">Effective learning requires more than just reading textbooks and attending lectures. Research shows that active recall, spaced repetition, and interleaved practice are among the most powerful learning strategies.</div>
+      <div class="meta">难度：⭐⭐⭐ | ~250字符 | CET-4 词汇</div>
+    </div>
+    <div class="mat-card" data-text-id="cet4-cs">
+      <h4>计算机编程导论</h4>
+      <div class="preview">Computer programming is the process of designing and building an executable computer program to accomplish a specific computing result. The purpose of programming is to find a sequence of instructions that will automate the performance of a task.</div>
+      <div class="meta">难度：⭐⭐⭐⭐ | ~300字符 | 专业词汇</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== TAB 4: Stats ==================== -->
+<div class="tab" id="tab-stats">
+  <div class="stats-layout">
+    <div class="panel">
+      <h3>📅 每日打卡</h3>
+      <div id="checkin-status">
+        <p style="color:var(--text2);font-size:14px;">今天日期：<strong id="today-date"></strong></p>
+        <div style="margin:12px 0;">
+          连续打卡：<span class="streak-badge" id="streak-badge">🔥 0 天</span>
+        </div>
+        <button class="checkin-btn" id="checkin-btn" onclick="toggleCheckin()">✅ 今日打卡签到</button>
+      </div>
+      <div class="checkin-form" id="checkin-form">
+        <div class="form-row">
+          <label>练习时长</label>
+          <input type="number" id="ci-duration" placeholder="分钟" min="1" max="300" value="30">
+          <span style="font-size:12px;color:var(--text3)">分钟</span>
+        </div>
+        <div class="form-row">
+          <label>最快 WPM</label>
+          <input type="number" id="ci-wpm" placeholder="WPM" min="0" max="200" value="0">
+        </div>
+        <div class="form-row">
+          <label>正确率</label>
+          <input type="number" id="ci-acc" placeholder="正确率" min="0" max="100" value="95">
+          <span style="font-size:12px;color:var(--text3)">%</span>
+        </div>
+        <div class="form-row">
+          <label>练习笔记</label>
+          <textarea id="ci-notes" placeholder="今天遇到的困难键位、进步、感悟..."></textarea>
+        </div>
+        <button class="btn btn-primary" onclick="saveCheckin()" style="width:100%;">💾 保存打卡记录</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>📈 练习总览</h3>
+      <div class="stats-summary">
+        <div class="summary-item">
+          <div class="val" id="sum-total-days">0</div>
+          <div class="lbl">累计练习天数</div>
+        </div>
+        <div class="summary-item">
+          <div class="val" id="sum-total-minutes">0</div>
+          <div class="lbl">累计练习分钟</div>
+        </div>
+        <div class="summary-item">
+          <div class="val" id="sum-best-wpm">0</div>
+          <div class="lbl">历史最佳 WPM</div>
+        </div>
+      </div>
+      <h4 style="font-size:13px;color:var(--text2);margin-bottom:6px;">📊 近10次 WPM 趋势</h4>
+      <div class="chart-container" id="wpm-chart">
+        <div class="empty-state" style="padding:20px;"><p>还没有数据，开始练习后自动生成</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:20px;">
+    <h3>📋 打卡历史记录</h3>
+    <div style="overflow-x:auto;">
+      <table class="history-table">
+        <thead><tr><th>日期</th><th>时长(分)</th><th>WPM</th><th>正确率</th><th>笔记</th><th>操作</th></tr></thead>
+        <tbody id="history-tbody">
+          <tr><td colspan="6" class="empty-state">暂无打卡记录，开始你的第一次练习吧！</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:12px;display:flex;gap:8px;">
+      <button class="btn btn-secondary btn-sm" onclick="exportData()">📥 导出数据</button>
+      <button class="btn btn-danger btn-sm" onclick="clearData()">🗑️ 清除全部数据</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== TAB 5: Tips ==================== -->
+<div class="tab" id="tab-tips">
+  <div class="guide-section">
+    <h2>⚠️ 十大坏习惯与纠正</h2>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">1. 看键盘打字 — 永远无法盲打</div>
+      <div class="tip-body"><strong>纠正：</strong>用纸板/快递盒盖住手部上方，挡住看键盘的视线。强制眼睛只看屏幕，手指凭触觉找键。连续3天，你会发现已经能摸到大部分键位了。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">2. 只用两三个手指 — 速度上限极低</div>
+      <div class="tip-body"><strong>纠正：</strong>从基准键位重新开始，强迫每个手指负责自己的键区。开始会慢到怀疑人生——这恰恰说明你在建立正确的肌肉记忆。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">3. 手腕压在桌面上 — 移动受限，易受伤</div>
+      <div class="tip-body"><strong>纠正：</strong>手腕悬空1-2cm。腕托只是临时休息用的，不是让你一直压着的。打字时手腕应该像钢琴家一样自然悬空。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">4. 打完键手指不归位 — 迷失方向</div>
+      <div class="tip-body"><strong>纠正：</strong>每个键打完的瞬间，手指立刻弹回基准键位。用F/J上的小凸起重新定位。这个习惯养成后，盲打就稳了。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">5. 大力敲击键盘 — 疲劳、噪音、速度慢</div>
+      <div class="tip-body"><strong>纠正：</strong>想象键盘是烫的——轻触即可触发。现在的键盘不需要用力按。手指越轻，速度越快，练得越久。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">6. 追求速度忽视准确率 — 肌肉记忆是错误的</div>
+      <div class="tip-body"><strong>纠正：</strong>前30天奖励准确率而不是速度。一个键打错10次再纠正比第一次就打对难10倍。慢就是快，准就是快。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">7. CapsLock 当 Shift 用 — 效率极低</div>
+      <div class="tip-body"><strong>纠正：</strong>养成只用 Shift 切换大小写的习惯。CapsLock 只用于连续大写（如常量名 MAX_SIZE）。日常打字中的单个大写字母一律 Shift。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">8. 坐姿歪斜 — 身体不对称疲劳</div>
+      <div class="tip-body"><strong>纠正：</strong>对镜子自查：双脚平放、膝盖90°、背部挺直、肩膀放松。好的坐姿让你练2小时不累，坏的坐姿30分钟就酸痛。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">9. 练习时分心 — 低效的30分钟=浪费</div>
+      <div class="tip-body"><strong>纠正：</strong>练习时只做练习。关掉手机通知，关掉视频网站。30分钟全神贯注 > 2小时边看视频边练。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">10. 低头看屏幕 — 颈椎杀手</div>
+      <div class="tip-body"><strong>纠正：</strong>用笔记本支架或几本书垫高屏幕，使屏幕上沿与视线平齐。长期低头看屏幕对颈椎的伤害是不可逆的。</div>
+    </div>
+  </div>
+
+  <div class="guide-section">
+    <h2>🚀 八大快速提升技巧</h2>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">🔦 技巧1：键盘"抹黑"训练法</div>
+      <div class="tip-body">找一张A4纸或快递纸板，盖在手上方，挡住看键盘的视线。强制眼睛只看屏幕，手指凭触觉找键。连续练习3天后，你会惊讶地发现自己已经能摸到大部分键了。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">⚓ 技巧2：F/J 锚点法</div>
+      <div class="tip-body">每次手指迷失时，<strong>不要低头看！</strong>用食指摸F和J上的小凸起 → 其他手指自动归位 → 重新出发。这是盲打最核心的武器，形成肌肉记忆后就再也丢不掉了。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">🎵 技巧3：节奏训练法</div>
+      <div class="tip-body">打开手机节拍器App，设置60BPM → 每个节拍打一个字母。慢慢提速到80→100→120BPM。节奏感建立后，打字会像弹钢琴一样流畅。推荐搜索"metronome"或"节拍器"。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">🧠 技巧4：睡前"脑内打字"</div>
+      <div class="tip-body">睡前闭眼，在脑海中想象键盘布局，从A到Z默念每个键对应的手指。5分钟即可，强化神经连接——很多打字高手都用这个方法，效果出奇地好。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">🎯 技巧5：弱键专项突击</div>
+      <div class="tip-body">每次练习后，把打错3次以上的键位单独提取出来，重复打50遍，直到连续10次不出错。这是效率最高的补练方式，比盲目练新文本快3倍。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">⚡ 技巧6：渐进式速度爆发</div>
+      <div class="tip-body">每3天做一次"速度爆发"：选一段熟悉文本，用比平常快20%的速度去打。正确率掉到85%以下就停止。不求一次成功，目的是让大脑和手指适应高速度的感觉。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">🔄 技巧7：反向练习法</div>
+      <div class="tip-body">偶尔从右往左打字：dog→god，code→edoc。锻炼逆向手指移动能力，打破固定模式。每周做2次，每次3分钟即可。</div>
+    </div>
+    <div class="tip-accordion">
+      <div class="tip-header" onclick="toggleTip(this)">💻 技巧8：C语言符号肌肉记忆</div>
+      <div class="tip-body">编程最大的速度瓶颈不是字母，是符号！每天单独练3分钟符号：<code>() {} [] ; , " ' &lt; &gt; = + - * / % ! &amp; | ^ ~</code>。把这些符号练到和字母一样流畅，写代码速度翻倍。</div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ==================== APP ====================
+const APP = {
+  currentTab: 'practice',
+  currentCat: 'basic',
+  targetText: '',
+  inputHistory: '',
+  currentIndex: 0,
+  errors: 0,
+  startTime: null,
+  timerSeconds: 0,
+  timerLimit: 60,
+  timerInterval: null,
+  isActive: false,
+  isFinished: false,
+  isComposing: false,
+  composeBuffer: '',
+  weakKeys: {}, // { 'a': 3, ';': 5 } error counts
+};
+
+// ==================== TEXT DATABASE ====================
+const TEXT_DB = {
+  'basic': [
+    "asdf jkl; asdf jkl; asdf jkl; asdf jkl; fj fj fj fj dk dk dk dk sl sl sl sl a; a; a; a; fdsa ;lkj fdsa ;lkj fdsa ;lkj dad dad dad sad sad sad fad fad fad lad lad lad ask ask ask fall fall fall lass lass lass flask salad",
+    "a sad lad asks a dad; a lad asks a sad dad; all dads fall; a flask asks a lad; a sad lass falls; ask a dad; a salad;",
+    "asdfg hjkl; asdfg hjkl; asdfg hjkl; glad glad glad flash flash flash glass glass glass",
+  ],
+  'chinese': [
+    "我们 他们 你们 自己 这个 那个 什么 怎么 为什么 可以 能够 应该 必须 需要 喜欢 觉得 知道 了解",
+    "今天 明天 昨天 现在 以后 以前 时候 时间 地方 学习 工作 方法 问题 解决 处理 管理 系统 程序",
+    "数据 代码 函数 变量 循环 条件 数组 指针 内存 安全 漏洞 攻击 防御 加密 协议 网络 服务器",
+  ],
+  'english': [
+    "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.",
+    "The only way to learn a new programming language is by writing programs in it. Security is not a product, but a process.",
+    "Talk is cheap. Show me the code. First, solve the problem. Then, write the code.",
+    "Practice makes perfect. After a long time of practicing, our work will become natural, skillful, swift, and steady.",
+    "Success is the sum of small efforts, repeated day in and day out. It does not matter how slowly you go as long as you do not stop.",
+  ],
+  'c-basic': [
+    '#include <stdio.h>\n\nint main() {\n    printf("Hello, World!\\n");\n    return 0;\n}',
+    '#include <stdio.h>\n\nint main() {\n    int a = 10, b = 20;\n    int sum = a + b;\n    printf("sum = %d\\n", sum);\n    return 0;\n}',
+    '#include <stdio.h>\n\nint main() {\n    int score;\n    printf("Enter score: ");\n    scanf("%d", &score);\n    if (score >= 90) {\n        printf("A\\n");\n    } else if (score >= 60) {\n        printf("Pass\\n");\n    } else {\n        printf("Fail\\n");\n    }\n    return 0;\n}',
+  ],
+  'c-adv': [
+    '#include <stdio.h>\n\nint factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\n\nint main() {\n    int n = 5;\n    printf("%d! = %d\\n", n, factorial(n));\n    return 0;\n}',
+    'void bubble_sort(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - 1 - i; j++) {\n            if (arr[j] > arr[j + 1]) {\n                int temp = arr[j];\n                arr[j] = arr[j + 1];\n                arr[j + 1] = temp;\n            }\n        }\n    }\n}',
+    '#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\ntypedef struct {\n    char name[50];\n    int age;\n    float score;\n} Student;\n\nint main() {\n    Student stu;\n    strcpy(stu.name, "ZhangSan");\n    stu.age = 20;\n    stu.score = 92.5;\n    printf("Name: %s\\n", stu.name);\n    printf("Age: %d\\n", stu.age);\n    printf("Score: %.2f\\n", stu.score);\n    int *ptr = (int *)malloc(sizeof(int) * 10);\n    for (int i = 0; i < 10; i++) ptr[i] = i * i;\n    free(ptr);\n    return 0;\n}',
+  ],
+  'cet4': [
+    "The Internet has changed the way people communicate and access information. With just a few clicks, we can connect with friends across the globe, participate in online courses, and explore vast digital libraries. However, this convenience also brings challenges. Cybersecurity threats such as phishing attacks, malware, and data breaches are becoming increasingly common. Therefore, it is essential for every Internet user to develop good security habits, including using strong passwords, keeping software updated, and being cautious about suspicious emails and links.",
+    "Effective learning requires more than just reading textbooks and attending lectures. Research shows that active recall, spaced repetition, and interleaved practice are among the most powerful learning strategies. Instead of passively reviewing notes, students should test themselves regularly on the material. Spreading study sessions over time, rather than cramming the night before an exam, leads to better long-term retention.",
+    "Computer programming is the process of designing and building an executable computer program to accomplish a specific computing result. Programming involves tasks such as analysis, generating algorithms, profiling algorithms accuracy and resource consumption, and the implementation of algorithms in a chosen programming language. The purpose of programming is to find a sequence of instructions that will automate the performance of a task on a computer.",
+  ],
+  'symbols': [
+    "() () () () () () () () () () {} {} {} {} {} {} {} {} {} {} [] [] [] [] [] [] [] [] [] [] ; ; ; ; ; ; ; ; ; ; , , , , , , , , , , \" \" \" \" \" \" \" \" \" \" ' ' ' ' ' ' ' ' ' ' < > < > < > == != <= >= && || ++ -- += -= *= /= %= ->",
+  ],
+  'mixed': [
+    "The quick brown fox jumps over the lazy dog. 我们每天都在学习新的编程知识。int main() { printf(\"hello world\\n\"); return 0; } Practice makes perfect.",
+    "Security is not a product, but a process. 网络安全是每个程序员的基本素养。for (int i = 0; i < n; i++) { sum += arr[i]; } Success is the sum of small efforts, repeated day in and day out.",
+  ],
+};
+
+// Material tab text IDs
+const MATERIAL_TEXTS = {
+  'basic-1': TEXT_DB['basic'][0],
+  'basic-2': "qwer tyui op[] qwer tyui op[] we we we are are are you you you quite world early point yours tower poetry writer quiet",
+  'basic-3': "za xs cd vf bg nh jm k, l. ;/ zxcv bnm, ./ zxcv bnm, ./ zoo zoo zoo vex vex vex cat cat cat banana monkey zebra cactus violin",
+  'basic-4': "the quick brown fox jumps over the lazy dog. pack my box with five dozen liquor jugs. sphinx of black quartz judge my vow.",
+  'cn-daily': "我们 他们 你们 自己 这个 那个 什么 怎么 为什么 可以 能够 应该 必须 需要 喜欢 觉得 知道 了解 今天 明天 昨天 现在 以后 以前 时候 时间 地方",
+  'cn-study': "学习 工作 方法 问题 解决 处理 管理 系统 程序 数据 代码 函数 变量 循环 条件 数组 指针 内存 安全 漏洞 攻击 防御 加密 协议 网络 服务器",
+  'en-1': "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.",
+  'en-2': "Talk is cheap. Show me the code. First, solve the problem. Then, write the code. Security is not a product, but a process.",
+  'en-3': "Practice makes perfect. Success is the sum of small efforts, repeated day in and day out. It does not matter how slowly you go as long as you do not stop.",
+  'c-hello': '#include <stdio.h>\n\nint main() {\n    printf("Hello, World!\\n");\n    return 0;\n}',
+  'c-if': '#include <stdio.h>\n\nint main() {\n    int score = 85;\n    if (score >= 90) {\n        printf("A\\n");\n    } else if (score >= 60) {\n        printf("Pass\\n");\n    } else {\n        printf("Fail\\n");\n    }\n    return 0;\n}',
+  'c-sort': 'void bubble_sort(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - 1 - i; j++) {\n            if (arr[j] > arr[j + 1]) {\n                int temp = arr[j];\n                arr[j] = arr[j + 1];\n                arr[j + 1] = temp;\n            }\n        }\n    }\n}',
+  'c-struct': 'typedef struct {\n    char name[50];\n    int age;\n    float score;\n} Student;\n\nint *ptr = (int *)malloc(sizeof(int) * 10);\nfor (int i = 0; i < 10; i++) {\n    ptr[i] = i * i;\n}\nfree(ptr);',
+  'sym-1': "() () () {} {} {} [] [] [] ; ; ; , , , \" \" \" ' ' ' < > < > == != <= >= && || ++ -- += -= *= /= %= ->",
+  'cet4-tech': "The Internet has changed the way people communicate and access information. Cybersecurity threats such as phishing attacks, malware, and data breaches are becoming increasingly common. Therefore, it is essential for every Internet user to develop good security habits.",
+  'cet4-learn': "Effective learning requires more than just reading textbooks and attending lectures. Research shows that active recall, spaced repetition, and interleaved practice are among the most powerful learning strategies.",
+  'cet4-cs': "Computer programming is the process of designing and building an executable computer program to accomplish a specific computing result. The purpose of programming is to find a sequence of instructions that will automate the performance of a task.",
+};
+
+// ==================== DOM REFS ====================
+const $ = id => document.getElementById(id);
+const textDisplay = $('text-display');
+const typingInput = $('typing-input');
+const textContainer = $('text-container');
+const wpmDisplay = $('wpm-display');
+const accDisplay = $('acc-display');
+const timeDisplay = $('time-display');
+const progressDisplay = $('progress-display');
+const toast = $('toast');
+
+// ==================== INIT ====================
+function init() {
+  setupNav();
+  setupCategoryButtons();
+  setupTimerButtons();
+  setupTypingInput();
+  setupActionButtons();
+  setupMaterialCards();
+  buildKeyboard();
+  loadRandomText();
+  renderStatsTab();
+  updateCheckinUI();
+}
+
+// ==================== NAVIGATION ====================
+function setupNav() {
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const tabId = btn.dataset.tab;
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      $(`tab-${tabId}`).classList.add('active');
+      APP.currentTab = tabId;
+      if (tabId === 'stats') renderStatsTab();
+      if (tabId === 'practice') {
+        setTimeout(() => typingInput.focus(), 100);
+      }
+    });
+  });
+}
+
+// ==================== CATEGORY BUTTONS ====================
+function setupCategoryButtons() {
+  document.querySelectorAll('#cat-grid .cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#cat-grid .cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      APP.currentCat = btn.dataset.cat;
+      loadRandomText();
+      typingInput.focus();
+    });
+  });
+}
+
+// ==================== TIMER BUTTONS ====================
+function setupTimerButtons() {
+  document.querySelectorAll('.timer-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.timer-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      APP.timerLimit = parseInt(btn.dataset.time);
+      resetPractice();
+      typingInput.focus();
+    });
+  });
+}
+
+// ==================== TEXT LOADING ====================
+function loadRandomText() {
+  const pool = TEXT_DB[APP.currentCat] || TEXT_DB['basic'];
+  const idx = Math.floor(Math.random() * pool.length);
+  APP.targetText = pool[idx];
+  resetPractice();
+}
+
+function loadText(text) {
+  APP.targetText = text;
+  resetPractice();
+}
+
+function resetPractice() {
+  APP.currentIndex = 0;
+  APP.errors = 0;
+  APP.inputHistory = '';
+  APP.startTime = null;
+  APP.isActive = false;
+  APP.isFinished = false;
+  APP.timerSeconds = 0;
+  if (APP.timerInterval) clearInterval(APP.timerInterval);
+  APP.timerInterval = null;
+  typingInput.value = '';
+  typingInput.disabled = false;
+  textContainer.classList.remove('finished');
+  textContainer.classList.add('focused');
+  wpmDisplay.textContent = '0';
+  wpmDisplay.classList.remove('green');
+  accDisplay.textContent = '100%';
+  accDisplay.classList.add('green');
+  accDisplay.classList.remove('red');
+  timeDisplay.textContent = APP.timerLimit > 0 ? formatTime(APP.timerLimit) : '0:00';
+  progressDisplay.textContent = '0%';
+  renderText();
+  updateKeyboardHighlight(null);
+}
+
+function renderText() {
+  textDisplay.innerHTML = '';
+  const text = APP.targetText;
+  const lines = text.split('\n');
+
+  lines.forEach((line, lineIdx) => {
+    const lineDiv = document.createElement('span');
+    lineDiv.className = 'line';
+
+    for (let i = 0; i < line.length; i++) {
+      const ch = line[i];
+      const span = document.createElement('span');
+      span.className = 'char pending';
+      if (ch === ' ') {
+        span.classList.add('space-pending');
+        span.innerHTML = '&nbsp;';
+      } else if (ch === '\t') {
+        span.textContent = '  ';
+        span.style.opacity = '0.4';
+      } else {
+        span.textContent = ch;
+      }
+      span.dataset.char = ch;
+      span.dataset.index = lineIdx + ':' + i;
+      lineDiv.appendChild(span);
+    }
+
+    textDisplay.appendChild(lineDiv);
+
+    // Add newline indicator between lines
+    if (lineIdx < lines.length - 1) {
+      const nlSpan = document.createElement('span');
+      nlSpan.className = 'char newline pending';
+      nlSpan.dataset.char = '\n';
+      nlSpan.dataset.index = 'nl:' + lineIdx;
+      textDisplay.appendChild(nlSpan);
+      const br = document.createElement('br');
+      textDisplay.appendChild(br);
+    }
+  });
+}
+
+// ==================== TYPING INPUT HANDLING ====================
+function setupTypingInput() {
+  typingInput.addEventListener('compositionstart', () => {
+    APP.isComposing = true;
+  });
+
+  typingInput.addEventListener('compositionend', (e) => {
+    APP.isComposing = false;
+    // After IME composition, process the newly committed text
+    processInput();
+  });
+
+  typingInput.addEventListener('input', (e) => {
+    if (APP.isComposing) return; // Wait for compositionend
+    processInput();
+  });
+
+  typingInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      resetPractice();
+      typingInput.focus();
+      return;
+    }
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      if (APP.isActive && APP.currentIndex < APP.targetText.length) {
+        const expected = APP.targetText[APP.currentIndex];
+        if (expected === '\t') {
+          handleChar('\t');
+        }
+      }
+      return;
+    }
+    // Prevent backspace from navigating back in browser
+    if (e.key === 'Backspace' && document.activeElement !== typingInput) {
+      e.preventDefault();
+    }
+  });
+
+  // Keep cursor at end
+  typingInput.addEventListener('click', () => {
+    typingInput.selectionStart = typingInput.selectionEnd = typingInput.value.length;
+  });
+
+  // Focus management
+  textContainer.addEventListener('click', () => {
+    typingInput.focus();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    // Global hotkeys - only if not typing in an input elsewhere
+    if (document.activeElement && document.activeElement.tagName === 'INPUT' && document.activeElement !== typingInput) return;
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+
+    // If typing input not focused and user starts typing, focus it
+    if (document.activeElement !== typingInput && APP.currentTab === 'practice' && !APP.isFinished) {
+      if (e.key.length === 1 || e.key === 'Backspace' || e.key === 'Enter') {
+        typingInput.focus();
+      }
+    }
+  });
+}
+
+function processInput() {
+  if (APP.isFinished) return;
+
+  const inputVal = typingInput.value;
+
+  // Start timer on first input
+  if (!APP.isActive && inputVal.length > 0) {
+    APP.isActive = true;
+    APP.startTime = Date.now();
+    if (APP.timerLimit > 0) {
+      startTimer();
+    }
+  }
+
+  // Compare character by character
+  const target = APP.targetText;
+  let correct = 0;
+  let errors = 0;
+  const minLen = Math.min(inputVal.length, target.length);
+
+  // Update all character spans
+  const allSpans = textDisplay.querySelectorAll('.char');
+  let globalIdx = 0;
+
+  allSpans.forEach(span => {
+    const ch = span.dataset.char;
+    if (!ch) return;
+    span.classList.remove('correct', 'incorrect', 'current');
+
+    if (globalIdx < minLen) {
+      const typed = inputVal[globalIdx];
+      if (typed === ch) {
+        span.classList.add('correct');
+        if (ch === ' ') span.classList.add('space-correct');
+        if (ch === '\n') span.classList.add('newline', 'correct');
+        correct++;
+      } else {
+        span.classList.add('incorrect');
+        if (ch === ' ') span.classList.add('space-incorrect');
+        if (ch === '\n') span.classList.add('newline', 'incorrect');
+        errors++;
+        // Track weak keys
+        if (ch && ch !== '\n' && ch !== ' ' && ch !== '\t') {
+          APP.weakKeys[ch] = (APP.weakKeys[ch] || 0) + 1;
+        }
+      }
+    } else if (globalIdx === minLen) {
+      if (minLen < target.length) {
+        span.classList.add('current');
+      }
+    }
+    // else: pending (default)
+
+    globalIdx++;
+  });
+
+  APP.currentIndex = minLen;
+  APP.errors = APP.currentIndex - correct;
+  APP.inputHistory = inputVal;
+
+  // Highlight keyboard for current expected character
+  if (APP.currentIndex < target.length) {
+    const expectedChar = target[APP.currentIndex];
+    updateKeyboardHighlight(expectedChar);
+  } else {
+    updateKeyboardHighlight(null);
+  }
+
+  // Check completion
+  if (APP.currentIndex >= target.length) {
+    finishPractice();
+  }
+
+  updateStats();
+  scrollToCurrentChar();
+}
+
+function handleChar(ch) {
+  // Used for programmatic character insertion (tab, etc.)
+  const ta = typingInput;
+  const start = ta.selectionStart;
+  const end = ta.selectionEnd;
+  ta.value = ta.value.substring(0, start) + ch + ta.value.substring(end);
+  ta.selectionStart = ta.selectionEnd = start + ch.length;
+  processInput();
+}
+
+function scrollToCurrentChar() {
+  const currentSpan = textDisplay.querySelector('.char.current');
+  if (currentSpan) {
+    currentSpan.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+}
+
+// ==================== TIMER ====================
+function startTimer() {
+  APP.timerSeconds = APP.timerLimit;
+  updateTimerDisplay();
+  APP.timerInterval = setInterval(() => {
+    APP.timerSeconds--;
+    updateTimerDisplay();
+    if (APP.timerSeconds <= 0) {
+      finishPractice();
+    }
+  }, 1000);
+}
+
+function updateTimerDisplay() {
+  if (APP.timerLimit > 0) {
+    timeDisplay.textContent = formatTime(APP.timerSeconds);
+  } else {
+    const elapsed = APP.startTime ? Math.floor((Date.now() - APP.startTime) / 1000) : 0;
+    timeDisplay.textContent = formatTime(elapsed);
+  }
+}
+
+function formatTime(seconds) {
+  const m = Math.floor(seconds / 60);
+  const s = seconds % 60;
+  return m + ':' + String(s).padStart(2, '0');
+}
+
+// ==================== STATS CALCULATION ====================
+function updateStats() {
+  const inputVal = typingInput.value;
+  const target = APP.targetText;
+  const minLen = Math.min(inputVal.length, target.length);
+
+  let correct = 0;
+  for (let i = 0; i < minLen; i++) {
+    if (inputVal[i] === target[i]) correct++;
+  }
+
+  const accuracy = minLen > 0 ? Math.round((correct / minLen) * 100) : 100;
+  const elapsedMinutes = APP.startTime ? (Date.now() - APP.startTime) / 60000 : 0;
+  const wpm = elapsedMinutes > 0.05 ? Math.round((correct / 5) / elapsedMinutes) : 0;
+
+  wpmDisplay.textContent = wpm;
+  accDisplay.textContent = accuracy + '%';
+  progressDisplay.textContent = Math.round((APP.currentIndex / target.length) * 100) + '%';
+
+  if (accuracy >= 95) {
+    accDisplay.classList.add('green'); accDisplay.classList.remove('red');
+  } else if (accuracy < 85) {
+    accDisplay.classList.add('red'); accDisplay.classList.remove('green');
+  } else {
+    accDisplay.classList.remove('green', 'red');
+  }
+
+  // Update time if no timer limit
+  if (APP.timerLimit === 0) {
+    updateTimerDisplay();
+  }
+}
+
+function finishPractice() {
+  APP.isActive = false;
+  APP.isFinished = true;
+  if (APP.timerInterval) { clearInterval(APP.timerInterval); APP.timerInterval = null; }
+  typingInput.disabled = true;
+  textContainer.classList.add('finished');
+  textContainer.classList.remove('focused');
+  updateKeyboardHighlight(null);
+
+  const finalWpm = parseInt(wpmDisplay.textContent) || 0;
+  const finalAcc = parseInt(accDisplay.textContent) || 100;
+
+  // Auto-save checkin data for stats
+  autoSaveSession(finalWpm, finalAcc);
+
+  if (finalWpm >= 60) {
+    showToast('🎉 恭喜！达到60+ WPM目标！', 'success');
+  } else if (finalWpm >= 40) {
+    showToast('👍 不错！继续加油冲击60 WPM！', 'success');
+  }
+
+  // Update checkin form
+  const ciWpm = $('ci-wpm');
+  const ciAcc = $('ci-acc');
+  if (ciWpm && finalWpm > parseInt(ciWpm.value || '0')) ciWpm.value = finalWpm;
+  if (ciAcc) ciAcc.value = finalAcc;
+}
+
+// ==================== ACTION BUTTONS ====================
+function setupActionButtons() {
+  $('btn-restart').addEventListener('click', () => {
+    resetPractice();
+    typingInput.focus();
+  });
+
+  $('btn-new-text').addEventListener('click', () => {
+    loadRandomText();
+    typingInput.focus();
+  });
+
+  $('btn-weak-keys').addEventListener('click', () => {
+    generateWeakKeyPractice();
+    typingInput.focus();
+  });
+}
+
+function generateWeakKeyPractice() {
+  const weak = Object.entries(APP.weakKeys).sort((a, b) => b[1] - a[1]).slice(0, 8);
+  if (weak.length === 0) {
+    showToast('还没有错误记录，先练习积累数据吧！', '');
+    return;
+  }
+
+  let practiceText = '';
+  weak.forEach(([key, count]) => {
+    practiceText += (key + ' ').repeat(20);
+    // Add word practice for each weak key
+    const words = getWordsForKey(key);
+    practiceText += words + ' ';
+  });
+
+  APP.targetText = practiceText.trim();
+  resetPractice();
+  showToast('🎯 已生成弱键专项练习：' + weak.map(([k]) => k).join(' '), 'success');
+
+  // Reset weak keys tracking for this session
+  APP.weakKeys = {};
+}
+
+function getWordsForKey(key) {
+  const wordMap = {
+    'a': 'and at ask art',
+    'b': 'but big boy bit',
+    'c': 'cat can cup cut',
+    'd': 'dog did dad day',
+    'e': 'end eat egg elm',
+    'f': 'fun fat fit for',
+    'g': 'get got gas gum',
+    'h': 'hat hot hit how',
+    'i': 'ink its if in',
+    'j': 'jam jog jet joy',
+    'k': 'kit key kid kin',
+    'l': 'let lot lip log',
+    'm': 'man map mom met',
+    'n': 'not net nut new',
+    'o': 'old one our out',
+    'p': 'put pen pop pin',
+    'q': 'queen quick quit',
+    'r': 'run red rat row',
+    's': 'sit set say sun',
+    't': 'the top tin two',
+    'u': 'use us up under',
+    'v': 'van vet via vow',
+    'w': 'was win wet why',
+    'x': 'axe box fix mix',
+    'y': 'yes you yet yam',
+    'z': 'zip zoo zen zap',
+    ';': '; ; ; ;',
+    ',': ', , , ,',
+    '(': '( ( ( (',
+    ')': ') ) ) )',
+    '{': '{ { { {',
+    '}': '} } } }',
+    '[': '[ [ [ [',
+    ']': '] ] ] ]',
+    '<': '< < < <',
+    '>': '> > > >',
+    '"': '" " " "',
+    "'": "' ' ' '",
+  };
+  return wordMap[key] || (key + ' ' + key + ' ' + key);
+}
+
+// ==================== MATERIAL CARDS ====================
+function setupMaterialCards() {
+  document.querySelectorAll('#tab-materials .mat-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const textId = card.dataset.textId;
+      if (textId && MATERIAL_TEXTS[textId]) {
+        loadText(MATERIAL_TEXTS[textId]);
+        // Switch to practice tab
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        document.querySelector('[data-tab="practice"]').classList.add('active');
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        $('tab-practice').classList.add('active');
+        APP.currentTab = 'practice';
+        showToast('✅ 已加载练习文本，开始打字吧！', 'success');
+        setTimeout(() => typingInput.focus(), 200);
+      }
+    });
+  });
+}
+
+// ==================== KEYBOARD VISUALIZATION ====================
+const KEYBOARD_LAYOUT = [
+  // [keyLabel, widthClass, keyValue, fingerZone]
+  { row: 0, keys: [
+    ['`', 'w1', '`', 'lp'], ['1', 'w1', '1', 'lp'], ['2', 'w1', '2', 'lr'], ['3', 'w1', '3', 'lm'], ['4', 'w1', '4', 'li'],
+    ['5', 'w1', '5', 'li'], ['6', 'w1', '6', 'ri'], ['7', 'w1', '7', 'ri'], ['8', 'w1', '8', 'rm'], ['9', 'w1', '9', 'rr'],
+    ['0', 'w1', '0', 'rr'], ['-', 'w1', '-', 'rp'], ['=', 'w1', '=', 'rp'], ['⌫', 'w2', 'Backspace', 'rp']
+  ]},
+  { row: 1, keys: [
+    ['Tab', 'w1-5', 'Tab', 'lp'], ['Q', 'w1', 'q', 'lp'], ['W', 'w1', 'w', 'lr'], ['E', 'w1', 'e', 'lm'],
+    ['R', 'w1', 'r', 'li'], ['T', 'w1', 't', 'li'], ['Y', 'w1', 'y', 'ri'], ['U', 'w1', 'u', 'ri'],
+    ['I', 'w1', 'i', 'rm'], ['O', 'w1', 'o', 'rr'], ['P', 'w1', 'p', 'rp'], ['[', 'w1', '[', 'rp'],
+    [']', 'w1', ']', 'rp'], ['\\', 'w1-5', '\\', 'rp']
+  ]},
+  { row: 2, keys: [
+    ['Caps', 'w1-75', 'CapsLock', 'lp'], ['A', 'w1', 'a', 'lp'], ['S', 'w1', 's', 'lr'], ['D', 'w1', 'd', 'lm'],
+    ['F', 'w1', 'f', 'li', true], ['G', 'w1', 'g', 'li'], ['H', 'w1', 'h', 'ri'], ['J', 'w1', 'j', 'ri', true],
+    ['K', 'w1', 'k', 'rm'], ['L', 'w1', 'l', 'rr'], [';', 'w1', ';', 'rp'], ["'", 'w1', "'", 'rp'],
+    ['Enter', 'w2-25', 'Enter', 'rp']
+  ]},
+  { row: 3, keys: [
+    ['Shift', 'w2-25', 'ShiftLeft', 'lp'], ['Z', 'w1', 'z', 'lp'], ['X', 'w1', 'x', 'lr'], ['C', 'w1', 'c', 'lm'],
+    ['V', 'w1', 'v', 'li'], ['B', 'w1', 'b', 'li'], ['N', 'w1', 'n', 'ri'], ['M', 'w1', 'm', 'ri'],
+    [',', 'w1', ',', 'rm'], ['.', 'w1', '.', 'rr'], ['/', 'w1', '/', 'rp'], ['Shift', 'w2-75', 'ShiftRight', 'rp']
+  ]},
+  { row: 4, keys: [
+    ['Ctrl', 'w1-25', 'ControlLeft', 'lp'], ['Win', 'w1-25', 'MetaLeft', 'lp'], ['Alt', 'w1-25', 'AltLeft', 'lp'],
+    ['Space', 'w6', ' ', 'thumb'], ['Alt', 'w1-25', 'AltRight', 'rp'], ['Win', 'w1-25', 'MetaRight', 'rp'],
+    ['Menu', 'w1-25', 'ContextMenu', 'rp'], ['Ctrl', 'w1-25', 'ControlRight', 'rp']
+  ]}
+];
+
+const FINGER_COLORS = {
+  'lp': '--finger-lp-solid',
+  'lr': '--finger-lr-solid',
+  'lm': '--finger-lm-solid',
+  'li': '--finger-li-solid',
+  'ri': '--finger-ri-solid',
+  'rm': '--finger-rm-solid',
+  'rr': '--finger-rr-solid',
+  'rp': '--finger-rp-solid',
+  'thumb': '--text3',
+};
+
+const FINGER_NAMES = {
+  'lp': '左手小指', 'lr': '左手无名指', 'lm': '左手中指', 'li': '左手食指',
+  'ri': '右手食指', 'rm': '右手中指', 'rr': '右手无名指', 'rp': '右手小指', 'thumb': '大拇指',
+};
+
+function buildKeyboard() {
+  const kb = $('keyboard');
+  kb.innerHTML = '';
+
+  KEYBOARD_LAYOUT.forEach(rowData => {
+    const rowDiv = document.createElement('div');
+    rowDiv.className = 'kb-row';
+
+    rowData.keys.forEach(([label, widthClass, keyValue, zone, isAnchor]) => {
+      const keyEl = document.createElement('div');
+      keyEl.className = `kb-key ${widthClass} zone-${zone}`;
+      if (isAnchor) keyEl.classList.add('anchor');
+      keyEl.textContent = label;
+      keyEl.dataset.keyValue = keyValue;
+      keyEl.dataset.zone = zone;
+      rowDiv.appendChild(keyEl);
+    });
+
+    kb.appendChild(rowDiv);
+  });
+
+  // Build legend
+  const legend = $('legend');
+  legend.innerHTML = '';
+  const seenZones = new Set();
+  KEYBOARD_LAYOUT.forEach(row => {
+    row.keys.forEach(([,,, zone]) => {
+      if (!seenZones.has(zone)) {
+        seenZones.add(zone);
+        const item = document.createElement('div');
+        item.className = 'legend-item';
+        const dot = document.createElement('div');
+        dot.className = 'legend-dot';
+        dot.style.background = `var(${FINGER_COLORS[zone] || '--text3'})`;
+        const label = document.createElement('span');
+        label.textContent = FINGER_NAMES[zone] || zone;
+        item.appendChild(dot);
+        item.appendChild(label);
+        legend.appendChild(item);
+      }
+    });
+  });
+}
+
+function updateKeyboardHighlight(char) {
+  // Remove all highlights
+  document.querySelectorAll('.kb-key.highlight').forEach(k => k.classList.remove('highlight'));
+
+  if (!char) return;
+
+  // Map character to key value
+  let keyVal = char.toLowerCase();
+  if (char === ' ') keyVal = ' ';
+  if (char === '\n') keyVal = 'Enter';
+  if (char === '\t') keyVal = 'Tab';
+
+  // Find and highlight matching key
+  const keyEl = document.querySelector(`.kb-key[data-key-value="${CSS.escape(keyVal)}"]`);
+  if (keyEl) {
+    keyEl.classList.add('highlight');
+  }
+
+  // If uppercase or symbol requiring shift, also highlight shift
+  const shiftChars = '~!@#$%^&*()_+{}|:"<>?';
+  if (shiftChars.includes(char) || (char >= 'A' && char <= 'Z')) {
+    const shiftKey = document.querySelector('.kb-key[data-key-value="ShiftLeft"]');
+    if (shiftKey) shiftKey.classList.add('highlight');
+  }
+}
+
+// CSS.escape polyfill for older browsers
+if (!CSS.escape) {
+  CSS.escape = function(value) {
+    return String(value).replace(/([^\w-])/g, '\\$1');
+  };
+}
+
+// ==================== STATS / CHECKIN ====================
+function getStorage() {
+  try {
+    const raw = localStorage.getItem('typemaster_data');
+    return raw ? JSON.parse(raw) : { checkins: [], bestWpm: 0, totalMinutes: 0 };
+  } catch (e) {
+    return { checkins: [], bestWpm: 0, totalMinutes: 0 };
+  }
+}
+
+function saveStorage(data) {
+  try {
+    localStorage.setItem('typemaster_data', JSON.stringify(data));
+  } catch (e) {
+    showToast('⚠️ 本地存储空间不足，请导出数据后清理', 'error');
+  }
+}
+
+function autoSaveSession(wpm, acc) {
+  const data = getStorage();
+  const today = getTodayStr();
+
+  // Update best WPM
+  if (wpm > data.bestWpm) data.bestWpm = wpm;
+
+  // Estimate duration based on timer
+  let duration = 0;
+  if (APP.timerLimit > 0 && APP.startTime) {
+    duration = Math.round((Date.now() - APP.startTime) / 60000);
+  } else if (APP.startTime) {
+    duration = Math.round((Date.now() - APP.startTime) / 60000);
+  }
+  data.totalMinutes = (data.totalMinutes || 0) + Math.max(1, duration);
+
+  // Update today's checkin if exists
+  const existingIdx = data.checkins.findIndex(c => c.date === today);
+  if (existingIdx >= 0) {
+    const existing = data.checkins[existingIdx];
+    if (wpm > existing.wpm) existing.wpm = wpm;
+    if (acc > existing.accuracy) existing.accuracy = acc;
+    existing.duration = (existing.duration || 0) + Math.max(1, duration);
+  }
+  // Don't auto-create checkin - user should manually check in with notes
+
+  saveStorage(data);
+}
+
+function getTodayStr() {
+  const d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+
+function updateCheckinUI() {
+  const today = getTodayStr();
+  const data = getStorage();
+  const todayCheckin = data.checkins.find(c => c.date === today);
+
+  $('today-date').textContent = today;
+
+  // Streak calculation
+  let streak = 0;
+  const sortedDates = [...new Set(data.checkins.map(c => c.date))].sort().reverse();
+  const checkDate = new Date();
+  for (let i = 0; i < sortedDates.length; i++) {
+    const expected = new Date(checkDate);
+    expected.setDate(expected.getDate() - i);
+    const expectedStr = expected.getFullYear() + '-' + String(expected.getMonth() + 1).padStart(2, '0') + '-' + String(expected.getDate()).padStart(2, '0');
+    if (sortedDates[i] === expectedStr) {
+      streak++;
+    } else {
+      break;
+    }
+  }
+  // Also check if today is checked in
+  if (streak === 0 && todayCheckin) streak = 1;
+
+  $('streak-badge').textContent = '🔥 ' + streak + ' 天';
+
+  if (todayCheckin) {
+    $('checkin-btn').textContent = '✅ 今日已打卡';
+    $('checkin-btn').classList.add('checked');
+    $('checkin-form').classList.add('show');
+    $('ci-duration').value = todayCheckin.duration || 30;
+    $('ci-wpm').value = todayCheckin.wpm || 0;
+    $('ci-acc').value = todayCheckin.accuracy || 95;
+    $('ci-notes').value = todayCheckin.notes || '';
+  } else {
+    $('checkin-btn').textContent = '✅ 今日打卡签到';
+    $('checkin-btn').classList.remove('checked');
+    $('checkin-form').classList.remove('show');
+    $('ci-duration').value = 30;
+    $('ci-wpm').value = 0;
+    $('ci-acc').value = 95;
+    $('ci-notes').value = '';
+  }
+}
+
+function toggleCheckin() {
+  const today = getTodayStr();
+  const data = getStorage();
+  const todayCheckin = data.checkins.find(c => c.date === today);
+
+  if (todayCheckin) {
+    // Already checked in - edit mode
+    $('checkin-form').classList.toggle('show');
+  } else {
+    // New checkin
+    $('checkin-form').classList.add('show');
+    // Pre-fill from current session
+    const currentWpm = parseInt(wpmDisplay.textContent) || 0;
+    const currentAcc = parseInt(accDisplay.textContent) || 100;
+    $('ci-wpm').value = currentWpm;
+    $('ci-acc').value = currentAcc;
+    $('ci-duration').value = 30;
+  }
+}
+
+function saveCheckin() {
+  const today = getTodayStr();
+  const data = getStorage();
+
+  const duration = parseInt($('ci-duration').value) || 0;
+  const wpm = parseInt($('ci-wpm').value) || 0;
+  const accuracy = parseInt($('ci-acc').value) || 0;
+  const notes = $('ci-notes').value.trim();
+
+  if (duration <= 0) {
+    showToast('⚠️ 请填写练习时长', 'error');
+    return;
+  }
+
+  const existingIdx = data.checkins.findIndex(c => c.date === today);
+  const entry = { date: today, duration, wpm, accuracy, notes, timestamp: Date.now() };
+
+  if (existingIdx >= 0) {
+    data.checkins[existingIdx] = entry;
+  } else {
+    data.checkins.push(entry);
+  }
+
+  if (wpm > data.bestWpm) data.bestWpm = wpm;
+  data.totalMinutes = (data.totalMinutes || 0) + duration;
+
+  saveStorage(data);
+  updateCheckinUI();
+  renderStatsTab();
+  showToast('✅ 打卡记录已保存！', 'success');
+}
+
+function renderStatsTab() {
+  const data = getStorage();
+  const checkins = data.checkins.sort((a, b) => b.timestamp - a.timestamp);
+
+  // Summary
+  $('sum-total-days').textContent = new Set(checkins.map(c => c.date)).size;
+  $('sum-total-minutes').textContent = data.totalMinutes || 0;
+  $('sum-best-wpm').textContent = data.bestWpm || 0;
+
+  // WPM Chart - last 10
+  const chartContainer = $('wpm-chart');
+  chartContainer.innerHTML = '';
+  const recent = checkins.slice(0, 10).reverse();
+  if (recent.length === 0) {
+    chartContainer.innerHTML = '<div class="empty-state" style="padding:20px;width:100%;"><p>还没有数据，开始练习后自动生成</p></div>';
+  } else {
+    const maxWpm = Math.max(...recent.map(c => c.wpm), 1);
+    recent.forEach(c => {
+      const bar = document.createElement('div');
+      bar.className = 'chart-bar';
+      const h = Math.max((c.wpm / maxWpm) * 130, 8);
+      bar.style.height = h + 'px';
+      bar.title = `${c.date}: ${c.wpm} WPM (${c.accuracy}%)`;
+      const valueLabel = document.createElement('div');
+      valueLabel.className = 'chart-bar-value';
+      valueLabel.textContent = c.wpm;
+      bar.appendChild(valueLabel);
+      const dateLabel = document.createElement('div');
+      dateLabel.className = 'chart-bar-label';
+      dateLabel.textContent = c.date.slice(5);
+      bar.appendChild(dateLabel);
+      chartContainer.appendChild(bar);
+    });
+  }
+
+  // History table
+  const tbody = $('history-tbody');
+  if (checkins.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">暂无打卡记录，开始你的第一次练习吧！</td></tr>';
+  } else {
+    tbody.innerHTML = checkins.slice(0, 30).map(c => `
+      <tr>
+        <td>${c.date}</td>
+        <td>${c.duration}</td>
+        <td class="wpm-cell">${c.wpm}</td>
+        <td>${c.accuracy}%</td>
+        <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${c.notes || '-'}</td>
+        <td><button class="btn btn-danger btn-sm" style="padding:2px 8px;font-size:11px;" onclick="deleteCheckin('${c.date}')">删除</button></td>
+      </tr>
+    `).join('');
+  }
+
+  updateCheckinUI();
+}
+
+function deleteCheckin(date) {
+  if (!confirm('确定删除 ' + date + ' 的打卡记录吗？')) return;
+  const data = getStorage();
+  data.checkins = data.checkins.filter(c => c.date !== date);
+  // Recalculate
+  data.bestWpm = data.checkins.reduce((max, c) => Math.max(max, c.wpm), 0);
+  data.totalMinutes = data.checkins.reduce((sum, c) => sum + c.duration, 0);
+  saveStorage(data);
+  renderStatsTab();
+  showToast('已删除记录', '');
+}
+
+function exportData() {
+  const data = getStorage();
+  const exportStr = JSON.stringify(data, null, 2);
+  const blob = new Blob([exportStr], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'typemaster-backup-' + getTodayStr() + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('📥 数据已导出', 'success');
+}
+
+function clearData() {
+  if (!confirm('⚠️ 确定清除全部打卡记录和统计数据吗？此操作不可恢复！\n\n建议先导出数据备份。')) return;
+  if (!confirm('再次确认：清除所有本地数据？')) return;
+  localStorage.removeItem('typemaster_data');
+  renderStatsTab();
+  showToast('🗑️ 全部数据已清除', '');
+}
+
+// ==================== TIPS ACCORDION ====================
+function toggleTip(header) {
+  header.classList.toggle('open');
+  header.nextElementSibling.classList.toggle('open');
+}
+
+// ==================== TOAST ====================
+function showToast(msg, type) {
+  toast.textContent = msg;
+  toast.className = 'toast ' + type + ' show';
+  clearTimeout(toast._timeout);
+  toast._timeout = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2500);
+}
+
+// ==================== INIT ====================
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  // Focus input after a short delay to ensure layout is ready
+  setTimeout(() => typingInput.focus(), 300);
+});
+
+// Handle window resize for keyboard
+window.addEventListener('resize', () => {
+  // Keyboard is responsive via CSS, no JS needed
+});
+</script>
+</body>
+</html>

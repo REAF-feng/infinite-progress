@@ -1,0 +1,11 @@
+{
+    // Code Runner：一键运行 C 代码 (Ctrl+Alt+N)
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.executorMap": {
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt.exe -Wall -Wextra -std=c17 && echo '=== Output ===' && $dir$fileNameWithoutExt.exe"
+    },
+    // 文件编码
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": false
+}

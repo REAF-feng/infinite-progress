@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}仪表盘{% endblock %}
+{% block content %}
+
+<!-- 今日打卡卡片 -->
+<div class="card">
+  <div class="card-header"><span class="icon">📋</span> 今日打卡</div>
+  <div class="grid-4" id="checkin-grid">
+    <div class="text-center text-muted" style="grid-column:1/-1;padding:20px;">加载中...</div>
+  </div>
+</div>
+
+<!-- 本周热力图 -->
+<div class="card">
+  <div class="card-header"><span class="icon">📅</span> 本周打卡热力图</div>
+  <div id="heatmap-container">
+    <div class="text-center text-muted" style="padding:20px;">加载中...</div>
+  </div>
+</div>
+
+<!-- 统计概览 -->
+<div class="grid-2">
+  <!-- 数据统计 -->
+  <div class="card">
+    <div class="card-header"><span class="icon">📊</span> 数据统计</div>
+    <div id="stats-summary">
+      <div class="text-center text-muted" style="padding:20px;">加载中...</div>
+    </div>
+  </div>
+
+  <!-- 打字速度趋势 -->
+  <div class="card">
+    <div class="card-header"><span class="icon">📈</span> 打字速度趋势</div>
+    <div class="chart-container">
+      <canvas id="typing-chart"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- 里程碑 -->
+<div class="card">
+  <div class="card-header"><span class="icon">🏆</span> 成就里程碑（取四科最长连续打卡）</div>
+  <div class="stat-row" id="milestones">
+    <div class="text-center text-muted" style="padding:20px;">加载中...</div>
+  </div>
+</div>
+
+<!-- 操作提示 -->
+<div class="card" style="text-align:center;">
+  <div class="text-muted text-sm">
+    💡 提示：点击上方"打卡卡片"即可记录每日学习 | 连续打卡达成里程碑可解锁成就
+    <br>每天每科可打卡一次，已打卡的科目可点击更新学习记录
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,84 @@
+{
+  "python": [
+    {
+      "name": "Hello World",
+      "text": "print(\"Hello, World!\")\nname = input(\"What's your name? \")\nprint(f\"Nice to meet you, {name}!\")"
+    },
+    {
+      "name": "FizzBuzz",
+      "text": "for i in range(1, 101):\n    if i % 15 == 0:\n        print(\"FizzBuzz\")\n    elif i % 3 == 0:\n        print(\"Fizz\")\n    elif i % 5 == 0:\n        print(\"Buzz\")\n    else:\n        print(i)"
+    },
+    {
+      "name": "List Comprehension",
+      "text": "numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nevens = [x for x in numbers if x % 2 == 0]\nsquares = [x**2 for x in numbers]\nprint(f\"Evens: {evens}\")\nprint(f\"Squares: {squares}\")"
+    },
+    {
+      "name": "Dictionary Operations",
+      "text": "student = {\n    \"name\": \"Alice\",\n    \"age\": 20,\n    \"major\": \"Computer Science\",\n    \"grades\": [85, 90, 92, 88]\n}\naverage = sum(student[\"grades\"]) / len(student[\"grades\"])\nprint(f\"{student['name']}'s average: {average}\")"
+    },
+    {
+      "name": "Function with Error Handling",
+      "text": "def safe_divide(a, b):\n    try:\n        result = a / b\n        return result\n    except ZeroDivisionError:\n        print(\"Error: Cannot divide by zero!\")\n        return None\n    except TypeError:\n        print(\"Error: Invalid input types!\")\n        return None"
+    },
+    {
+      "name": "File Reading",
+      "text": "with open(\"data.txt\", \"r\", encoding=\"utf-8\") as file:\n    lines = file.readlines()\n    for i, line in enumerate(lines, 1):\n        print(f\"Line {i}: {line.strip()}\")"
+    },
+    {
+      "name": "Class Definition",
+      "text": "class BankAccount:\n    def __init__(self, owner, balance=0):\n        self.owner = owner\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError(\"Insufficient funds\")\n        self.balance -= amount\n        return self.balance"
+    },
+    {
+      "name": "Decorator Pattern",
+      "text": "import time\n\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end-start:.4f}s\")\n        return result\n    return wrapper\n\n@timer\ndef slow_function():\n    total = sum(range(1000000))\n    return total"
+    }
+  ],
+  "c_lang": [
+    {
+      "name": "Hello World in C",
+      "text": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}"
+    },
+    {
+      "name": "Pointer Basics",
+      "text": "#include <stdio.h>\n\nvoid swap(int *a, int *b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}\n\nint main() {\n    int x = 5, y = 10;\n    printf(\"Before: x=%d, y=%d\\n\", x, y);\n    swap(&x, &y);\n    printf(\"After: x=%d, y=%d\\n\", x, y);\n    return 0;\n}"
+    },
+    {
+      "name": "Array and Loop",
+      "text": "#include <stdio.h>\n\nint main() {\n    int scores[] = {85, 92, 78, 95, 88};\n    int sum = 0;\n    int n = sizeof(scores) / sizeof(scores[0]);\n\n    for (int i = 0; i < n; i++) {\n        sum += scores[i];\n    }\n\n    float avg = (float)sum / n;\n    printf(\"Average score: %.2f\\n\", avg);\n    return 0;\n}"
+    },
+    {
+      "name": "Struct and Malloc",
+      "text": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\ntypedef struct {\n    char name[50];\n    int age;\n    float gpa;\n} Student;\n\nint main() {\n    Student *s = (Student*)malloc(sizeof(Student));\n    strcpy(s->name, \"Bob\");\n    s->age = 21;\n    s->gpa = 3.75;\n    printf(\"Student: %s, Age: %d, GPA: %.2f\\n\", s->name, s->age, s->gpa);\n    free(s);\n    return 0;\n}"
+    },
+    {
+      "name": "Recursive Factorial",
+      "text": "#include <stdio.h>\n\nlong long factorial(int n) {\n    if (n <= 1) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}\n\nint main() {\n    int num = 10;\n    printf(\"%d! = %lld\\n\", num, factorial(num));\n    return 0;\n}"
+    },
+    {
+      "name": "File I/O",
+      "text": "#include <stdio.h>\n\nint main() {\n    FILE *fp = fopen(\"output.txt\", \"w\");\n    if (fp == NULL) {\n        printf(\"Error opening file!\\n\");\n        return 1;\n    }\n    fprintf(fp, \"Line 1: Hello\\n\");\n    fprintf(fp, \"Line 2: World\\n\");\n    fclose(fp);\n    printf(\"File written successfully.\\n\");\n    return 0;\n}"
+    }
+  ],
+  "english": [
+    {
+      "name": "Technology",
+      "text": "Technology has transformed every aspect of our daily lives. From smartphones to artificial intelligence, we are surrounded by innovations that make tasks easier and more efficient. However, it is important to maintain a healthy balance between screen time and real-world interactions."
+    },
+    {
+      "name": "Environment",
+      "text": "Climate change is one of the most pressing challenges facing humanity today. Rising temperatures, melting ice caps, and extreme weather events are clear signs that we need to take immediate action. Every individual can contribute by reducing their carbon footprint."
+    },
+    {
+      "name": "Education",
+      "text": "Education is not merely about acquiring knowledge; it is about learning how to think critically and solve problems creatively. A well-rounded education empowers individuals to pursue their passions and make meaningful contributions to society."
+    },
+    {
+      "name": "Health",
+      "text": "Maintaining good health requires a combination of regular exercise, a balanced diet, and sufficient sleep. Many people underestimate the importance of mental health, which is just as crucial as physical well-being for leading a fulfilling life."
+    },
+    {
+      "name": "Programming",
+      "text": "Learning to code is like learning a new language. It opens doors to creative problem-solving and logical thinking. The most important skill for a programmer is not memorizing syntax, but developing the ability to break down complex problems into manageable pieces."
+    }
+  ]
+}
